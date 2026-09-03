@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Simulador Hoshin Workshop v28 · Conversaciones que Transforman</title>
+<title>Simulador Hoshin Workshop v29 · Conversaciones que Transforman</title>
 <link rel="icon" type="image/png" href="./favicon-experiencia-japon.png">
 <link rel="shortcut icon" href="./favicon.ico">
 <style>
@@ -497,13 +497,154 @@ body.sidebar-collapsed main{padding-left:26px}
 }
 @media print{.sidebar-toggle{display:none!important}}
 
+
+/* v29 · Revisión integral de ancho, responsive y scroll horizontal por bloque */
+
+/* El contenido nunca debe ensanchar la página completa por accidente */
+html,body{max-width:100%;overflow-x:hidden}
+main{container-type:inline-size;container-name:board}
+main,section,details,.fold-content,.card,.exec-report,
+.grid-2,.grid-3,.grid-4,.score-grid,.metric-bars,.system-kpis,
+.case-story,.case-actors,.visible-facts,.tension-list,.direction-frame,
+.role-profile-grid,.candidate-grid,.analysis-grid,.manager-summary-auto,
+.report-role-grid,.form-grid,.compare-grid,.prompt-grid,.flow-strip,
+.catchball-thinking,.system-reference-grid,.system-reference-bottom,
+.matrix-guide-grid,.matrix-guide-scale,.demo-options,.demo-scoreline{
+  min-width:0;
+  max-width:100%;
+}
+.grid-2>*,.grid-3>*,.grid-4>*,.score-grid>*,.metric-bars>*,
+.system-kpis>*,.case-story>*,.case-actors>*,.visible-facts>*,
+.tension-list>*,.direction-frame>*,.role-profile-grid>*,
+.candidate-grid>*,.analysis-grid>*,.manager-summary-auto>*,
+.report-role-grid>*,.form-grid>*,.compare-grid>*,.prompt-grid>*,
+.catchball-thinking>*,.system-reference-grid>*,.system-reference-bottom>*,
+.matrix-guide-grid>*,.matrix-guide-scale>*,.demo-options>*{
+  min-width:0;
+}
+
+/* Las tablas anchas se desplazan DENTRO de su propio bloque, nunca toda la hoja */
+.context-wrap,.table-wrap,.case-matrix{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  overflow-x:auto;
+  overflow-y:hidden;
+  overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-gutter:stable;
+  position:relative;
+}
+.context-wrap::-webkit-scrollbar,
+.table-wrap::-webkit-scrollbar,
+.case-matrix::-webkit-scrollbar{height:12px}
+.context-wrap::-webkit-scrollbar-track,
+.table-wrap::-webkit-scrollbar-track,
+.case-matrix::-webkit-scrollbar-track{background:#edf3f1;border-radius:999px}
+.context-wrap::-webkit-scrollbar-thumb,
+.table-wrap::-webkit-scrollbar-thumb,
+.case-matrix::-webkit-scrollbar-thumb{background:#a9c5be;border-radius:999px;border:2px solid #edf3f1}
+.context-wrap.scrollable-x,
+.table-wrap.scrollable-x,
+.case-matrix.scrollable-x{padding-top:28px}
+.scroll-x-hint{
+  display:none;
+  position:absolute;
+  top:5px;
+  right:9px;
+  z-index:7;
+  border:1px solid #cddfd9;
+  background:rgba(248,252,251,.96);
+  color:#53676d;
+  border-radius:999px;
+  padding:4px 8px;
+  font-size:8.5px;
+  font-weight:900;
+  letter-spacing:.02em;
+  pointer-events:none;
+}
+.scrollable-x>.scroll-x-hint{display:block}
+
+/* Primera columna fija en las tablas donde perder la referencia resulta molesto */
+.catchball-v10 th:first-child,.catchball-v10 td:first-child,
+.matrix th:first-child,.matrix td:first-child,
+.feedback-table th:first-child,.feedback-table td:first-child,
+.a3-table th:first-child,.a3-table td:first-child,
+.eval-table th:first-child,.eval-table td:first-child,
+.report-matrix th:first-child,.report-matrix td:first-child{
+  position:sticky;
+  left:0;
+  z-index:3;
+  background:#fff;
+  box-shadow:1px 0 0 var(--line);
+}
+.catchball-v10 th:first-child,.matrix th:first-child,.feedback-table th:first-child,
+.a3-table th:first-child,.eval-table th:first-child,.report-matrix th:first-child{
+  background:#f7faf9;
+  z-index:5;
+}
+
+/* En pantallas intermedias nos importa más la legibilidad que exprimir columnas */
+@container board (max-width:1200px){
+  .hero{grid-template-columns:1fr}
+  .case-story{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .case-actors,.direction-frame,.role-profile-grid,.candidate-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))
+  }
+  .visible-facts,.tension-list,.grid-2,.form-grid,.compare-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))
+  }
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-4,.score-grid,.manager-summary-auto,.analysis-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))
+  }
+  .system-reference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .report-role-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .flow-strip{
+    grid-template-columns:repeat(5,minmax(150px,1fr));
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    padding:2px 3px 8px;
+  }
+}
+@container board (max-width:850px){
+  .case-story,.case-actors,.visible-facts,.tension-list,.direction-frame,
+  .role-profile-grid,.candidate-grid,.grid-2,.grid-3,.grid-4,.score-grid,
+  .metric-bars,.system-kpis,.form-grid,.compare-grid,.prompt-grid,
+  .analysis-grid,.manager-summary-auto,.report-role-grid,
+  .system-reference-grid,.system-reference-bottom,.matrix-guide-grid,
+  .catchball-thinking,.demo-options{
+    grid-template-columns:1fr
+  }
+  .hero{padding:22px}
+  .hero h1{font-size:30px}
+  .toolbar>div{width:100%}
+  .toolbar label{flex:1;min-width:170px}
+  .report-head{flex-direction:column}
+}
+@container board (max-width:620px){
+  main{padding:15px}
+  .card{padding:15px;border-radius:18px}
+  .fold-content{padding-left:0;padding-right:0}
+  .hero{border-radius:22px}
+  .hero-actions .btn{flex:1}
+  .flow-strip{grid-template-columns:repeat(5,minmax(135px,1fr))}
+}
+
+/* Texto: preservar tamaño legible y permitir cortes de palabras largas */
+.card,.info-card,.objective,.role-card,.role-profile,.candidate-card,
+.report-block,.compare-card,.matrix-guide-card,.system-reference-card{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+
 </style>
 </head>
 <body>
 <button type="button" class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()" aria-expanded="true"><span class="icon">☰</span><span id="sidebarToggleText">Ocultar índice</span></button>
 <div class="layout">
 <aside>
-<div class="brand"><div class="brand-mark"></div><div><strong>GrupoSet</strong><span>Hoshin Workshop · v28</span></div></div>
+<div class="brand"><div class="brand-mark"></div><div><strong>GrupoSet</strong><span>Hoshin Workshop · v29</span></div></div>
 <nav>
 <button class="active" data-target="caso"><i>1</i>Caso y objetivos</button>
 <button data-target="preguntas"><i>2</i>Preguntas al caso</button>
@@ -928,7 +1069,7 @@ body.sidebar-collapsed main{padding-left:26px}
 
 <script>
 const BASE_VARS=[{"id":"estandares_tienda","name":"Estandarizar prácticas críticas entre tiendas","type":"Variable estratégica","owner":"Operaciones + Personas","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["productividad","personas","operaciones"],"impact":{"ventas":2,"costos":3,"personas":3},"detail":"Busca reducir variabilidad entre tiendas mediante estándares simples sobre prácticas críticas. Puede mejorar consistencia y desempeño, pero requiere aprendizaje, seguimiento y adaptación al contexto local."},{"id":"automatizacion","name":"Automatizar procesos operativos","type":"Variable estratégica","owner":"IT + Operaciones","difficulty":5,"interdep":5,"sp":5,"profile":"Estructural","topics":["automatizacion","digital","operaciones"],"impact":{"ventas":1,"costos":3,"personas":1},"detail":"Puede liberar capacidad y reducir trabajo manual, pero en Comercial Andina la adopción y el rediseño del trabajo son condiciones necesarias para capturar el beneficio."},{"id":"horas_extra","name":"Reducir horas extra","type":"Variable estratégica","owner":"Operaciones + Personas","difficulty":2,"interdep":4,"sp":3,"profile":"Balanceada","topics":["clima","personas","operaciones"],"impact":{"ventas":-1,"costos":3,"personas":-1},"detail":"Reduce costo directo, pero si se ejecuta como recorte y no como rediseño de cobertura puede perjudicar servicio, ventas y carga de los equipos."},{"id":"promociones","name":"Aumentar promociones","type":"Variable estratégica","owner":"Comercial + Finanzas","difficulty":2,"interdep":3,"sp":2,"profile":"Quick win","topics":["ventas","promociones","margen"],"impact":{"ventas":3,"costos":-3,"personas":-2},"detail":"Puede acelerar volumen en el corto plazo, pero aumenta presión operativa y puede deteriorar margen. El caso muestra que parte del crecimiento reciente ya estuvo asociado a promociones."},{"id":"cap_comercial","name":"Mejorar efectividad de capacitación comercial","type":"Variable estratégica","owner":"Comercial + Personas","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["personas","ventas","capacitacion"],"impact":{"ventas":3,"costos":-1,"personas":4},"detail":"Puede mejorar capacidades y ventas si se traduce en práctica, observación y coaching. La formación aislada ya mostró límites y además consume capacidad de líderes y equipos."},{"id":"quiebres","name":"Reducir quiebres de stock","type":"Variable estratégica","owner":"Supply + Comercial + IT","difficulty":4,"interdep":5,"sp":4,"profile":"Estructural","topics":["stock","supply","ventas"],"impact":{"ventas":4,"costos":-1,"personas":1},"detail":"Tiene una relación directa con disponibilidad y ventas. Resolver quiebres exige mejor reposición y datos; hacerlo simplemente aumentando inventario puede empeorar capital y costos."},{"id":"ticket","name":"Aumentar ticket promedio","type":"Variable estratégica","owner":"Comercial","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["ventas","margen"],"impact":{"ventas":2,"costos":0,"personas":0},"detail":"Puede aportar crecimiento mediante mix, bundles y recomendación, aunque por sí sola no resuelve las brechas de stock, conversión o coordinación que aparecen en el caso."},{"id":"conversion","name":"Aumentar tasa de conversión","type":"Variable estratégica","owner":"Comercial + Operaciones","difficulty":4,"interdep":4,"sp":4,"profile":"Estructural","topics":["ventas","tiendas","personas"],"impact":{"ventas":4,"costos":1,"personas":1},"detail":"El caso muestra diferencias de conversión entre tiendas comparables. Mejorarla requiere trabajar disponibilidad, habilidades comerciales, ejecución y liderazgo de tienda."},{"id":"trafico","name":"Aumentar tráfico a tiendas","type":"Variable estratégica","owner":"Marketing + Comercial","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["marketing","ventas"],"impact":{"ventas":1,"costos":-2,"personas":-1},"detail":"Puede ampliar oportunidades comerciales, pero demanda inversión y puede aumentar presión sobre una operación que ya muestra diferencias de conversión y capacidad."},{"id":"frecuencia","name":"Aumentar frecuencia de compra","type":"Variable estratégica","owner":"Comercial + CRM","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["ventas","crm","clientes"],"impact":{"ventas":2,"costos":0,"personas":0},"detail":"Puede aumentar ventas sobre clientes actuales, pero requiere conocimiento de comportamiento, propuesta relevante y capacidad de CRM. Su importancia debe justificarse con evidencia del caso."},{"id":"clientes_activos","name":"Aumentar clientes activos","type":"Variable estratégica","owner":"Marketing + Comercial","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["ventas","clientes","marketing"],"impact":{"ventas":2,"costos":-2,"personas":0},"detail":"Amplía la base compradora, aunque la adquisición exige inversión y no existe evidencia suficiente para asumir que la principal restricción del caso sea la cantidad de clientes."},{"id":"mayor_margen","name":"Aumentar ventas de productos de mayor margen","type":"Variable estratégica","owner":"Comercial + Finanzas","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["ventas","margen","mix"],"impact":{"ventas":3,"costos":3,"personas":0},"detail":"Busca mejorar simultáneamente crecimiento y rentabilidad a través del mix. Depende de disponibilidad, selección de surtido y capacidad comercial para orientar la venta."},{"id":"cross_selling","name":"Aumentar cross-selling","type":"Variable estratégica","owner":"Comercial + CRM","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["ventas","crm","capacitacion"],"impact":{"ventas":2,"costos":0,"personas":1},"detail":"Puede capturar más valor por cliente mediante recomendación complementaria, pero requiere datos, habilidades y una propuesta coherente. Su relevancia debe ser defendida."},{"id":"merma","name":"Reducir desperdicio y merma","type":"Variable estratégica","owner":"Operaciones + Supply","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["costos","stock","operaciones"],"impact":{"ventas":0,"costos":2,"personas":0},"detail":"Puede mejorar eficiencia si la merma es material. El caso describe tensiones de inventario y operación, pero la mesa debería validar antes si esta es realmente una causa prioritaria."},{"id":"logistica","name":"Reducir costos logísticos por unidad","type":"Variable estratégica","owner":"Supply + Finanzas","difficulty":4,"interdep":5,"sp":4,"profile":"Estructural","topics":["logistica","costos","clientes"],"impact":{"ventas":-2,"costos":3,"personas":0},"detail":"Puede generar ahorro, pero consolidar entregas o modificar frecuencias y SLA puede deteriorar disponibilidad, tiempos de respuesta y experiencia comercial."},{"id":"rotacion_stock","name":"Aumentar rotación de inventario","type":"Variable estratégica","owner":"Supply + Comercial + Finanzas","difficulty":4,"interdep":5,"sp":4,"profile":"Estructural","topics":["stock","costos","ventas"],"impact":{"ventas":3,"costos":4,"personas":1},"detail":"Conecta compra, surtido, demanda y capital de trabajo. Es coherente con la coexistencia de quiebres y stock de baja salida, pero exige coordinación transversal sostenida."},{"id":"obsoleto","name":"Reducir inventario obsoleto","type":"Variable estratégica","owner":"Supply + Comercial","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["stock","costos","margen"],"impact":{"ventas":1,"costos":2,"personas":0},"detail":"Libera capital y espacio, aunque liquidarlo agresivamente puede deteriorar margen. Es una parte del problema de inventario, no necesariamente toda la causa."},{"id":"tiempos_improductivos","name":"Reducir tiempos improductivos en tienda","type":"Variable estratégica","owner":"Operaciones + Personas","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["productividad","costos","personas"],"impact":{"ventas":2,"costos":4,"personas":2},"detail":"El caso vincula mejores tiendas con menor tiempo improductivo. La oportunidad está en rediseñar trabajo y cobertura sin convertir productividad en mayor presión sobre las personas."},{"id":"procurement","name":"Reducir costos de compras / procurement","type":"Variable estratégica","owner":"Compras + Finanzas","difficulty":4,"interdep":4,"sp":4,"profile":"Estructural","topics":["costos","compras","supply"],"impact":{"ventas":-1,"costos":3,"personas":0},"detail":"Puede mejorar costo de compra, pero el caso advierte que precio no es el único costo: plazo, calidad y disponibilidad pueden trasladar el impacto a otras partes del sistema."},{"id":"centralizadas","name":"Aumentar porcentaje de compras centralizadas","type":"Variable estratégica","owner":"Compras + Operaciones","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["costos","compras","tiendas"],"impact":{"ventas":-1,"costos":2,"personas":-1},"detail":"Puede aportar escala y control, pero también quitar autonomía local y reducir velocidad de respuesta ante particularidades de tienda o demanda."},{"id":"ausentismo","name":"Reducir ausentismo","type":"Variable estratégica","owner":"Personas + Operaciones","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["personas","clima","costos"],"impact":{"ventas":1,"costos":1,"personas":1},"detail":"Puede mejorar cobertura y continuidad, aunque el caso no demuestra que el ausentismo sea hoy una causa central. Su priorización requiere evidencia adicional."},{"id":"rotacion_personal","name":"Reducir rotación del personal","type":"Variable estratégica","owner":"Personas + Líderes","difficulty":4,"interdep":4,"sp":4,"profile":"Estructural","topics":["personas","clima","liderazgo"],"impact":{"ventas":1,"costos":1,"personas":2},"detail":"Preserva experiencia y puede reducir costos de reemplazo. Sin embargo, la información disponible habla más claramente de saturación y capacidades que de una rotación crítica."},{"id":"feedback_managers","name":"Aumentar frecuencia y calidad de feedback de managers","type":"Variable estratégica","owner":"Personas + Líderes de tienda","difficulty":2,"interdep":3,"sp":2,"profile":"Quick win","topics":["personas","liderazgo","capacitacion"],"impact":{"ventas":2,"costos":0,"personas":4},"detail":"La información del caso relaciona mejor desempeño con feedback frecuente y líderes presentes. Su dificultad está en proteger tiempo y calidad de conversación en managers ya saturados."},{"id":"digital_tools","name":"Aumentar utilización de herramientas digitales","type":"Variable estratégica","owner":"IT + Operaciones + Personas","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["digital","personas","productividad"],"impact":{"ventas":2,"costos":2,"personas":3},"detail":"Las mejores tiendas muestran mayor utilización de herramientas. El impacto depende de adopción, hábitos y rediseño de trabajo, no de disponer de tecnología por sí sola."}];
-const KEY='hoshin_v28_internal';
+const KEY='hoshin_v29_internal';
 const TARGETS={ventas:15,costos:10,personas:10};
 const SCALE={ventas:{1:.8,2:1.6,3:2.5,4:3.5,5:4.8},costos:{1:.6,2:1.2,3:2.0,4:2.7,5:3.5},personas:{1:.6,2:1.1,3:1.8,4:2.5,5:3.2}};
 const OBJECTIVE_OPTIONS=['Ventas','Costos','Desempeño','Equilibrio de los tres'];
@@ -1004,7 +1145,7 @@ function toggleSidebar(force){
  applySidebarState(collapsed);
 })();
 
-function show(id){document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.target===id));saveInputs();updateAll()}
+function show(id){document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.target===id));saveInputs();updateAll();scheduleScrollHintRefresh()}
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>show(b.dataset.target));
 function allVars(t=team()){return [...BASE_VARS,...(t.customVars||[])]}
 function varById(id,t=team()){return allVars(t).find(v=>v.id===id)}
@@ -1303,7 +1444,29 @@ function loadAllDemoExamples(){
  openModal('Tres ejemplos cargados','Las tres mesas están disponibles en el selector de Equipo. Podés recorrer cada una y luego compararlas en Evaluación y Ranking.');
 }
 
-function updateAll(full=true){syncTeams();renderRoleProfiles();renderQuestions();renderInternal();renderCandidates();renderMatrix();renderMetrics();renderHints();renderReport();renderFeedback();renderCompare();renderA3();renderEvaluation()}
+
+function refreshHorizontalScrollHints(){
+  const wrappers=[...document.querySelectorAll('.table-wrap,.case-matrix,.context-wrap')];
+  wrappers.forEach(w=>{
+    let hint=w.querySelector(':scope > .scroll-x-hint');
+    if(!hint){
+      hint=document.createElement('div');
+      hint.className='scroll-x-hint';
+      hint.textContent='Desplazá horizontalmente →';
+      w.prepend(hint);
+    }
+    const overflowing=w.scrollWidth>w.clientWidth+4;
+    w.classList.toggle('scrollable-x',overflowing);
+  });
+}
+let scrollHintTimer=null;
+function scheduleScrollHintRefresh(){
+  clearTimeout(scrollHintTimer);
+  scrollHintTimer=setTimeout(refreshHorizontalScrollHints,60);
+}
+window.addEventListener('resize',scheduleScrollHintRefresh);
+
+function updateAll(full=true){syncTeams();renderRoleProfiles();renderQuestions();renderInternal();renderCandidates();renderMatrix();renderMetrics();renderHints();renderReport();renderFeedback();renderCompare();renderA3();renderEvaluation();scheduleScrollHintRefresh()}
 
 function directFoldBlocks(section){return [...section.children].filter(el=>el.matches&&el.matches('details.fold-block'))}
 function updateFoldMasterButton(sectionId,buttonId){

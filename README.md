@@ -74,3 +74,13 @@
 ## v28 · Favicon Experiencia Japón
 - Se agrega favicon del proyecto usando el logo de Experiencia Japón.
 - Archivos incluidos: `public/favicon-experiencia-japon.png` y `public/favicon.ico`.
+
+## v29 · Revisión integral de ancho y legibilidad
+- Se revisó la estructura de las 8 hojas y sus bloques.
+- Texto y tarjetas ahora responden al ancho real del área de trabajo mediante container queries.
+- Las grillas de 3, 4 y 5 columnas se reorganizan antes de que el contenido quede comprimido o cortado.
+- Toda tabla ancha queda contenida en su propio bloque con scroll horizontal.
+- Las tablas con scroll muestran la indicación **“Desplazá horizontalmente →”**.
+- En tablas críticas, la primera columna queda fija al desplazarse horizontalmente.
+- Se evita que un bloque ancho genere scroll horizontal de toda la página.
+- Se mantiene el tamaño tipográfico y se prioriza legibilidad sobre compresión.
