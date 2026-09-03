@@ -65,3 +65,12 @@
 - Para Costos -10%, un valor positivo significa que la variable ayuda a reducir costos; un valor negativo dificulta la reducción.
 - Encabezados de Matriz y Reporte pasan a hablar de contribución a cada objetivo.
 - Se añade una leyenda visible y se actualiza la guía desplegable y el modal de ayuda.
+
+## v27 · Índice lateral colapsable
+- Se agrega un botón fijo para ocultar / mostrar la barra índice de hojas.
+- Al ocultarse el índice, la página gana ancho completo para trabajar sin desplazarse horizontalmente entre izquierda y derecha.
+- El estado del índice queda recordado en el navegador.
+
+## v28 · Favicon Experiencia Japón
+- Se agrega favicon del proyecto usando el logo de Experiencia Japón.
+- Archivos incluidos: `public/favicon-experiencia-japon.png` y `public/favicon.ico`.
