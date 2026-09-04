@@ -84,3 +84,16 @@
 - En tablas críticas, la primera columna queda fija al desplazarse horizontalmente.
 - Se evita que un bloque ancho genere scroll horizontal de toda la página.
 - Se mantiene el tamaño tipográfico y se prioriza legibilidad sobre compresión.
+
+## v30 · Objetivos sin condición de Dirección
+- En Hoja 1, bloque **Objetivos definidos por Dirección**, se eliminaron los tres recuadros **Condición de dirección**.
+- Dirección comunica únicamente los resultados esperados.
+- Las restricciones, tensiones y criterios de decisión deben ser deducidos por el equipo a partir del caso y el Catchball.
+
+## v31 · Índice fijo durante la navegación
+- Mantiene el cambio anterior: Hoja 1 sin los recuadros **Condición de dirección**.
+- En escritorio, el índice lateral queda fijo al viewport mientras se navega verticalmente por cualquier hoja.
+- El usuario puede cambiar de hoja desde cualquier punto de la página sin volver hacia arriba.
+- El índice sigue siendo ocultable / visible mediante el botón superior.
+- Al ocultarlo, el contenido recupera todo el ancho disponible.
+- En pantallas menores a 1100 px se conserva el comportamiento responsive previo.

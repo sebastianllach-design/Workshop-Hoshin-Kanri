@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Simulador Hoshin Workshop v29 · Conversaciones que Transforman</title>
+<title>Simulador Hoshin Workshop v31 · Conversaciones que Transforman</title>
 <link rel="icon" type="image/png" href="./favicon-experiencia-japon.png">
 <link rel="shortcut icon" href="./favicon.ico">
 <style>
@@ -68,8 +68,6 @@ section{display:none}section.active{display:block}.card{background:#fff;border:1
 .direction-card h4{font-size:15px;margin:0 0 6px}
 .direction-card .kr-big{font-size:24px;font-weight:950;letter-spacing:-.05em;margin:5px 0 7px}
 .direction-card p{font-size:11.5px;color:#607078;line-height:1.45;margin:0}
-.direction-card .criterion{margin-top:9px;border:1px solid var(--line);background:#fbfdfc;border-radius:13px;padding:9px}
-.direction-card .criterion b{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:#667780;margin-bottom:3px}
 .case-boundary{border:1px dashed #cbd5e1;background:#f8fbfa;border-radius:17px;padding:13px}
 .case-boundary h4{margin:0 0 5px;font-size:13px}
 .case-boundary p{margin:0;color:#607078;font-size:11.5px;line-height:1.45}
@@ -638,13 +636,52 @@ main,section,details,.fold-content,.card,.exec-report,
   word-break:normal;
 }
 
+
+/* v31 · Índice fijo durante la navegación vertical */
+@media(min-width:1101px){
+  .layout{
+    display:block;
+    min-height:100vh;
+    padding-left:300px;
+    transition:padding-left .28s ease;
+  }
+  .layout.sidebar-collapsed{
+    padding-left:0;
+  }
+  aside{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:300px;
+    height:100vh;
+    z-index:60;
+    overflow-y:auto;
+    overflow-x:hidden;
+    overscroll-behavior:contain;
+    background:#fff;
+    border-right:1px solid var(--line);
+  }
+  .layout.sidebar-collapsed aside{
+    transform:translateX(-100%);
+    opacity:0;
+    pointer-events:none;
+    border-right-color:transparent;
+  }
+  main{
+    width:100%;
+    max-width:none;
+    min-width:0;
+  }
+}
+
 </style>
 </head>
 <body>
 <button type="button" class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()" aria-expanded="true"><span class="icon">☰</span><span id="sidebarToggleText">Ocultar índice</span></button>
 <div class="layout">
 <aside>
-<div class="brand"><div class="brand-mark"></div><div><strong>GrupoSet</strong><span>Hoshin Workshop · v29</span></div></div>
+<div class="brand"><div class="brand-mark"></div><div><strong>GrupoSet</strong><span>Hoshin Workshop · v31</span></div></div>
 <nav>
 <button class="active" data-target="caso"><i>1</i>Caso y objetivos</button>
 <button data-target="preguntas"><i>2</i>Preguntas al caso</button>
@@ -856,21 +893,21 @@ main,section,details,.fold-content,.card,.exec-report,
 <h4>Crecimiento rentable</h4>
 <div class="kr-big">Ventas +15%</div>
 <p><b>KR Resultado:</b> aumentar la facturación total 15% en el próximo ciclo.</p>
-<div class="criterion"><b>Condición de dirección</b><span>El crecimiento debe poder defenderse sin depender únicamente de más descuentos o deteriorar experiencia.</span></div>
+
 </div>
 <div class="direction-card">
 <div class="eyebrow">Objetivo estratégico 2</div>
 <h4>Eficiencia</h4>
 <div class="kr-big">Costos -10%</div>
 <p><b>KR Resultado:</b> reducir el costo operativo/comercial relativo 10%.</p>
-<div class="criterion"><b>Condición de dirección</b><span>La reducción debe sostener capacidad de respuesta, ventas y servicio.</span></div>
+
 </div>
 <div class="direction-card">
 <div class="eyebrow">Objetivo estratégico 3</div>
 <h4>Capacidad organizacional</h4>
 <div class="kr-big">Desempeño +10%</div>
 <p><b>KR Resultado:</b> mejorar productividad y capacidades críticas del personal 10%.</p>
-<div class="criterion"><b>Condición de dirección</b><span>El desarrollo debe integrarse al trabajo y ser sostenible para líderes y equipos.</span></div>
+
 </div>
 </div>
 <div class="idea" style="margin-top:13px">
@@ -1069,7 +1106,7 @@ main,section,details,.fold-content,.card,.exec-report,
 
 <script>
 const BASE_VARS=[{"id":"estandares_tienda","name":"Estandarizar prácticas críticas entre tiendas","type":"Variable estratégica","owner":"Operaciones + Personas","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["productividad","personas","operaciones"],"impact":{"ventas":2,"costos":3,"personas":3},"detail":"Busca reducir variabilidad entre tiendas mediante estándares simples sobre prácticas críticas. Puede mejorar consistencia y desempeño, pero requiere aprendizaje, seguimiento y adaptación al contexto local."},{"id":"automatizacion","name":"Automatizar procesos operativos","type":"Variable estratégica","owner":"IT + Operaciones","difficulty":5,"interdep":5,"sp":5,"profile":"Estructural","topics":["automatizacion","digital","operaciones"],"impact":{"ventas":1,"costos":3,"personas":1},"detail":"Puede liberar capacidad y reducir trabajo manual, pero en Comercial Andina la adopción y el rediseño del trabajo son condiciones necesarias para capturar el beneficio."},{"id":"horas_extra","name":"Reducir horas extra","type":"Variable estratégica","owner":"Operaciones + Personas","difficulty":2,"interdep":4,"sp":3,"profile":"Balanceada","topics":["clima","personas","operaciones"],"impact":{"ventas":-1,"costos":3,"personas":-1},"detail":"Reduce costo directo, pero si se ejecuta como recorte y no como rediseño de cobertura puede perjudicar servicio, ventas y carga de los equipos."},{"id":"promociones","name":"Aumentar promociones","type":"Variable estratégica","owner":"Comercial + Finanzas","difficulty":2,"interdep":3,"sp":2,"profile":"Quick win","topics":["ventas","promociones","margen"],"impact":{"ventas":3,"costos":-3,"personas":-2},"detail":"Puede acelerar volumen en el corto plazo, pero aumenta presión operativa y puede deteriorar margen. El caso muestra que parte del crecimiento reciente ya estuvo asociado a promociones."},{"id":"cap_comercial","name":"Mejorar efectividad de capacitación comercial","type":"Variable estratégica","owner":"Comercial + Personas","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["personas","ventas","capacitacion"],"impact":{"ventas":3,"costos":-1,"personas":4},"detail":"Puede mejorar capacidades y ventas si se traduce en práctica, observación y coaching. La formación aislada ya mostró límites y además consume capacidad de líderes y equipos."},{"id":"quiebres","name":"Reducir quiebres de stock","type":"Variable estratégica","owner":"Supply + Comercial + IT","difficulty":4,"interdep":5,"sp":4,"profile":"Estructural","topics":["stock","supply","ventas"],"impact":{"ventas":4,"costos":-1,"personas":1},"detail":"Tiene una relación directa con disponibilidad y ventas. Resolver quiebres exige mejor reposición y datos; hacerlo simplemente aumentando inventario puede empeorar capital y costos."},{"id":"ticket","name":"Aumentar ticket promedio","type":"Variable estratégica","owner":"Comercial","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["ventas","margen"],"impact":{"ventas":2,"costos":0,"personas":0},"detail":"Puede aportar crecimiento mediante mix, bundles y recomendación, aunque por sí sola no resuelve las brechas de stock, conversión o coordinación que aparecen en el caso."},{"id":"conversion","name":"Aumentar tasa de conversión","type":"Variable estratégica","owner":"Comercial + Operaciones","difficulty":4,"interdep":4,"sp":4,"profile":"Estructural","topics":["ventas","tiendas","personas"],"impact":{"ventas":4,"costos":1,"personas":1},"detail":"El caso muestra diferencias de conversión entre tiendas comparables. Mejorarla requiere trabajar disponibilidad, habilidades comerciales, ejecución y liderazgo de tienda."},{"id":"trafico","name":"Aumentar tráfico a tiendas","type":"Variable estratégica","owner":"Marketing + Comercial","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["marketing","ventas"],"impact":{"ventas":1,"costos":-2,"personas":-1},"detail":"Puede ampliar oportunidades comerciales, pero demanda inversión y puede aumentar presión sobre una operación que ya muestra diferencias de conversión y capacidad."},{"id":"frecuencia","name":"Aumentar frecuencia de compra","type":"Variable estratégica","owner":"Comercial + CRM","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["ventas","crm","clientes"],"impact":{"ventas":2,"costos":0,"personas":0},"detail":"Puede aumentar ventas sobre clientes actuales, pero requiere conocimiento de comportamiento, propuesta relevante y capacidad de CRM. Su importancia debe justificarse con evidencia del caso."},{"id":"clientes_activos","name":"Aumentar clientes activos","type":"Variable estratégica","owner":"Marketing + Comercial","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["ventas","clientes","marketing"],"impact":{"ventas":2,"costos":-2,"personas":0},"detail":"Amplía la base compradora, aunque la adquisición exige inversión y no existe evidencia suficiente para asumir que la principal restricción del caso sea la cantidad de clientes."},{"id":"mayor_margen","name":"Aumentar ventas de productos de mayor margen","type":"Variable estratégica","owner":"Comercial + Finanzas","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["ventas","margen","mix"],"impact":{"ventas":3,"costos":3,"personas":0},"detail":"Busca mejorar simultáneamente crecimiento y rentabilidad a través del mix. Depende de disponibilidad, selección de surtido y capacidad comercial para orientar la venta."},{"id":"cross_selling","name":"Aumentar cross-selling","type":"Variable estratégica","owner":"Comercial + CRM","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["ventas","crm","capacitacion"],"impact":{"ventas":2,"costos":0,"personas":1},"detail":"Puede capturar más valor por cliente mediante recomendación complementaria, pero requiere datos, habilidades y una propuesta coherente. Su relevancia debe ser defendida."},{"id":"merma","name":"Reducir desperdicio y merma","type":"Variable estratégica","owner":"Operaciones + Supply","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["costos","stock","operaciones"],"impact":{"ventas":0,"costos":2,"personas":0},"detail":"Puede mejorar eficiencia si la merma es material. El caso describe tensiones de inventario y operación, pero la mesa debería validar antes si esta es realmente una causa prioritaria."},{"id":"logistica","name":"Reducir costos logísticos por unidad","type":"Variable estratégica","owner":"Supply + Finanzas","difficulty":4,"interdep":5,"sp":4,"profile":"Estructural","topics":["logistica","costos","clientes"],"impact":{"ventas":-2,"costos":3,"personas":0},"detail":"Puede generar ahorro, pero consolidar entregas o modificar frecuencias y SLA puede deteriorar disponibilidad, tiempos de respuesta y experiencia comercial."},{"id":"rotacion_stock","name":"Aumentar rotación de inventario","type":"Variable estratégica","owner":"Supply + Comercial + Finanzas","difficulty":4,"interdep":5,"sp":4,"profile":"Estructural","topics":["stock","costos","ventas"],"impact":{"ventas":3,"costos":4,"personas":1},"detail":"Conecta compra, surtido, demanda y capital de trabajo. Es coherente con la coexistencia de quiebres y stock de baja salida, pero exige coordinación transversal sostenida."},{"id":"obsoleto","name":"Reducir inventario obsoleto","type":"Variable estratégica","owner":"Supply + Comercial","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["stock","costos","margen"],"impact":{"ventas":1,"costos":2,"personas":0},"detail":"Libera capital y espacio, aunque liquidarlo agresivamente puede deteriorar margen. Es una parte del problema de inventario, no necesariamente toda la causa."},{"id":"tiempos_improductivos","name":"Reducir tiempos improductivos en tienda","type":"Variable estratégica","owner":"Operaciones + Personas","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["productividad","costos","personas"],"impact":{"ventas":2,"costos":4,"personas":2},"detail":"El caso vincula mejores tiendas con menor tiempo improductivo. La oportunidad está en rediseñar trabajo y cobertura sin convertir productividad en mayor presión sobre las personas."},{"id":"procurement","name":"Reducir costos de compras / procurement","type":"Variable estratégica","owner":"Compras + Finanzas","difficulty":4,"interdep":4,"sp":4,"profile":"Estructural","topics":["costos","compras","supply"],"impact":{"ventas":-1,"costos":3,"personas":0},"detail":"Puede mejorar costo de compra, pero el caso advierte que precio no es el único costo: plazo, calidad y disponibilidad pueden trasladar el impacto a otras partes del sistema."},{"id":"centralizadas","name":"Aumentar porcentaje de compras centralizadas","type":"Variable estratégica","owner":"Compras + Operaciones","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["costos","compras","tiendas"],"impact":{"ventas":-1,"costos":2,"personas":-1},"detail":"Puede aportar escala y control, pero también quitar autonomía local y reducir velocidad de respuesta ante particularidades de tienda o demanda."},{"id":"ausentismo","name":"Reducir ausentismo","type":"Variable estratégica","owner":"Personas + Operaciones","difficulty":3,"interdep":3,"sp":3,"profile":"Balanceada","topics":["personas","clima","costos"],"impact":{"ventas":1,"costos":1,"personas":1},"detail":"Puede mejorar cobertura y continuidad, aunque el caso no demuestra que el ausentismo sea hoy una causa central. Su priorización requiere evidencia adicional."},{"id":"rotacion_personal","name":"Reducir rotación del personal","type":"Variable estratégica","owner":"Personas + Líderes","difficulty":4,"interdep":4,"sp":4,"profile":"Estructural","topics":["personas","clima","liderazgo"],"impact":{"ventas":1,"costos":1,"personas":2},"detail":"Preserva experiencia y puede reducir costos de reemplazo. Sin embargo, la información disponible habla más claramente de saturación y capacidades que de una rotación crítica."},{"id":"feedback_managers","name":"Aumentar frecuencia y calidad de feedback de managers","type":"Variable estratégica","owner":"Personas + Líderes de tienda","difficulty":2,"interdep":3,"sp":2,"profile":"Quick win","topics":["personas","liderazgo","capacitacion"],"impact":{"ventas":2,"costos":0,"personas":4},"detail":"La información del caso relaciona mejor desempeño con feedback frecuente y líderes presentes. Su dificultad está en proteger tiempo y calidad de conversación en managers ya saturados."},{"id":"digital_tools","name":"Aumentar utilización de herramientas digitales","type":"Variable estratégica","owner":"IT + Operaciones + Personas","difficulty":3,"interdep":4,"sp":3,"profile":"Balanceada","topics":["digital","personas","productividad"],"impact":{"ventas":2,"costos":2,"personas":3},"detail":"Las mejores tiendas muestran mayor utilización de herramientas. El impacto depende de adopción, hábitos y rediseño de trabajo, no de disponer de tecnología por sí sola."}];
-const KEY='hoshin_v29_internal';
+const KEY='hoshin_v31_internal';
 const TARGETS={ventas:15,costos:10,personas:10};
 const SCALE={ventas:{1:.8,2:1.6,3:2.5,4:3.5,5:4.8},costos:{1:.6,2:1.2,3:2.0,4:2.7,5:3.5},personas:{1:.6,2:1.1,3:1.8,4:2.5,5:3.2}};
 const OBJECTIVE_OPTIONS=['Ventas','Costos','Desempeño','Equilibrio de los tres'];
