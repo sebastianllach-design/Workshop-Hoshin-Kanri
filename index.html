@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Simulador Hoshin Workshop v31 · Conversaciones que Transforman</title>
+<title>Hoshin Workshop v33 · Conversaciones que Transforman</title>
 <link rel="icon" type="image/png" href="./favicon-experiencia-japon.png">
 <link rel="shortcut icon" href="./favicon.ico">
 <style>
@@ -19,7 +19,7 @@ section{display:none}section.active{display:block}.card{background:#fff;border:1
 .context-wrap,.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:19px;background:#fff}table{border-collapse:separate;border-spacing:0;width:100%;min-width:900px}th,td{padding:9px 10px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th:last-child,td:last-child{border-right:0}tr:last-child td{border-bottom:0}th{background:#f7faf9;font-size:9.5px;color:#607078;text-transform:uppercase;letter-spacing:.06em;font-weight:950}td{font-size:12px;color:#405159;line-height:1.42}
 .objective-band{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.objective{border:1px solid var(--line);border-top:5px solid var(--teal);border-radius:18px;padding:15px;background:#fff}.objective b{display:block;font-size:15px;margin-bottom:4px}.objective .kr{font-size:22px;font-weight:950;letter-spacing:-.04em}.objective p{font-size:11.5px;color:var(--muted);line-height:1.4}
 .role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.role-card{border:1px solid var(--line);border-radius:16px;background:#fbfdfc;padding:12px}.role-card b{display:block;font-size:12px;margin-bottom:5px}.role-card p{font-size:10.5px;color:var(--muted);margin:5px 0 0;line-height:1.4}
-.unlock{border:1px solid rgba(18,191,165,.22);background:linear-gradient(135deg,#fff,#f4fffb);border-radius:21px;padding:17px}.unlock-head{display:flex;justify-content:space-between;gap:12px}.counter{border:1px solid #bfe8dc;background:#e8f8f3;color:#087e68;border-radius:999px;padding:7px 9px;font-size:10px;font-weight:950;text-transform:uppercase;white-space:nowrap}.question-row{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:12px}.answer-log{display:grid;gap:8px;margin-top:11px}.answer-card{border:1px solid var(--line);background:#fff;border-radius:15px;padding:11px}.answer-card.good{border-color:#bfe8dc}.answer-card.blocked{background:#fffbeb;border-color:#fde68a}.answer-card.denied{background:#fff5f5;border-color:#fecaca}.answer-card .q{font-size:11px;color:#667780;margin-bottom:5px}.answer-card .a{font-size:12px;line-height:1.45}
+.unlock{border:1px solid rgba(18,191,165,.22);background:linear-gradient(135deg,#fff,#f4fffb);border-radius:21px;padding:17px}.unlock-head{display:flex;justify-content:space-between;gap:12px}.counter{border:1px solid #bfe8dc;background:#e8f8f3;color:#087e68;border-radius:999px;padding:7px 9px;font-size:10px;font-weight:950;text-transform:uppercase;white-space:nowrap}.question-guidance{margin:10px 0 0;color:#53666e;font-size:12px;line-height:1.45}.question-bank{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:15px}.question-option{width:100%;min-height:142px;border:1px solid var(--line);border-radius:17px;background:#fff;color:var(--ink);padding:13px;text-align:left;display:flex;flex-direction:column;gap:8px;cursor:pointer;transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease,background .18s ease}.question-option:hover:not(:disabled){border-color:#8ed8c7;box-shadow:0 9px 22px rgba(15,23,42,.08);transform:translateY(-1px)}.question-option:focus-visible{outline:3px solid rgba(18,191,165,.28);outline-offset:2px}.question-option.selected{border:2px solid var(--teal);background:#effcf8;box-shadow:0 0 0 3px rgba(18,191,165,.1)}.question-option.consulted{border-color:#bfe8dc;background:#f2fbf8;cursor:default}.question-option.unavailable{background:#f5f7f6;color:#839097;cursor:not-allowed;opacity:.72}.question-option:disabled{transform:none;box-shadow:none}.question-category{font-size:9.5px;font-weight:950;text-transform:uppercase;letter-spacing:.07em;color:#087e68}.question-text{font-size:12.5px;font-weight:850;line-height:1.42;flex:1}.question-state{align-self:flex-start;border:1px solid var(--line);border-radius:999px;background:#f8fbfa;color:#667780;padding:5px 7px;font-size:9px;font-weight:950;text-transform:uppercase;letter-spacing:.04em}.question-option.selected .question-state{border-color:#8ed8c7;background:#dff7f0;color:#087e68}.question-option.consulted .question-state{border-color:#bfe8dc;background:#e8f8f3;color:#087e68}.question-actions{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:13px;padding-top:13px;border-top:1px solid var(--line)}.question-pending{color:var(--muted);font-size:11.5px;line-height:1.4}.btn:disabled{cursor:not-allowed;opacity:.48;background:#eef3f1;border-color:#dce5e2;color:#7b898e}.answer-log{display:grid;gap:8px;margin-top:15px}.answer-log-title{margin:0;font-size:14px}.answer-card{border:1px solid var(--line);background:#fff;border-radius:15px;padding:12px}.answer-card.good{border-color:#bfe8dc}.answer-card.blocked{background:#fffbeb;border-color:#fde68a}.answer-card.denied{background:#fff5f5;border-color:#fecaca}.answer-card .q{font-size:11px;color:#53666e;margin-bottom:7px;line-height:1.45}.answer-card .a{font-size:12px;line-height:1.5}.answer-label{display:block;font-size:9px;color:#087e68;text-transform:uppercase;letter-spacing:.07em;font-weight:950;margin-bottom:3px}
 .matrix table{min-width:1450px}.var-name{min-width:220px}.var-name b{display:block;color:var(--ink);font-size:12.5px}.var-name small{display:block;color:#76868d;margin-top:3px;font-size:10.5px}.impact{font-weight:950;text-align:center}.impact.pos{color:#15803d}.impact.neg{color:#be123c}.impact.zero{color:#64748b}.tag{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:5px 7px;font-size:9px;font-weight:900;background:#f8fbfa}.tag.quick{background:#e8f8f3;color:#087e68;border-color:#bfe8dc}.tag.struct{background:#eef5ff;color:#2358c5;border-color:#cfe0ff}.tag.bal{background:#fff7ed;color:#a16207;border-color:#fed7aa}.range-wrap{display:grid;grid-template-columns:1fr 42px;gap:7px;align-items:center;min-width:160px}input[type="range"]{padding:0;border:0;box-shadow:none}.range-val{text-align:center;border:1px solid var(--line);background:#fbfdfc;border-radius:10px;padding:6px 3px;font-weight:900}
 .metric-bars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.metric-box{border:1px solid var(--line);border-radius:17px;background:#fff;padding:13px}.metric-box h4{font-size:13px}.metric-value{display:flex;justify-content:space-between;align-items:end;gap:8px}.metric-value b{font-size:24px}.metric-value span{font-size:10.5px;color:var(--muted)}.progress{height:10px;background:#edf3f1;border-radius:999px;overflow:hidden;margin-top:8px}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),#22c55e);border-radius:999px;width:0}.progress.red i{background:linear-gradient(90deg,#f59e0b,#ef4444)}
 .system-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.system-kpi{border:1px solid var(--line);background:#fbfdfc;border-radius:15px;padding:12px}.system-kpi b{display:block;font-size:9.5px;text-transform:uppercase;color:var(--muted);letter-spacing:.06em}.system-kpi span{display:block;font-size:22px;font-weight:950;margin-top:4px}.balance.high{color:#15803d}.balance.mid{color:#a16207}.balance.low{color:#be123c}
@@ -29,7 +29,8 @@ section{display:none}section.active{display:block}.card{background:#fff;border:1
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.field{display:grid;gap:5px}.field label{font-size:9.5px;color:var(--muted);font-weight:950;text-transform:uppercase;letter-spacing:.06em}.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.compare-card{border:1px solid var(--line);border-radius:17px;padding:13px;background:#fbfdfc}.compare-card h4{font-size:13px}.mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.mini{border:1px solid var(--line);background:#fff;border-radius:12px;padding:8px}.mini b{display:block;font-size:8.5px;color:var(--muted);text-transform:uppercase}.mini span{font-size:16px;font-weight:950}
 .a3-table table{min-width:1400px}.a3-table input,.a3-table textarea{font-size:11px;padding:7px}.a3-table textarea{min-height:60px}.eval-table table{min-width:1250px}.eval-table input[type="number"]{width:62px;text-align:center}.rank-list{display:grid;gap:8px}.rank-item{display:flex;justify-content:space-between;gap:10px;align-items:center;border:1px solid var(--line);background:#fff;border-radius:15px;padding:11px}.rank-item .place{font-size:18px;font-weight:950;color:var(--teal)}.rank-item strong{font-size:13px}.rank-item small{display:block;color:var(--muted);font-size:10.5px}.rank-item .total{font-size:23px;font-weight:950}
 .modal-bg{position:fixed;inset:0;background:rgba(15,23,42,.42);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}.modal{max-width:600px;width:100%;background:#fff;border-radius:21px;padding:20px;box-shadow:0 26px 70px rgba(15,23,42,.24)}.modal h3{margin:0 0 7px}.modal p{font-size:12.5px;line-height:1.5;color:var(--muted)}
-@media(max-width:1100px){.layout{grid-template-columns:1fr}aside{position:relative;height:auto}.hero,.grid-2,.grid-3,.grid-4,.score-grid,.metric-bars,.system-kpis,.role-grid,.objective-band,.report-grid,.form-grid,.compare-grid{grid-template-columns:1fr}.toolbar{display:block}.question-row{grid-template-columns:1fr}.prompt-grid{grid-template-columns:1fr}}
+@media(max-width:1100px){.layout{grid-template-columns:1fr}aside{position:relative;height:auto}.hero,.grid-2,.grid-3,.grid-4,.score-grid,.metric-bars,.system-kpis,.role-grid,.objective-band,.report-grid,.form-grid,.compare-grid{grid-template-columns:1fr}.toolbar{display:block}.question-bank{grid-template-columns:repeat(2,minmax(0,1fr))}.prompt-grid{grid-template-columns:1fr}}
+@media(max-width:680px){main{padding:14px}.unlock{padding:14px}.unlock-head,.question-actions{align-items:stretch;flex-direction:column}.counter{align-self:flex-start}.question-bank{grid-template-columns:1fr}.question-option{min-height:auto}.question-actions .btn{width:100%}}
 @media print{aside,.toolbar,.hero-actions,.btn{display:none!important}.layout{display:block}main{padding:0}section{display:block!important}.card,.hero{box-shadow:none}}
 
 /* v09 · Caso y objetivos profundizados */
@@ -675,16 +676,83 @@ main,section,details,.fold-content,.card,.exec-report,
   }
 }
 
+/* v32 · Hoja 1 como Informe Directivo institucional */
+#caso{--ca-navy:#092744;--ca-blue:#175b8f;--ca-teal:#0c8f83;--ca-gold:#d6a342;--ca-ice:#f3f8fa}
+.director-report{display:grid;gap:16px;min-width:0;max-width:100%}
+.report-cover{
+  position:relative;overflow:hidden;min-height:270px;padding:34px;border-radius:28px;
+  color:#fff;background:linear-gradient(122deg,#071e36 0%,#0b3556 56%,#0a756f 100%);
+  box-shadow:0 18px 42px rgba(9,39,68,.18)
+}
+.report-cover:before{content:"";position:absolute;width:360px;height:360px;border:1px solid rgba(255,255,255,.15);border-radius:50%;right:-105px;top:-190px;box-shadow:0 0 0 54px rgba(255,255,255,.035),0 0 0 108px rgba(255,255,255,.025)}
+.report-cover>*{position:relative;z-index:1}
+.report-cover-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.ca-identity{display:flex;align-items:center;gap:13px}
+.ca-logo{width:58px;height:58px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.11);border-radius:17px;display:grid;place-items:center;box-shadow:inset 0 0 0 6px rgba(255,255,255,.045)}
+.ca-logo span{font-size:20px;font-weight:950;letter-spacing:-.08em;color:#fff}
+.ca-name{display:block;font-size:17px;font-weight:950;letter-spacing:.08em}
+.ca-sector{display:block;margin-top:3px;color:rgba(255,255,255,.67);font-size:10px;font-weight:850;text-transform:uppercase;letter-spacing:.1em}
+.report-meta{text-align:right;color:rgba(255,255,255,.72);font-size:10.5px;line-height:1.55;text-transform:uppercase;letter-spacing:.08em;font-weight:850}
+.report-cover h2{max-width:760px;margin:38px 0 9px;font-size:38px;line-height:1.04;letter-spacing:-.045em}
+.report-cover .report-period{display:inline-flex;padding:6px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.09em}
+.report-intro{max-width:920px;margin:18px 0 0;color:rgba(255,255,255,.82);font-size:14px;line-height:1.58}
+.report-index{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;min-width:0}
+.report-index span{border:1px solid #d7e6e7;background:#fff;border-radius:13px;padding:10px 11px;font-size:10px;font-weight:900;color:#48616b;text-align:center;min-width:0}
+.report-index b{display:block;color:var(--ca-teal);font-size:9px;letter-spacing:.08em;margin-bottom:3px}
+#caso .fold-block{border-color:#d7e6e7;box-shadow:0 9px 26px rgba(9,39,68,.055)}
+#caso .fold-block[open]>summary{background:#f5fafb}
+#caso .fold-control{color:var(--ca-teal)}
+#caso .fold-icon{border-color:#bbdcd8;background:#eaf7f5}
+.profile-lead{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:stretch;min-width:0}
+.profile-copy{border-left:5px solid var(--ca-teal);padding:4px 0 4px 17px;min-width:0}
+.profile-copy p{margin:0;color:#4d626c;font-size:13px;line-height:1.62}
+.profile-copy p+p{margin-top:10px}
+.profile-snapshot{display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:0}
+.profile-snapshot div{border:1px solid #dce9e8;background:#f8fbfb;border-radius:15px;padding:12px;min-width:0}
+.profile-snapshot b{display:block;color:var(--ca-navy);font-size:12px}
+.profile-snapshot span{display:block;margin-top:3px;color:#6a7d84;font-size:10.5px;line-height:1.35}
+.report-section-note{margin:0 0 14px;color:#61737b;font-size:12.5px;line-height:1.5}
+#caso .case-story .story{background:linear-gradient(180deg,#fff,#f8fbfb);border-color:#d9e7e7}
+#caso .case-story .story:before{background:linear-gradient(var(--ca-teal),var(--ca-blue))}
+#caso .case-story .story b{color:var(--ca-teal)}
+#caso .case-matrix th{background:#edf6f7;color:#36535e}
+#caso .case-matrix th:first-child,#caso .case-matrix td:first-child{background:#edf6f7;color:var(--ca-teal)}
+.matrix-lens{display:block;margin-top:5px;color:#71858d;font-size:9px;font-weight:700;text-transform:none;letter-spacing:0;line-height:1.25}
+#caso .case-actors{grid-template-columns:repeat(3,minmax(0,1fr))}
+#caso .actor-card{background:linear-gradient(180deg,#fff,#f8fbfb);border-color:#dae8e7}
+#caso .actor-card h4{color:var(--ca-navy)}
+#caso .visible-facts{grid-template-columns:repeat(4,minmax(0,1fr))}
+#caso .fact-card{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff,#f8fbfb);border-color:#d9e7e7;min-height:150px}
+#caso .fact-card:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--ca-teal)}
+#caso .fact-card:nth-child(3n):before{background:var(--ca-blue)}
+#caso .fact-card:nth-child(3n+2):before{background:var(--ca-gold)}
+#caso .fact-card .fact-num{color:var(--ca-navy);font-size:21px;margin-top:3px}
+#caso .fact-card h4{color:#294650}
+#caso .direction-card{border-top-color:var(--ca-teal);background:linear-gradient(180deg,#fff,#f8fbfb)}
+#caso .direction-card:nth-child(2){border-top-color:var(--ca-blue)}
+#caso .direction-card:nth-child(3){border-top-color:var(--ca-gold)}
+#caso .direction-card .eyebrow{color:var(--ca-teal)}
+.board-mandate{margin-top:13px;border:1px solid #b9d9d5;background:linear-gradient(135deg,#f2fbf9,#fff);border-radius:18px;padding:15px 17px}
+.board-mandate b{display:block;color:var(--ca-navy);font-size:11px;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+.board-mandate p{margin:0;color:#45616a;font-size:13px;line-height:1.5}
+@container board (max-width:1180px){#caso .visible-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.report-index{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@container board (max-width:850px){
+ .report-cover{padding:24px 20px;min-height:0}.report-cover-top{display:grid}.report-meta{text-align:left}.report-cover h2{font-size:30px;margin-top:28px}.report-intro{font-size:13px}
+ .report-index,.profile-lead,.profile-snapshot,#caso .case-actors,#caso .visible-facts{grid-template-columns:1fr}
+ .report-index span{text-align:left}#caso .fact-card{min-height:0}
+}
+@media print{.report-cover{background:#0b3556!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.report-index{display:none}}
+
 </style>
 </head>
 <body>
 <button type="button" class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()" aria-expanded="true"><span class="icon">☰</span><span id="sidebarToggleText">Ocultar índice</span></button>
 <div class="layout">
 <aside>
-<div class="brand"><div class="brand-mark"></div><div><strong>GrupoSet</strong><span>Hoshin Workshop · v31</span></div></div>
+<div class="brand"><div class="brand-mark"></div><div><strong>GrupoSet</strong><span>Hoshin Workshop · v33</span></div></div>
 <nav>
 <button class="active" data-target="caso"><i>1</i>Caso y objetivos</button>
-<button data-target="preguntas"><i>2</i>Preguntas al caso</button>
+<button data-target="preguntas"><i>2</i>Consultas a Dirección</button>
 <button data-target="despliegue"><i>3</i>Equipo de liderazgo y despliegue</button>
 <button data-target="reporte"><i>4</i>Reporte al directorio</button>
 <button data-target="feedback"><i>5</i>Catchball con dirección</button>
@@ -703,223 +771,95 @@ main,section,details,.fold-content,.card,.exec-report,
 <div class="toolbar"><div><label>Equipo<select id="teamSelect"></select></label><button class="btn" onclick="addTeam()">+ Equipo</button><label>Nombre<input id="teamName"></label></div><div><button class="btn" onclick="saveTeam()">Guardar</button><button class="btn" onclick="duplicateTeam()">Duplicar</button><button class="btn red" onclick="deleteTeam()">Eliminar</button></div></div>
 
 <section id="caso" class="active">
-<div class="fold-masterbar"><button type="button" class="fold-masterbtn" id="toggleAllCaso" onclick="toggleAllFolds('caso','toggleAllCaso')"><span class="master-icon">⌃</span><span>Ocultar todo</span></button></div>
+<div class="director-report">
+<header class="report-cover">
+<div class="report-cover-top">
+<div class="ca-identity"><div class="ca-logo" aria-label="Comercial Andina"><span>CA</span></div><div><span class="ca-name">COMERCIAL ANDINA</span><span class="ca-sector">Retail regional omnicanal</span></div></div>
+<div class="report-meta">Documento de uso interno<br>Dirección General · Octubre 2026</div>
+</div>
+<span class="report-period">Ciclo de planificación 2027</span>
+<h2>Informe Directivo para la Planificación 2027</h2>
+<p class="report-intro">Este informe reúne la información que el Equipo de Liderazgo utilizará como punto de partida para la planificación 2027. Su propósito es construir una lectura común de la evolución de Comercial Andina, comprender las condiciones actuales del negocio y acordar las prioridades necesarias para el próximo ciclo.</p>
+</header>
 
-<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>Comercial Andina · el desafío 2027</h3><p>Comercial Andina es una empresa regional de retail omnicanal con tiendas físicas, e-commerce y red de distribuidores. Durante años creció apoyada en cercanía con el cliente, buen conocimiento del producto y decisiones rápidas. Ese mismo modelo que permitió crecer empezó a mostrar límites cuando la compañía sumó canales, categorías, campañas y mayor complejidad operativa.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
-<div class="case-brief">
-<h3 class="fold-original-title">Comercial Andina · el desafío 2027</h3>
-<p><b>Comercial Andina</b> es una empresa regional de retail omnicanal con tiendas físicas, e-commerce y red de distribuidores. Durante años creció apoyada en cercanía con el cliente, buen conocimiento del producto y decisiones rápidas. Ese mismo modelo que permitió crecer empezó a mostrar límites cuando la compañía sumó canales, categorías, campañas y mayor complejidad operativa.</p>
-<p>Ustedes integran el <b>Equipo de Liderazgo ampliado</b>. El Directorio ya definió tres resultados que considera críticos para el próximo ciclo. Su tarea no es debatir si esos resultados son “los correctos”, sino decidir qué combinación de variables conviene mover, con capacidad limitada y cuidando el sistema completo.</p>
+<div class="report-index" aria-label="Contenido del informe">
+<span><b>01</b>Perfil</span><span><b>02</b>Evolución</span><span><b>03</b>Lectura estratégica</span><span><b>04</b>Áreas</span><span><b>05</b>Desempeño</span><span><b>06</b>Prioridades 2027</span>
+</div>
+
+<div class="fold-masterbar"><button type="button" class="fold-masterbtn" id="toggleAllCaso" onclick="toggleAllFolds('caso','toggleAllCaso')"><span class="master-icon">⌃</span><span>Ocultar secciones</span></button></div>
+
+<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>01. Perfil de Comercial Andina</h3><p>Actividad, alcance y características del modelo de crecimiento.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
+<div class="profile-lead">
+<div class="profile-copy"><p><b>Comercial Andina</b> es una empresa regional de retail omnicanal que opera mediante tiendas físicas, comercio electrónico y una red de distribuidores.</p><p>Durante años creció apoyada en la cercanía con el cliente, el conocimiento del producto y la capacidad de tomar decisiones rápidas. La incorporación de nuevos canales, categorías y campañas amplió el negocio y, al mismo tiempo, aumentó la complejidad de coordinación entre tiendas y áreas.</p></div>
+<div class="profile-snapshot"><div><b>Alcance</b><span>Operación regional</span></div><div><b>Modelo</b><span>Retail omnicanal</span></div><div><b>Canales</b><span>Tiendas y e-commerce</span></div><div><b>Red</b><span>Distribuidores</span></div></div>
 </div>
 </div></div></details>
-<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>Historia de la empresa</h3><p>La situación actual no apareció de un día para otro. Es resultado de una secuencia de crecimiento, hábitos y decisiones acumuladas.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
-<h3 class="fold-original-title">Historia de la empresa</h3>
-<p class="sub fold-original-subtitle">La situación actual no apareció de un día para otro. Es resultado de una secuencia de crecimiento, hábitos y decisiones acumuladas.</p>
+
+<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>02. Evolución de la compañía</h3><p>Principales etapas que explican la configuración actual del negocio.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
+<p class="report-section-note">La situación actual es resultado de una secuencia de crecimiento, incorporación de capacidades y decisiones acumuladas.</p>
 <div class="case-story">
-<div class="story">
-<b>Etapa 1</b>
-<h4>Una empresa de tiendas</h4>
-<p>Comercial Andina nació como cadena regional de locales físicos. Su diferencial era la cercanía: vendedores conocedores, atención personalizada y fuerte vínculo con clientes habituales.</p>
-</div>
-<div class="story">
-<b>Etapa 2</b>
-<h4>Expansión regional</h4>
-<p>La empresa abrió nuevas sucursales, amplió categorías y comenzó a trabajar con distribuidores. El crecimiento fue rápido y la coordinación siguió siendo principalmente informal.</p>
-</div>
-<div class="story">
-<b>Etapa 3</b>
-<h4>Omnicanalidad</h4>
-<p>El e-commerce pasó de ser un canal complementario a representar una parte relevante de las ventas. Marketing digital, promociones y nuevos medios de pago aceleraron la demanda.</p>
-</div>
-<div class="story">
-<b>Etapa 4</b>
-<h4>El sistema se tensiona</h4>
-<p>La facturación siguió creciendo, pero aparecieron diferencias de stock, reprocesos, costos logísticos, descuentos difíciles de controlar, más reclamos y sobrecarga de líderes.</p>
-</div>
-<div class="story">
-<b>Etapa 5</b>
-<h4>Nuevo ciclo de gestión</h4>
-<p>El Directorio quiere pasar de reaccionar por área a gestionar prioridades comunes. El desafío es crecer, ganar eficiencia y elevar desempeño sin resolver un problema creando otro.</p>
-</div>
+<div class="story"><b>Etapa 1</b><h4>Una empresa de tiendas</h4><p>Comercial Andina nació como cadena regional de locales físicos. Su diferencial era la cercanía: vendedores conocedores, atención personalizada y fuerte vínculo con clientes habituales.</p></div>
+<div class="story"><b>Etapa 2</b><h4>Expansión regional</h4><p>La empresa abrió nuevas sucursales, amplió categorías y comenzó a trabajar con distribuidores. El crecimiento fue rápido y la coordinación siguió siendo principalmente informal.</p></div>
+<div class="story"><b>Etapa 3</b><h4>Desarrollo omnicanal</h4><p>El e-commerce pasó de ser un canal complementario a representar una parte relevante de las ventas. Marketing digital, promociones y nuevos medios de pago aceleraron la demanda.</p></div>
+<div class="story"><b>Etapa 4</b><h4>Mayor complejidad operativa</h4><p>La facturación continuó creciendo mientras aparecían diferencias de stock, reprocesos, costos logísticos, descuentos difíciles de controlar, reclamos y sobrecarga de líderes.</p></div>
+<div class="story"><b>Etapa 5</b><h4>Nuevo ciclo de gestión</h4><p>El Directorio busca pasar de la reacción por área a una gestión de prioridades comunes que combine crecimiento, eficiencia y capacidad organizacional.</p></div>
 </div>
 </div></div></details>
-<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>Situación actual · análisis por niveles y perspectivas</h3><p>Lean el cuadro como equipo. No todas las frases son “pistas” directas; algunas solamente describen el sistema. El trabajo es conectar información antes de decidir.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
-<h3 class="fold-original-title">Situación actual · análisis por niveles y perspectivas</h3>
-<p class="sub fold-original-subtitle">Lean el cuadro como equipo. No todas las frases son “pistas” directas; algunas solamente describen el sistema. El trabajo es conectar información antes de decidir.</p>
-<div class="case-matrix">
-<table>
-<thead>
-<tr>
-<th>Nivel</th>
-<th>Retrospectiva<br/><small>Qué viene pasando</small></th>
-<th>Introspectiva<br/><small>Cómo estamos hoy</small></th>
-<th>Expectativa<br/><small>Qué esperan los actores</small></th>
-<th>Prospectiva<br/><small>Qué puede venir</small></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Mercado</td>
-<td><p>En los últimos años el cliente incorporó la comparación digital como comportamiento habitual. Precio, disponibilidad, comentarios, tiempos de entrega y facilidad de devolución influyen cada vez más en la decisión.</p></td>
-<td><p>La demanda sigue activa, pero el cliente cambia de canal con facilidad. Una mala experiencia online puede afectar la visita a tienda y una mala experiencia en tienda puede llevar al cliente a comparar en la web.</p></td>
-<td><p>Los clientes esperan coherencia: encontrar el producto, recibir información confiable, pagar de forma simple y saber qué ocurre con su pedido. Valoran promociones, pero también disponibilidad y cumplimiento.</p></td>
-<td><p>La competencia tenderá a usar más datos para pricing, surtido, personalización, CRM y reposición. La velocidad para aprender de la operación probablemente pese tanto como la escala.</p></td>
-</tr>
-<tr>
-<td>Rubro</td>
-<td><p>El retail regional creció históricamente con sucursales, promociones estacionales y gestión comercial centrada en volumen. Muchas empresas sumaron e-commerce sin rediseñar totalmente procesos y responsabilidades.</p></td>
-<td><p>Los competidores más avanzados ya integran información de ventas, margen, stock y clientes. Otros siguen administrando cada canal casi como un negocio separado.</p></td>
-<td><p>El rubro exige crecer sin inmovilizar capital innecesariamente, sostener margen y responder rápido a cambios de demanda. Los proveedores también presionan por volumen, condiciones y previsibilidad.</p></td>
-<td><p>El costo de adquisición digital, la presión promocional y la necesidad de cumplir promesas omnicanal harán más difícil competir solo con descuentos o aperturas de locales.</p></td>
-</tr>
-<tr>
-<td>Empresa</td>
-<td><p>Comercial Andina construyó una cultura de resolución rápida y autonomía local. Esa flexibilidad permitió crecer, aunque también generó prácticas distintas entre tiendas, canales y áreas.</p></td>
-<td><p>Hoy conviven tiendas con desempeño muy distinto, un canal digital en expansión, líderes saturados, datos repartidos entre sistemas y decisiones comerciales que no siempre llegan al resto de las áreas con el mismo timing.</p></td>
-<td><p>Dirección quiere crecimiento rentable; Finanzas quiere mayor previsibilidad; Comercial quiere evitar perder oportunidades; Operaciones busca menos urgencias; Personas pide foco y capacidad; clientes esperan promesas cumplidas.</p></td>
-<td><p>Si la empresa continúa creciendo sin mayor alineación, es probable que aumenten las tensiones entre volumen, margen, inventario, servicio y carga de los equipos. El Directorio quiere intervenir antes de que eso se vuelva estructural.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+
+<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>03. Lectura estratégica del entorno y la organización</h3><p>Antecedentes, situación actual, evolución esperada y escenarios relevantes.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
+<p class="report-section-note">La lectura reúne información en tres niveles —mercado, industria y empresa— y distingue entre hechos observados, situación interna, evolución externa esperada y escenarios que Comercial Andina podría construir.</p>
+<div class="case-matrix"><table><thead><tr>
+<th>Nivel</th><th>Retrospectiva<span class="matrix-lens">Qué viene ocurriendo</span></th><th>Introspectiva<span class="matrix-lens">Cómo estamos hoy</span></th><th>Expectativa<span class="matrix-lens">Qué evolución externa esperamos</span></th><th>Prospectiva<span class="matrix-lens">Qué escenario podemos construir</span></th>
+</tr></thead><tbody>
+<tr><td>Mercado</td><td><p>En los últimos años el cliente incorporó la comparación digital como comportamiento habitual. Precio, disponibilidad, comentarios, tiempos de entrega y facilidad de devolución influyen cada vez más en la decisión.</p></td><td><p>La demanda sigue activa, pero el cliente cambia de canal con facilidad. Una mala experiencia online puede afectar la visita a tienda y una mala experiencia en tienda puede llevar al cliente a comparar en la web.</p></td><td><p>Se espera que los clientes continúen elevando sus exigencias de coherencia entre canales, información confiable, simplicidad de compra, visibilidad del pedido y cumplimiento.</p></td><td><p>Comercial Andina puede aspirar a una experiencia integrada donde la cercanía histórica se sostenga con información consistente y capacidad de respuesta en todos los canales.</p></td></tr>
+<tr><td>Industria</td><td><p>El retail regional creció históricamente con sucursales, promociones estacionales y gestión comercial centrada en volumen. Muchas empresas sumaron e-commerce sin rediseñar totalmente procesos y responsabilidades.</p></td><td><p>Los competidores más avanzados integran información de ventas, margen, stock y clientes. Otros todavía administran cada canal casi como un negocio separado.</p></td><td><p>El costo de adquisición digital, la presión promocional y las exigencias de cumplimiento omnicanal seguirán aumentando. Los proveedores mantendrán demandas de volumen, condiciones y previsibilidad.</p></td><td><p>La velocidad de aprendizaje operativo, el uso integrado de datos y la coordinación del abastecimiento pueden ganar tanta relevancia competitiva como la escala o la apertura de nuevos locales.</p></td></tr>
+<tr><td>Empresa</td><td><p>Comercial Andina construyó una cultura de resolución rápida y autonomía local. Esa flexibilidad permitió crecer, aunque también generó prácticas distintas entre tiendas, canales y áreas.</p></td><td><p>Conviven tiendas con desempeños diferentes, un canal digital en expansión, líderes exigidos, información distribuida en varios sistemas y decisiones comerciales que no siempre llegan a las demás áreas con el mismo tiempo y nivel de detalle.</p></td><td><p>Las condiciones del mercado anticipan mayores exigencias de disponibilidad, margen, servicio y velocidad. Si el negocio mantiene su dinámica actual, la complejidad de coordinación también aumentará.</p></td><td><p>El escenario buscado combina autonomía cercana al cliente con prioridades compartidas, información comparable y una ejecución que pueda sostener crecimiento, eficiencia y desarrollo de capacidades.</p></td></tr>
+</tbody></table></div>
 </div></div></details>
-<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>Actores que forman parte del sistema</h3><p>No todos miran la misma realidad ni tienen los mismos incentivos. El juego busca que esas miradas aparezcan dentro de la mesa.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
-<h3 class="fold-original-title">Actores que forman parte del sistema</h3>
-<p class="sub fold-original-subtitle">No todos miran la misma realidad ni tienen los mismos incentivos. El juego busca que esas miradas aparezcan dentro de la mesa.</p>
+
+<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>04. Áreas que intervienen en la planificación</h3><p>Responsabilidades e intereses que deben considerarse en las decisiones del próximo ciclo.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
 <div class="case-actors">
-<div class="actor-card">
-<h4>Directorio / Gerencia General</h4>
-<p>Busca crecimiento sostenible y mayor disciplina de ejecución.</p>
-<ul><li>Observa resultados globales.</li><li>No quiere una mejora local que deteriore otro objetivo.</li></ul>
-</div>
-<div class="actor-card">
-<h4>Comercial y Marketing</h4>
-<p>Necesitan tráfico, conversión, ticket y clientes activos.</p>
-<ul><li>Temen perder velocidad comercial.</li><li>Defienden inversión cuando ven oportunidad de crecimiento.</li></ul>
-</div>
-<div class="actor-card">
-<h4>Finanzas</h4>
-<p>Observa margen, capital inmovilizado, descuentos y retorno.</p>
-<ul><li>Cuestiona crecimiento sin rentabilidad.</li><li>Busca decisiones comparables con datos.</li></ul>
-</div>
-<div class="actor-card">
-<h4>Operaciones / Supply</h4>
-<p>Gestiona disponibilidad, reposición, entregas y capacidad diaria.</p>
-<ul><li>Recibe muchas urgencias.</li><li>Busca estabilidad y prioridades claras.</li></ul>
-</div>
-<div class="actor-card">
-<h4>Personas / RRHH</h4>
-<p>Observa capacidades, rotación, liderazgo y sostenibilidad del trabajo.</p>
-<ul><li>Detecta líderes saturados.</li><li>Busca que el desarrollo ocurra dentro del trabajo real.</li></ul>
-</div>
-<div class="actor-card">
-<h4>Clientes</h4>
-<p>No participan de la mesa, pero condicionan todas las decisiones.</p>
-<ul><li>Esperan disponibilidad y cumplimiento.</li><li>Castigan inconsistencias entre canales.</li></ul>
-</div>
+<div class="actor-card"><h4>Directorio / Gerencia General</h4><p>Busca crecimiento sostenible y mayor disciplina de ejecución.</p><ul><li>Observa resultados globales.</li><li>Procura evitar que una mejora local deteriore otro resultado.</li></ul></div>
+<div class="actor-card"><h4>Comercial y Marketing</h4><p>Gestionan tráfico, conversión, ticket y desarrollo de clientes.</p><ul><li>Necesitan preservar velocidad comercial.</li><li>Promueven inversión cuando identifican oportunidades de crecimiento.</li></ul></div>
+<div class="actor-card"><h4>Finanzas</h4><p>Observa margen, capital inmovilizado, descuentos y retorno.</p><ul><li>Analiza la rentabilidad del crecimiento.</li><li>Busca decisiones comparables apoyadas en datos.</li></ul></div>
+<div class="actor-card"><h4>Operaciones / Supply</h4><p>Gestiona disponibilidad, reposición, entregas y capacidad diaria.</p><ul><li>Absorbe urgencias de tiendas y canales.</li><li>Necesita estabilidad y prioridades claras.</li></ul></div>
+<div class="actor-card"><h4>Personas / RRHH</h4><p>Observa capacidades, rotación, liderazgo y sostenibilidad del trabajo.</p><ul><li>Registra una elevada exigencia sobre los líderes.</li><li>Busca integrar el desarrollo al trabajo cotidiano.</li></ul></div>
+<div class="actor-card"><h4>Clientes</h4><p>No forman parte de la estructura interna, pero condicionan todas las decisiones.</p><ul><li>Esperan disponibilidad y cumplimiento.</li><li>Reaccionan ante inconsistencias entre canales.</li></ul></div>
 </div>
 </div></div></details>
-<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>Datos visibles al inicio del juego</h3><p>Estos datos están disponibles para todos. No explican por sí solos qué hacer ni qué variable es prioritaria.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
-<h3 class="fold-original-title">Datos visibles al inicio del juego</h3>
-<p class="sub fold-original-subtitle">Estos datos están disponibles para todos. No explican por sí solos qué hacer ni qué variable es prioritaria.</p>
+
+<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>05. Síntesis del desempeño actual</h3><p>Indicadores y observaciones consolidadas para el inicio de la planificación.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
 <div class="visible-facts">
-<div class="fact-card">
-<div class="fact-num">+12%</div>
-<h4>Crecimiento interanual de facturación</h4>
-<p>La empresa creció, aunque la rentabilidad no evolucionó al mismo ritmo. Las promociones tuvieron un peso relevante en varios períodos comerciales.</p>
-</div>
-<div class="fact-card">
-<div class="fact-num">18%</div>
-<h4>Participación actual del e-commerce</h4>
-<p>El canal digital continúa creciendo y ya tiene peso suficiente para afectar stock, logística, atención y experiencia general.</p>
-</div>
-<div class="fact-card">
-<div class="fact-num">Desigual</div>
-<h4>Conversión entre sucursales</h4>
-<p>Tiendas comparables muestran diferencias relevantes en ventas, conversión y productividad, incluso con niveles de tráfico similares.</p>
-</div>
-<div class="fact-card">
-<div class="fact-num">Quiebres + sobrestock</div>
-<h4>Inventario</h4>
-<p>Algunas categorías de alta rotación pierden ventas por falta de producto mientras otras acumulan inventario de baja salida.</p>
-</div>
-<div class="fact-card">
-<div class="fact-num">Reclamos recurrentes</div>
-<h4>Experiencia omnicanal</h4>
-<p>Los reclamos más frecuentes mencionan promesas de entrega, diferencias entre stock publicado y real, y poca información durante el seguimiento.</p>
-</div>
-<div class="fact-card">
-<div class="fact-num">60%</div>
-<h4>Cobertura estimada de capacidades críticas</h4>
-<p>Existen brechas en venta consultiva, CRM, lectura de indicadores, liderazgo de tienda y resolución omnicanal.</p>
-</div>
-<div class="fact-card">
-<div class="fact-num">Alta presión</div>
-<h4>Carga en campañas y picos</h4>
-<p>Los períodos promocionales exigen horas extra, reprogramaciones, coordinación rápida y mayor intervención de líderes.</p>
-</div>
-<div class="fact-card">
-<div class="fact-num">Fragmentada</div>
-<h4>Información para decidir</h4>
-<p>Ventas, Finanzas, Operaciones, Marketing y Personas tienen datos relevantes, pero no siempre trabajan con el mismo nivel de detalle ni con la misma frecuencia.</p>
-</div>
+<div class="fact-card"><div class="fact-num">+12%</div><h4>Crecimiento interanual</h4><p>La facturación creció, aunque la rentabilidad no evolucionó al mismo ritmo. Las promociones tuvieron un peso relevante en varios períodos comerciales.</p></div>
+<div class="fact-card"><div class="fact-num">18%</div><h4>Participación del e-commerce</h4><p>El canal digital continúa creciendo y ya tiene peso suficiente para afectar stock, logística, atención y experiencia general.</p></div>
+<div class="fact-card"><div class="fact-num">Desigual</div><h4>Conversión entre sucursales</h4><p>Tiendas comparables muestran diferencias relevantes en ventas, conversión y productividad, incluso con niveles de tráfico similares.</p></div>
+<div class="fact-card"><div class="fact-num">Quiebres + sobrestock</div><h4>Composición del inventario</h4><p>Categorías de alta rotación pierden ventas por falta de producto mientras otras acumulan inventario de baja salida.</p></div>
+<div class="fact-card"><div class="fact-num">Recurrentes</div><h4>Reclamos omnicanal</h4><p>Se concentran en promesas de entrega, diferencias entre stock publicado y real, y falta de información durante el seguimiento.</p></div>
+<div class="fact-card"><div class="fact-num">60%</div><h4>Cobertura de capacidades críticas</h4><p>Persisten brechas en venta consultiva, CRM, lectura de indicadores, liderazgo de tienda y resolución omnicanal.</p></div>
+<div class="fact-card"><div class="fact-num">Alta presión</div><h4>Campañas y picos de demanda</h4><p>Los períodos promocionales requieren horas extra, reprogramaciones, coordinación rápida y mayor intervención de líderes.</p></div>
+<div class="fact-card"><div class="fact-num">Fragmentada</div><h4>Información para decidir</h4><p>Ventas, Finanzas, Operaciones, Marketing y Personas disponen de datos relevantes, pero trabajan con diferente detalle y frecuencia.</p></div>
+<div class="fact-card"><div class="fact-num">Local</div><h4>Autonomía operativa</h4><p>La resolución rápida en cada tienda sigue siendo una fortaleza, aunque produjo prácticas diferentes entre sucursales, canales y áreas.</p></div>
+<div class="fact-card"><div class="fact-num">Limitada</div><h4>Capacidad de transformación</h4><p>Existen oportunidades de automatización y digitalización mientras las áreas mantienen iniciativas abiertas y capacidad acotada para absorber cambios simultáneos.</p></div>
 </div>
 </div></div></details>
-<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>Tensiones que ya son visibles</h3><p>Estas tensiones forman parte del caso. Qué significan para la elección de variables debe debatirse en el equipo.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
-<h3 class="fold-original-title">Tensiones que ya son visibles</h3>
-<p class="sub fold-original-subtitle">Estas tensiones forman parte del caso. Qué significan para la elección de variables debe debatirse en el equipo.</p>
-<div class="tension-list">
-<div class="tension-neutral"><h4>Volumen vs rentabilidad</h4><p>La empresa necesita crecer, pero el Directorio cuestiona cuánto crecimiento está siendo comprado con descuento o inversión comercial.</p></div>
-<div class="tension-neutral"><h4>Disponibilidad vs inventario</h4><p>Comercial reclama producto para vender; Finanzas observa capital inmovilizado; Operaciones enfrenta al mismo tiempo quiebres y sobrestock.</p></div>
-<div class="tension-neutral"><h4>Velocidad vs estabilidad</h4><p>Las campañas y oportunidades comerciales exigen velocidad, mientras Operaciones pide mayor previsibilidad y menos cambios de prioridad.</p></div>
-<div class="tension-neutral"><h4>Autonomía vs coordinación</h4><p>Las tiendas históricamente tuvieron bastante autonomía. La omnicanalidad exige decisiones más consistentes entre canales y áreas.</p></div>
-<div class="tension-neutral"><h4>Desempeño vs carga</h4><p>Dirección quiere productividad y capacidades más altas, pero líderes y equipos vienen de meses de fuerte exigencia.</p></div>
-<div class="tension-neutral"><h4>Transformación vs capacidad</h4><p>Hay oportunidades de automatización y digitalización, aunque las áreas ya tienen proyectos abiertos y capacidad limitada para absorber cambios.</p></div>
-</div>
-</div></div></details>
-<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>Lo que el caso NO les entrega de antemano</h3><p>El caso no explica de entrada qué promociones son rentables, qué causa las diferencias de productividad, qué impacto real tienen los quiebres sobre otros resultados, qué pasa si se reducen horas extra, qué iniciativas digitales fallaron anteriormente ni qué criterio exacto usará Dirección para aceptar un trade-off. Esa información puede aparecer si el equipo formula preguntas suficientemente buenas.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
-<h3 class="fold-original-title">Lo que el caso NO les entrega de antemano</h3>
-<div class="case-boundary">
-<h4>Parte del juego es saber qué preguntar</h4>
-<p>El caso no explica de entrada qué promociones son rentables, qué causa las diferencias de productividad, qué impacto real tienen los quiebres sobre otros resultados, qué pasa si se reducen horas extra, qué iniciativas digitales fallaron anteriormente ni qué criterio exacto usará Dirección para aceptar un trade-off. Esa información puede aparecer si el equipo formula preguntas suficientemente buenas.</p>
-</div>
-</div></div></details>
-<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>Objetivos definidos por Dirección</h3><p>Estos son los fines que la organización busca simultáneamente. El Equipo de Liderazgo debe construir un único portafolio de variables para mover los tres.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
-<h3 class="fold-original-title">Objetivos definidos por Dirección</h3>
-<p class="sub fold-original-subtitle">Estos son los fines que la organización busca simultáneamente. El Equipo de Liderazgo debe construir un único portafolio de variables para mover los tres.</p>
+
+<details class="fold-block" open=""><summary><div class="fold-summary-copy"><h3>06. Prioridades estratégicas 2027</h3><p>Resultados definidos por el Directorio para el próximo ciclo.</p></div><div class="fold-control"><span class="fold-action"></span><span aria-hidden="true" class="fold-icon"></span></div></summary><div class="fold-content"><div class="card">
 <div class="direction-frame">
-<div class="direction-card">
-<div class="eyebrow">Objetivo estratégico 1</div>
-<h4>Crecimiento rentable</h4>
-<div class="kr-big">Ventas +15%</div>
-<p><b>KR Resultado:</b> aumentar la facturación total 15% en el próximo ciclo.</p>
-
+<div class="direction-card"><div class="eyebrow">Prioridad estratégica 1</div><h4>Crecimiento rentable</h4><div class="kr-big">Ventas +15%</div><p><b>Resultado esperado:</b> aumentar la facturación total 15% en el próximo ciclo.</p></div>
+<div class="direction-card"><div class="eyebrow">Prioridad estratégica 2</div><h4>Eficiencia</h4><div class="kr-big">Costos -10%</div><p><b>Resultado esperado:</b> reducir el costo operativo y comercial relativo 10%.</p></div>
+<div class="direction-card"><div class="eyebrow">Prioridad estratégica 3</div><h4>Capacidad organizacional</h4><div class="kr-big">Desempeño +10%</div><p><b>Resultado esperado:</b> mejorar la productividad y las capacidades críticas del personal 10%.</p></div>
 </div>
-<div class="direction-card">
-<div class="eyebrow">Objetivo estratégico 2</div>
-<h4>Eficiencia</h4>
-<div class="kr-big">Costos -10%</div>
-<p><b>KR Resultado:</b> reducir el costo operativo/comercial relativo 10%.</p>
-
-</div>
-<div class="direction-card">
-<div class="eyebrow">Objetivo estratégico 3</div>
-<h4>Capacidad organizacional</h4>
-<div class="kr-big">Desempeño +10%</div>
-<p><b>KR Resultado:</b> mejorar productividad y capacidades críticas del personal 10%.</p>
-
-</div>
-</div>
-<div class="idea" style="margin-top:13px">
-<h3>Consigna de Dirección</h3>
-<p>“No queremos tres planes separados. Queremos una propuesta que explique qué variables moveremos como empresa, cuánto esfuerzo requiere, qué objetivos ayuda o perjudica y qué acuerdos necesitamos para ejecutarla.”</p>
-</div>
+<div class="board-mandate"><b>Mandato del Directorio</b><p>“No queremos tres planes separados. Queremos una propuesta que explique qué variables moveremos como empresa, cuánto esfuerzo requiere, qué objetivos ayuda o perjudica y qué acuerdos necesitamos para ejecutarla.”</p></div>
 </div></div></details>
+</div>
 </section>
 
 <section id="preguntas">
-<div class="card"><div class="unlock"><div class="unlock-head"><div><h2>Preguntas al caso</h2><p class="sub" style="margin:0">Tienen 3 preguntas. Las mejores preguntas no piden la solución: ayudan a comprender relaciones, restricciones y causas antes de entrar al despliegue.</p></div><span class="counter" id="qCounter">0/3</span></div>
-<div class="question-row"><textarea id="qInput" placeholder="Ej.: ¿Qué efecto están teniendo las promociones sobre margen? ¿Los quiebres afectan solo ventas? ¿Qué explica la productividad desigual entre tiendas?"></textarea><button class="btn primary" onclick="askQuestion()">Preguntar</button></div><div id="qLog" class="answer-log"></div></div></div>
+<div class="card"><div class="unlock"><div class="unlock-head"><div><h2>Consultas a Dirección</h2><p class="sub" style="margin:0">La Dirección responderá hasta tres consultas adicionales. Seleccionen aquellas que les permitan comprender mejor las relaciones, restricciones y condiciones del negocio antes de construir la propuesta.</p></div><span class="counter" id="qCounter">Consultas realizadas: 0/3</span></div>
+<p class="question-guidance">Cada consulta utiliza una de las tres oportunidades disponibles. La elección queda confirmada cuando se solicita la respuesta.</p>
+<div id="qBank" class="question-bank" aria-label="Banco de consultas a Dirección"></div>
+<div class="question-actions"><span class="question-pending" id="qPending" aria-live="polite">Seleccionen una consulta para continuar.</span><button class="btn primary" id="qConsultBtn" type="button" onclick="consultSelectedQuestion()" disabled>Consultar a Dirección</button></div>
+<div id="qLog" class="answer-log" aria-live="polite"></div></div></div>
 </section>
 
 <section id="despliegue">
@@ -1144,6 +1084,19 @@ const ARCHETYPES={
 const COMPLEX_WORDS=['automatizar','transformar','implementar sistema','abrir canal','cambiar estructura','integrar','integracion','integración','rediseñar','rediseño'];
 const SIMPLE_WORDS=['piloto','rutina','estandar','estándar','checklist','ajuste','comunicacion','comunicación'];
 const INTERDEP_WORDS=['integracion','integración','omnicanal','transformacion','transformación','transversal','automatizacion','automatización','rediseño','rediseñar'];
+const QUESTION_BANK=[
+ {id:'promo_margen',category:'Crecimiento y rentabilidad',question:'¿Qué relación se observa entre las promociones, el crecimiento de ingresos y el margen?',answer:'Las promociones explican parte del crecimiento reciente, pero el margen de varias categorías cayó. La Dirección necesita distinguir el crecimiento rentable del volumen sostenido mediante descuentos.',unlocks:['promociones','margen']},
+ {id:'quiebres_inventario',category:'Disponibilidad e inventario',question:'¿Qué efectos producen los quiebres de stock y qué riesgo tendría resolverlos aumentando inventario?',answer:'Los quiebres afectan las ventas, generan urgencias, reprocesos y reclamos. Aumentar stock sin mejorar el pronóstico, la reposición y la composición del inventario puede elevar el capital inmovilizado y profundizar el sobrestock.',unlocks:['stock']},
+ {id:'desempeno_tiendas',category:'Desempeño entre tiendas',question:'¿Qué patrones diferencian a las tiendas con mejor desempeño de las demás?',answer:'Las tiendas con mejor desempeño combinan menos tiempos improductivos, mayor utilización de herramientas, liderazgo más presente, estándares claros y mejor cobertura en momentos de demanda. La información disponible no permite atribuir el resultado a una única causa.',unlocks:['productividad','clima']},
+ {id:'horas_extra_cobertura',category:'Horas extra y cobertura',question:'¿Qué origina las horas extra y qué podría ocurrir si simplemente se las reduce?',answer:'Las horas extra se concentran durante promociones, picos de actividad, reprogramaciones y urgencias operativas. Reducirlas sin revisar cobertura, horarios y causas puede trasladar el trabajo, aumentar la carga del equipo o deteriorar el servicio.',unlocks:['productividad','clima']},
+ {id:'capacidades_feedback',category:'Capacitación y liderazgo',question:'¿Qué condiciones hacen que la capacitación se transforme en un mejor desempeño?',answer:'La formación aislada tuvo poco efecto. Las tiendas con mejores resultados combinan práctica, observación, feedback frecuente, líderes presentes y estándares claros. Los líderes, sin embargo, ya muestran una carga de trabajo elevada.',unlocks:['personas','clima']},
+ {id:'adopcion_digital',category:'Adopción digital',question:'¿Qué ocurrió con las iniciativas digitales implementadas anteriormente?',answer:'Varias iniciativas no consiguieron el efecto esperado debido a dificultades de adopción e integración con el trabajo cotidiano. La tecnología estaba disponible, pero su utilización no se consolidó de manera consistente entre las tiendas.',unlocks:['digital']},
+ {id:'logistica_servicio',category:'Logística y servicio',question:'¿Qué relación existe entre el costo logístico, la frecuencia de reposición y la experiencia del cliente?',answer:'La logística incide tanto en costos como en disponibilidad y experiencia. Consolidar entregas puede generar ahorro, pero extender plazos o reducir frecuencias podría aumentar los quiebres y perjudicar la conversión o la recompra.',unlocks:['logistica','stock','clientes']},
+ {id:'compras_costo_total',category:'Compras y costo total',question:'¿Qué riesgos aparecen si Compras prioriza exclusivamente el precio?',answer:'Existen oportunidades de negociación y centralización, pero el precio no representa todo el costo. Los plazos, mínimos de compra, calidad y disponibilidad también pueden afectar inventario, urgencias operativas y ventas.',unlocks:['compras','stock']},
+ {id:'experiencia_omnicanal',category:'Experiencia omnicanal',question:'¿Dónde se concentran los principales reclamos de la experiencia omnicanal?',answer:'Los reclamos se concentran en promesas de entrega incumplidas, diferencias entre el stock publicado y el disponible, y falta de seguimiento. Una mejora interna que deteriore estas condiciones podría producir una optimización local y no una mejora del sistema.',unlocks:['clientes','logistica','digital']},
+ {id:'criterios_directorio',category:'Criterios del Directorio',question:'¿Qué aspectos considerará el Directorio al revisar la propuesta?',answer:'El Directorio observará la contribución a los tres objetivos, la lógica que conecta fines y medios, el uso de la capacidad disponible y la forma en que la propuesta reconoce y gestiona sus interdependencias y trade-offs.',unlocks:['direccion']}
+];
+let pendingQuestionId='';
 
 function uid(){return 't'+Date.now()+Math.floor(Math.random()*99999)}
 function blankManager(){return {logic:'',critical:'',tension:'',exposed:'',tradeoff:'',discarded:'',interdep:'',agreement:'',request:'',speech:''}}
@@ -1189,12 +1142,12 @@ function varById(id,t=team()){return allVars(t).find(v=>v.id===id)}
 function varsForSnapshot(s,t=team()){return [...BASE_VARS,...(s?.customVars||t.customVars||[])]}
 
 function syncTeams(){teamSelect.innerHTML=state.teams.map(t=>`<option value="${t.id}">${esc(t.name)}</option>`).join('');teamSelect.value=currentId;teamName.value=team().name}
-teamSelect.onchange=e=>{saveInputs();currentId=e.target.value;loadInputs();updateAll()};
+teamSelect.onchange=e=>{saveInputs();currentId=e.target.value;pendingQuestionId='';loadInputs();updateAll()};
 teamName.oninput=e=>{team().name=e.target.value||'Mesa';save();syncTeams();renderEvaluation()};
-function addTeam(){saveInputs();const t=blankTeam(state.teams.length+1);state.teams.push(t);currentId=t.id;save();loadInputs();updateAll()}
-function duplicateTeam(){saveInputs();const t=migrateTeam(JSON.parse(JSON.stringify(team())));t.id=uid();t.name+=' copia';t.round1=null;t.final=null;state.teams.push(t);currentId=t.id;save();loadInputs();updateAll()}
-function deleteTeam(){if(state.teams.length===1)return openModal('No se puede eliminar','Debe quedar al menos una mesa.');state.teams=state.teams.filter(x=>x.id!==currentId);currentId=state.teams[0].id;save();loadInputs();updateAll()}
-function resetTeam(){const i=state.teams.findIndex(x=>x.id===currentId),id=currentId,name=team().name,t=blankTeam(i+1);t.id=id;t.name=name;state.teams[i]=t;save();loadInputs();updateAll()}
+function addTeam(){saveInputs();const t=blankTeam(state.teams.length+1);state.teams.push(t);currentId=t.id;pendingQuestionId='';save();loadInputs();updateAll()}
+function duplicateTeam(){saveInputs();const t=migrateTeam(JSON.parse(JSON.stringify(team())));t.id=uid();t.name+=' copia';t.round1=null;t.final=null;state.teams.push(t);currentId=t.id;pendingQuestionId='';save();loadInputs();updateAll()}
+function deleteTeam(){if(state.teams.length===1)return openModal('No se puede eliminar','Debe quedar al menos una mesa.');state.teams=state.teams.filter(x=>x.id!==currentId);currentId=state.teams[0].id;pendingQuestionId='';save();loadInputs();updateAll()}
+function resetTeam(){const i=state.teams.findIndex(x=>x.id===currentId),id=currentId,name=team().name,t=blankTeam(i+1);t.id=id;t.name=name;state.teams[i]=t;pendingQuestionId='';save();loadInputs();updateAll()}
 function saveTeam(){saveInputs();save();openModal('Guardado','La mesa quedó guardada en este navegador.')}
 
 function renderRoleProfiles(){roleProfileGrid.innerHTML=ROLES.map(r=>`<div class="role-profile ${r.manager?'manager':''}"><div class="role-kicker">${r.manager?'Rol integrador':'Perspectiva funcional'}</div><h4>${esc(r.label)}</h4><input value="${esc(team().roles[r.id]||'')}" placeholder="Nombre del participante" oninput="setRole('${r.id}',this.value)"><div class="mini-section"><b>Responsabilidad</b><p>${esc(r.responsibility)}</p></div><div class="mini-section"><b>Tiende a defender</b><p>${esc(r.defends.join(' · '))}</p></div><div class="mini-section"><b>Le preocupa</b><p>${esc(r.concerns.join(' · '))}</p></div><div class="mini-section"><b>Variables que probablemente mire</b><p>${esc(r.looks.join(' · '))}</p></div><div class="mini-section"><b>Debería cuestionar</b><ul>${r.questions.map(q=>`<li>${esc(q)}</li>`).join('')}</ul></div><div class="mini-section"><b>Error a evitar</b><p>${esc(r.error)}</p></div>${r.manager?`<div class="central-question">${esc(r.questions[0])}</div>`:''}</div>`).join('');document.getElementById('despliegue').classList.toggle('facilitator-on',!!team().facilitator);facilitatorStatus.className='facilitator-status '+(team().facilitator?'on':'');facilitatorStatus.textContent=team().facilitator?'Modo facilitador activo. Puede revisar parámetros de variables propias.':'Modo facilitador desactivado. Los parámetros de variables propias están protegidos.'}
@@ -1202,9 +1155,27 @@ function setRole(id,v){team().roles[id]=v;save()}
 function toggleFacilitatorMode(){if(team().facilitator){team().facilitator=false;save();renderRoleProfiles();return}const key=prompt('Clave de modo facilitador:');if(key==='SET'){team().facilitator=true;save();renderRoleProfiles();openModal('Modo facilitador','Activado en esta mesa. Es una protección didáctica local, no seguridad real.')}else if(key!==null)openModal('Clave incorrecta','El modo facilitador sigue desactivado.')}
 
 function unlock(topic){if(!team().unlocked.includes(topic))team().unlocked.push(topic)}
-function answerQuestion(q){const s=normalize(q);if(/(que|cual|cuales).*(variable estratégica|variable|variables|combinacion).*(elegir|conviene|deberia|mejor)|como ganar|dame la solucion|que hacemos/.test(s))return {type:'denied',text:'Ese es el trabajo de la mesa. Dirección puede profundizar datos, relaciones y restricciones, pero no elegir el portafolio por ustedes.'};if(s.length<16)return {type:'blocked',text:'La pregunta es demasiado amplia. Pregunten por una relación concreta: margen, promociones, stock, productividad, personas, logística, clientes o coordinación.'};if(/promocion|descuento|margen|precio/.test(s)){unlock('promociones');unlock('margen');return {type:'good',text:'Las promociones explican parte del crecimiento reciente, pero el margen de varias categorías cayó. Dirección quiere distinguir crecimiento rentable de volumen comprado con descuento.'}}if(/quiebre|stock|inventario|disponibilidad|reposicion/.test(s)){unlock('stock');return {type:'good',text:'Los quiebres afectan Ventas directamente, pero también generan urgencias, reprocesos y mala experiencia. Aumentar stock indiscriminadamente, en cambio, puede empeorar capital inmovilizado.'}}if(/productividad|tiempo improductivo|empleado|horario|turno/.test(s)){unlock('productividad');unlock('clima');return {type:'good',text:'La productividad varía mucho entre tiendas. Las mejores combinan menos tiempos improductivos, mayor uso de herramientas, liderazgo, estándares claros y mejor cobertura en momentos de demanda. Dirección no considera “productividad” una explicación suficiente: la mesa debe identificar qué variables podrían causarla.'}}if(/automat|digital|herramienta|it|sistema|datos/.test(s)){unlock('digital');return {type:'good',text:'La automatización puede liberar capacidad y mejorar información, pero requiere IT, Operaciones, Personas y usuarios. Varias iniciativas digitales anteriores fallaron por adopción, no por tecnología.'}}if(/capacit|formacion|feedback|lider|coaching|persona|clima|rotacion/.test(s)){unlock('personas');unlock('clima');return {type:'good',text:'La formación aislada tuvo poco efecto. Las tiendas con mejor desempeño combinan práctica, feedback frecuente, líderes presentes y estándares claros. Los líderes, sin embargo, están saturados.'}}if(/logistica|entrega|distribucion|supply/.test(s)){unlock('logistica');return {type:'good',text:'Logística pesa en costos y experiencia. Consolidar entregas podría ahorrar, pero extender plazos o reducir frecuencia puede perjudicar conversión y recompra.'}}if(/compra|procurement|proveedor/.test(s)){unlock('compras');return {type:'good',text:'Compras ve oportunidades de negociación y centralización. Operaciones advierte que precio no es el único costo: plazo, calidad y disponibilidad afectan ventas y urgencias.'}}if(/cliente|experiencia|reclamo/.test(s)){unlock('clientes');return {type:'good',text:'Los reclamos se concentran en promesas incumplidas, diferencias de stock y falta de seguimiento. Dirección considera que una mejora que deteriore experiencia puede ser una optimización local.'}}if(/direccion|directorio|criterio|prioridad/.test(s)){unlock('direccion');return {type:'good',text:'Dirección evaluará el equilibrio entre los tres objetivos, la calidad del razonamiento, el uso de capacidad y la forma en que la mesa gestione interdependencias.'}}return {type:'blocked',text:'La pregunta todavía no desbloquea información concreta. Prueben preguntar por una relación causal o una tensión entre dos objetivos.'}}
-function askQuestion(){const q=qInput.value.trim();if(!q)return openModal('Pregunta vacía','Escriban una pregunta concreta.');if(team().questions.length>=3)return openModal('Límite alcanzado','Ya usaron las 3 preguntas.');const a=answerQuestion(q);team().questions.push({q,...a});qInput.value='';save();renderQuestions();renderHints()}
-function renderQuestions(){qCounter.textContent=`${team().questions.length}/3`;qLog.innerHTML=team().questions.length?team().questions.map((x,i)=>`<div class="answer-card ${x.type}"><div class="q"><b>Pregunta ${i+1}:</b> ${esc(x.q)}</div><div class="a">${esc(x.text)}</div></div>`).join(''):'<div class="answer-card"><div class="a">Tienen 3 preguntas para profundizar relaciones y restricciones antes de cerrar el portafolio.</div></div>'}
+function questionById(id){return QUESTION_BANK.find(x=>x.id===id)}
+function questionRecord(id){const item=questionById(id);return item?{id:item.id,q:item.question,type:'good',text:item.answer}:null}
+function consultedQuestionIds(){return new Set((team().questions||[]).map(x=>x.id).filter(Boolean))}
+function selectQuestion(id){const item=questionById(id),used=consultedQuestionIds();if(!item||used.has(id)||team().questions.length>=3)return;pendingQuestionId=pendingQuestionId===id?'':id;renderQuestions()}
+function consultSelectedQuestion(){const item=questionById(pendingQuestionId),used=consultedQuestionIds();if(team().questions.length>=3)return openModal('Consultas completas','La mesa ya utilizó las tres consultas disponibles.');if(!item)return openModal('Seleccionen una consulta','Elijan una pregunta del banco antes de solicitar la respuesta.');if(used.has(item.id)){pendingQuestionId='';renderQuestions();return openModal('Consulta ya realizada','Esa pregunta ya fue respondida por Dirección.')}item.unlocks.forEach(unlock);team().questions.push(questionRecord(item.id));pendingQuestionId='';save();renderQuestions();renderHints()}
+function renderQuestions(){
+ const questions=team().questions||[],used=consultedQuestionIds(),count=questions.length,complete=count>=3;
+ if(complete||used.has(pendingQuestionId)||!questionById(pendingQuestionId))pendingQuestionId='';
+ const counter=document.getElementById('qCounter'),bank=document.getElementById('qBank'),pending=document.getElementById('qPending'),button=document.getElementById('qConsultBtn'),log=document.getElementById('qLog');
+ if(!counter||!bank||!pending||!button||!log)return;
+ counter.textContent=`Consultas realizadas: ${Math.min(count,3)}/3`;
+ bank.innerHTML=QUESTION_BANK.map(item=>{
+  const consulted=used.has(item.id),selected=pendingQuestionId===item.id,unavailable=complete&&!consulted;
+  const state=consulted?'Consultada':selected?'Seleccionada':unavailable?'No disponible':'Disponible';
+  const cls=consulted?'consulted':selected?'selected':unavailable?'unavailable':'';
+  return `<button type="button" class="question-option ${cls}" onclick="selectQuestion('${item.id}')" aria-pressed="${selected?'true':'false'}" aria-label="${esc(item.category)}: ${esc(item.question)}. Estado: ${state}" ${(consulted||unavailable)?'disabled aria-disabled="true"':''}><span class="question-category">${esc(item.category)}</span><span class="question-text">${esc(item.question)}</span><span class="question-state">${state}</span></button>`;
+ }).join('');
+ button.disabled=!pendingQuestionId||complete;
+ pending.textContent=complete?'Se utilizaron las tres consultas disponibles. Continúen el análisis utilizando el Informe Directivo y la información obtenida.':pendingQuestionId?`Consulta seleccionada: ${questionById(pendingQuestionId).question}`:`Seleccionen una consulta para continuar. Quedan ${Math.max(0,3-count)} disponibles.`;
+ log.innerHTML=questions.length?`<h3 class="answer-log-title">Respuestas recibidas</h3>${questions.map((x,i)=>`<div class="answer-card ${esc(x.type||'good')}"><div class="q"><span class="answer-label">Consulta ${i+1}</span>${esc(x.q||'Consulta anterior')}</div><div class="a"><span class="answer-label">Respuesta de Dirección</span>${esc(x.text||'Sin respuesta registrada.')}</div></div>`).join('')}`:'<div class="answer-card"><div class="a">Todavía no se realizaron consultas. Revisen el banco y definan qué información adicional necesita la mesa.</div></div>';
+}
 
 function internalFor(id){return team().internal[id]||{priority:'',var1:'',var2:'',why:'',objection:''}}
 function setInternal(r,k,v){team().internal[r]=team().internal[r]||{};team().internal[r][k]=v;save();renderCandidates();renderMatrix()}
@@ -1288,7 +1259,7 @@ function renderFeedback(){directorPrompts.innerHTML=DIRECTOR_PROMPTS.map(x=>`<di
 
 function saveInputs(){const t=team();t.name=teamName.value||t.name;t.manager=managerFields();t.rethink={learning:re_learning?.value||'',keep:re_keep?.value||'',change:re_change?.value||'',extra:Number(re_extra?.value||0),interdep:re_interdep?.value||'',agreement:re_agreement?.value||''};save()}
 function loadInputs(){syncTeams();setManagerInputs(team().manager||blankManager());const r=team().rethink||{};re_learning.value=r.learning||'';re_keep.value=r.keep||'';re_change.value=r.change||'';re_extra.value=r.extra||0;re_interdep.value=r.interdep||'';re_agreement.value=r.agreement||''}
-document.addEventListener('input',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)&&!['qInput','teamName'].includes(e.target.id))saveInputs()});
+document.addEventListener('input',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)&&e.target.id!=='teamName')saveInputs()});
 function saveFinal(){saveInputs();team().final=snapshot();save();syncA3();renderCompare();openModal('Propuesta final guardada','Se congeló la propuesta final para evaluación y A3.')}
 function compareBlock(title,s){if(!s)return `<div class="compare-card"><h4>${title}</h4><p class="sub">Sin snapshot.</p></div>`;return `<div class="compare-card"><h4>${title}</h4><div class="mini-grid"><div class="mini"><b>Ventas</b><span>${Math.round(s.pct.ventas)}%</span></div><div class="mini"><b>Costos</b><span>${Math.round(s.pct.costos)}%</span></div><div class="mini"><b>Personas</b><span>${Math.round(s.pct.personas)}%</span></div><div class="mini"><b>Equilibrio</b><span>${s.balance}</span></div></div><p class="sub" style="margin-top:8px">${s.sp}/18 SP · Interdependencia ${n1(s.inter)}/5 · Score ${s.auto}</p></div>`}
 function renderCompare(){compare.innerHTML=compareBlock('Ronda 1',team().round1)+compareBlock(team().final?'Propuesta final':'Propuesta actual',team().final||snapshot())}
@@ -1312,9 +1283,9 @@ function makeDemoTeam(kind){
  const t=blankTeam(1);
  t.roles={gerente:'Lucía',comercial:'Martín',finanzas:'Carla',operaciones:'Diego',personas:'Sofía'};
  t.questions=[
-  {q:'¿Qué explica la productividad desigual entre tiendas?',type:'good',text:'Las mejores tiendas combinan menos tiempos improductivos, mayor uso de herramientas, liderazgo, estándares claros y mejor cobertura en momentos de demanda.'},
+  questionRecord('desempeno_tiendas'),
   {q:'¿Qué tensión existe entre crecimiento, inventario y margen?',type:'good',text:'Las promociones ayudaron al crecimiento, mientras conviven quiebres, stock de baja salida y presión sobre margen. Mejorar una dimensión puede trasladar el problema a otra.'}
- ];
+ ].filter(Boolean);
  t.unlocked=['productividad','clima','stock','promociones','margen'];
 
  if(kind==='funcional'){

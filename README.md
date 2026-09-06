@@ -97,3 +97,23 @@
 - El índice sigue siendo ocultable / visible mediante el botón superior.
 - Al ocultarlo, el contenido recupera todo el ancho disponible.
 - En pantallas menores a 1100 px se conserva el comportamiento responsive previo.
+
+## v32 · Hoja 1 convertida en Informe Directivo
+- La Hoja 1 se presenta como el **Informe Directivo para la Planificación 2027** de Comercial Andina.
+- Se incorpora identidad institucional propia, encabezado ejecutivo e índice de seis secciones.
+- El contenido se reorganiza en Perfil, Evolución, Lectura estratégica, Áreas, Desempeño y Prioridades 2027.
+- Se diferencia conceptualmente Retrospectiva, Introspectiva, Expectativa y Prospectiva.
+- Se eliminan de la Hoja 1 las referencias a juego, pistas, información faltante y tensiones explícitamente formuladas.
+- Los hechos que originan esas tensiones se preservan e integran en la historia, la matriz y los indicadores.
+- Se conserva el acuerdo de la v30: Dirección comunica los resultados esperados sin exponer condiciones o respuestas de decisión.
+- Se mantienen las mejoras responsive de la v29, el índice fijo de la v31 y toda la lógica funcional del tablero.
+
+## v33 · Consultas a Dirección seleccionables
+- La Hoja 2 pasa de **Preguntas al caso** a **Consultas a Dirección**.
+- Se elimina el campo de texto libre y el análisis por palabras clave.
+- Se incorpora un banco determinístico de 10 consultas sobre crecimiento, rentabilidad, inventario, desempeño, horas extra, capacidades, adopción digital, logística, compras, experiencia omnicanal y criterios del Directorio.
+- Cada mesa puede confirmar hasta 3 consultas, una por vez, y utilizar cada respuesta para decidir su siguiente elección.
+- Las consultas realizadas quedan bloqueadas, se registran en orden y mantienen la conexión con la información desbloqueada y las variables de la Matriz.
+- Se conserva la clave de almacenamiento y la compatibilidad con preguntas abiertas guardadas por versiones anteriores.
+- Se actualizan los equipos demo sin modificar sus decisiones, variables, Story Points ni evaluaciones.
+- La interfaz utiliza tarjetas accesibles y responsive: 3 columnas en escritorio, 2 en tablet y 1 en móvil.
