@@ -117,3 +117,15 @@
 - Se conserva la clave de almacenamiento y la compatibilidad con preguntas abiertas guardadas por versiones anteriores.
 - Se actualizan los equipos demo sin modificar sus decisiones, variables, Story Points ni evaluaciones.
 - La interfaz utiliza tarjetas accesibles y responsive: 3 columnas en escritorio, 2 en tablet y 1 en móvil.
+
+## v34 · Secciones reparadas y banco de consultas ampliado
+- Se corrige el control **Ocultar secciones / Ver secciones** de la Hoja 1. El problema estaba en que los seis bloques se encontraban dentro del contenedor del Informe Directivo y la función anterior solo buscaba bloques hijos directos de la hoja.
+- La detección de bloques desplegables ahora funciona tanto en la Hoja 1 como en la Hoja 3 y evita incorporar bloques pertenecientes a otras hojas.
+- El banco de la Hoja 2 aumenta de 10 a 20 consultas, manteniendo el límite de 3 elecciones por mesa.
+- La calibración interna del banco es:
+  - **12 consultas (60%)**: entregan información, relaciones o restricciones relevantes del caso.
+  - **4 consultas (20%)**: devuelven la decisión al Equipo de Liderazgo porque forman parte de su trabajo estratégico.
+  - **4 consultas (20%)**: corresponden a un área funcional o a una definición táctica que el Directorio no debe resolver.
+- Los tipos de respuesta no se muestran antes de seleccionar. Todas las tarjetas conservan una apariencia equivalente para que la mesa deba evaluar el valor potencial de cada consulta.
+- Las nuevas opciones cubren, entre otros temas, tráfico y conversión, fragmentación de información, selección del portafolio, prioridad entre objetivos, trade-offs, A3, proveedores, dotación, campañas y herramientas digitales.
+- Se mantienen el límite de tres, la persistencia, la compatibilidad con sesiones v33 y anteriores, y la conexión entre respuestas informativas y variables estratégicas.
