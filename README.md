@@ -129,3 +129,15 @@
 - Los tipos de respuesta no se muestran antes de seleccionar. Todas las tarjetas conservan una apariencia equivalente para que la mesa deba evaluar el valor potencial de cada consulta.
 - Las nuevas opciones cubren, entre otros temas, tráfico y conversión, fragmentación de información, selección del portafolio, prioridad entre objetivos, trade-offs, A3, proveedores, dotación, campañas y herramientas digitales.
 - Se mantienen el límite de tres, la persistencia, la compatibilidad con sesiones v33 y anteriores, y la conexión entre respuestas informativas y variables estratégicas.
+
+## v35 · Roles privados y recorrido directo a la Matriz
+
+- Los perfiles detallados de Gerente General, Comercial / Marketing, Finanzas, Operaciones / Supply y Personas / RRHH dejan de formar parte del tablero público.
+- La Hoja 3 registra únicamente la asignación de participantes a roles; la responsabilidad, intereses, sesgos, preguntas y posición inicial se trabajan en tarjetas privadas impresas.
+- El Gerente General recibe, fuera del tablero, un mapa adicional de perspectivas para integrar el sistema completo.
+- Se eliminan de la interfaz los registros redundantes de posición inicial, Catchball por rol y variables candidatas.
+- La conversación ocurre oralmente y las variables acordadas se incorporan directamente desde el banco completo a la Matriz.
+- La Hoja 3 queda organizada en tres bloques: Equipo asignado, Conversación y Matriz de variables, y Síntesis del Gerente General.
+- El modo facilitador se traslada a los controles de la Matriz y conserva la clave y el comportamiento previos.
+- Los datos `internal` de versiones anteriores se preservan en el estado para mantener compatibilidad, pero ya no se muestran ni se requieren.
+- Se mantienen sin cambios las variables, impactos, Story Points, fórmulas, límite de 7 variables, capacidad de 18 SP, consultas de la Hoja 2, demos, snapshots, Directorio, replanteo, A3 y evaluación.
