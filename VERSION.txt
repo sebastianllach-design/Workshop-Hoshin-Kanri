@@ -1,0 +1,17 @@
+Conversaciones que Transforman - Workshop Hoshin Kanri
+Version: v36
+Fecha: 2026-09-09
+
+Base verificada en GitHub:
+- Repositorio: sebastianllach-design/Workshop-Hoshin-Kanri
+- Rama: main
+- Commit: eb28dec0760219f78d12fd1820eac28acd9b7b2f
+- Mensaje: analisis de contexto
+
+Cambio principal:
+- Asignacion de equipo y roles al comienzo de la Hoja 2.
+- Eliminacion de roles de la Hoja 1 y del bloque redundante de la Hoja 3.
+- Recorrido directo desde consultas a conversacion, Matriz y sintesis.
+
+Marca visible esperada al abrir el tablero:
+Version v36 - Roles antes de consultas

@@ -1,3 +1,10 @@
+# Conversaciones que Transforman · Hoshin Workshop
+
+**Versión actual: v36 · Roles antes de consultas**
+
+Base verificada: último `main` disponible al iniciar el cambio, commit `eb28dec` del 8 de septiembre de 2026.
+
+Al abrir el tablero publicado, la marca **Versión v36 · Roles antes de consultas** debe verse en la portada principal y **Hoshin Workshop · v36** en el índice lateral.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.
@@ -141,3 +148,21 @@
 - El modo facilitador se traslada a los controles de la Matriz y conserva la clave y el comportamiento previos.
 - Los datos `internal` de versiones anteriores se preservan en el estado para mantener compatibilidad, pero ya no se muestran ni se requieren.
 - Se mantienen sin cambios las variables, impactos, Story Points, fórmulas, límite de 7 variables, capacidad de 18 SP, consultas de la Hoja 2, demos, snapshots, Directorio, replanteo, A3 y evaluación.
+
+## v36 · Roles antes de las consultas
+
+- La versión queda identificada de forma visible como **v36** en el título del navegador, el encabezado lateral y un sello dentro de la portada principal.
+- La Hoja 1 elimina el bloque **Áreas que intervienen en la planificación** y queda organizada en cinco secciones institucionales.
+- El nombre del equipo y la asignación de los cinco roles se trasladan al comienzo de la Hoja 2, antes del banco de consultas.
+- El tablero público continúa mostrando únicamente el rol y el nombre del participante; las perspectivas detalladas permanecen en materiales privados.
+- La Hoja 3 elimina el bloque redundante **Equipo asignado** y comienza directamente con Conversación y Matriz de variables.
+- Las secciones de la Hoja 3 se renumeran como **1. Conversación y Matriz de variables** y **2. Síntesis del Gerente General**.
+- El banco común de 20 consultas conserva el límite de tres elecciones y la distribución interna 60% información, 20% decisión del equipo y 20% consulta funcional.
+- Se preservan la clave `hoshin_v31_internal`, las sesiones anteriores, demos, snapshots, reportes, evaluación, modo facilitador, máximo de 7 variables, 18 Story Points, impactos y fórmulas.
+
+### Base verificada
+
+- Repositorio: `sebastianllach-design/Workshop-Hoshin-Kanri`
+- Rama: `main`
+- Commit utilizado como base: `eb28dec0760219f78d12fd1820eac28acd9b7b2f`
+- Fecha de la entrega: 9 de septiembre de 2026.
