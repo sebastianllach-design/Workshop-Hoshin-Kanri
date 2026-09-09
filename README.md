@@ -1,10 +1,10 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v37 · Guía breve de roles**
+**Versión actual: v38 · Roles simplificados**
 
 Base verificada: último `main` disponible al iniciar el cambio, commit `eb28dec` del 8 de septiembre de 2026.
 
-Al abrir el tablero publicado, la marca **Versión v37 · Guía breve de roles** debe verse en la portada principal y **Hoshin Workshop · v37** en el índice lateral.
+Al abrir el tablero publicado, la marca **Versión v38 · Roles simplificados** debe verse en la portada principal y **Hoshin Workshop · v38** en el índice lateral.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.
@@ -168,6 +168,14 @@ Al abrir el tablero publicado, la marca **Versión v37 · Guía breve de roles**
 - El Gerente General se presenta como integrador del sistema completo; los otros cuatro roles mantienen sus perspectivas funcionales.
 - El bloque utiliza dos columnas en escritorio y una columna en pantallas pequeñas para preservar la legibilidad.
 - Se conservan la asignación de participantes, la persistencia, las 20 consultas, el máximo de tres respuestas, la Matriz, los 18 Story Points y toda la lógica posterior.
+
+## v38 · Cierre limpio del bloque de roles
+
+- Se elimina el bloque redundante **Seleccionen las tres consultas que el equipo realizará al Directorio** ubicado al final de las fichas de roles.
+- También se eliminan su texto explicativo, separador y estilos asociados.
+- El bloque **Equipo y roles** termina inmediatamente después de las cinco fichas.
+- La tarjeta siguiente, **Consultas a Dirección**, conserva toda la orientación necesaria para seleccionar las tres consultas.
+- No se modifica ninguna lógica, dato ni componente interactivo.
 
 ### Base verificada
 
