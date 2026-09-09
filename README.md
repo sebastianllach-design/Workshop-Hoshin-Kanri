@@ -1,10 +1,10 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v36 · Roles antes de consultas**
+**Versión actual: v37 · Guía breve de roles**
 
 Base verificada: último `main` disponible al iniciar el cambio, commit `eb28dec` del 8 de septiembre de 2026.
 
-Al abrir el tablero publicado, la marca **Versión v36 · Roles antes de consultas** debe verse en la portada principal y **Hoshin Workshop · v36** en el índice lateral.
+Al abrir el tablero publicado, la marca **Versión v37 · Guía breve de roles** debe verse en la portada principal y **Hoshin Workshop · v37** en el índice lateral.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.
@@ -159,6 +159,15 @@ Al abrir el tablero publicado, la marca **Versión v36 · Roles antes de consult
 - Las secciones de la Hoja 3 se renumeran como **1. Conversación y Matriz de variables** y **2. Síntesis del Gerente General**.
 - El banco común de 20 consultas conserva el límite de tres elecciones y la distribución interna 60% información, 20% decisión del equipo y 20% consulta funcional.
 - Se preservan la clave `hoshin_v31_internal`, las sesiones anteriores, demos, snapshots, reportes, evaluación, modo facilitador, máximo de 7 variables, 18 Story Points, impactos y fórmulas.
+
+## v37 · Guía breve de roles dentro de la Hoja 2
+
+- Se elimina el título **Paso previo a las consultas**.
+- Se elimina el aviso sobre la entrega de tarjetas privadas por parte del facilitador.
+- Cada rol incorpora una guía breve con responsabilidad central, resultado que tiende a custodiar, qué mira/cuidar y errores a evitar, y preguntas para la conversación.
+- El Gerente General se presenta como integrador del sistema completo; los otros cuatro roles mantienen sus perspectivas funcionales.
+- El bloque utiliza dos columnas en escritorio y una columna en pantallas pequeñas para preservar la legibilidad.
+- Se conservan la asignación de participantes, la persistencia, las 20 consultas, el máximo de tres respuestas, la Matriz, los 18 Story Points y toda la lógica posterior.
 
 ### Base verificada
 

@@ -1,5 +1,5 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v36
+Version: v37
 Fecha: 2026-09-09
 
 Base verificada en GitHub:
@@ -8,10 +8,14 @@ Base verificada en GitHub:
 - Commit: eb28dec0760219f78d12fd1820eac28acd9b7b2f
 - Mensaje: analisis de contexto
 
-Cambio principal:
+Cambios acumulados desde v36:
 - Asignacion de equipo y roles al comienzo de la Hoja 2.
 - Eliminacion de roles de la Hoja 1 y del bloque redundante de la Hoja 3.
 - Recorrido directo desde consultas a conversacion, Matriz y sintesis.
 
 Marca visible esperada al abrir el tablero:
-Version v36 - Roles antes de consultas
+Version v37 - Guia breve de roles
+
+Cambio incorporado en v37:
+- La Hoja 2 muestra una guia resumida para actuar cada uno de los cinco roles.
+- Se eliminaron el titulo "Paso previo a las consultas" y el aviso sobre tarjetas privadas.
