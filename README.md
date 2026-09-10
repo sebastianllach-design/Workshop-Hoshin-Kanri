@@ -1,10 +1,10 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v38 · Roles simplificados**
+**Versión actual: v40 · ERIC por arrastre**
 
-Base verificada: último `main` disponible al iniciar el cambio, commit `eb28dec` del 8 de septiembre de 2026.
+Base verificada: último `main` disponible al iniciar el cambio, commit `021a97d` del 9 de septiembre de 2026.
 
-Al abrir el tablero publicado, la marca **Versión v38 · Roles simplificados** debe verse en la portada principal y **Hoshin Workshop · v38** en el índice lateral.
+Al abrir el tablero publicado, la marca **Versión v40 · ERIC por arrastre** debe verse en la portada principal y **Hoshin Workshop · v40** en el índice lateral.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.
@@ -177,9 +177,32 @@ Al abrir el tablero publicado, la marca **Versión v38 · Roles simplificados** 
 - La tarjeta siguiente, **Consultas a Dirección**, conserva toda la orientación necesaria para seleccionar las tres consultas.
 - No se modifica ninguna lógica, dato ni componente interactivo.
 
+## v39 · Claridad estratégica y Matriz ERIC
+
+- La Hoja 3 se reorganiza en cuatro pasos: ordenar indicios con ERIC, seleccionar variables, asignar capacidad y revisar impactos, y construir la síntesis del equipo.
+- Se incorporan 15 indicios factuales del caso, inicialmente sin clasificar, que pueden moverse y reordenarse entre Eliminar, Reducir, Incrementar y Crear.
+- Cada tarjeta puede operarse mediante arrastre o con un selector accesible, y siempre ocupa una única ubicación.
+- ERIC no tiene respuesta precargada, validación, puntaje, exigencia de completitud ni efecto sobre el dashboard.
+- La lectura del problema y el movimiento estratégico se guardan automáticamente por equipo.
+- El banco de variables, la Matriz de impactos y el dashboard se separan visualmente para distinguir interpretación, decisión, capacidad y resultado.
+- La guía de indicadores queda cerrada por defecto y concentra en un solo lugar las explicaciones de contribución, signos, equilibrio, Story Points, interdependencia y Score.
+- Se eliminan las preguntas generales repetidas, la leyenda duplicada de signos y el bloque independiente de principio pedagógico.
+- La síntesis se reduce de nueve preguntas a cuatro campos: lectura del problema, hipótesis de resolución, lógica del portafolio y acuerdos y condiciones críticas.
+- Se conservan la clave `hoshin_v31_internal`, las 20 consultas, el máximo de tres, el banco e impactos de variables, el límite de siete, los 18 Story Points, fórmulas, modo facilitador, demos, snapshots, evaluación, ranking y A3.
+- La migración inicializa ERIC de forma segura en sesiones anteriores y conserva los campos históricos de síntesis aunque ya no se muestren.
+
+## v40 · ERIC por arrastre
+
+- Se elimina de todas las tarjetas ERIC el texto **Ubicar en**, la casilla desplegable y cualquier instrucción asociada al selector.
+- La única forma visible de clasificación es arrastrar la tarjeta completa al cuadrante elegido.
+- Las tarjetas pueden moverse entre Eliminar, Reducir, Incrementar, Crear e Indicios sin clasificar, y reordenarse dentro de una zona.
+- Se incorpora soporte táctil para arrastrar en tablet y móvil, con una copia flotante de la tarjeta y realce visual del destino.
+- Se agrega un indicador visual de agarre en cada tarjeta y se actualizan las instrucciones y estados vacíos para describir una única interacción.
+- Se mantienen la persistencia por equipo, la ausencia de evaluación o resultado ERIC, y toda la lógica de variables, impactos, Story Points, Score, demos y Directorio.
+
 ### Base verificada
 
 - Repositorio: `sebastianllach-design/Workshop-Hoshin-Kanri`
 - Rama: `main`
-- Commit utilizado como base: `eb28dec0760219f78d12fd1820eac28acd9b7b2f`
-- Fecha de la entrega: 9 de septiembre de 2026.
+- Commit verificado en `main`: `021a97d6fa5dd8632cea7c9b27f6e9b9b5cce5fa`
+- Fecha de la entrega: 10 de septiembre de 2026.

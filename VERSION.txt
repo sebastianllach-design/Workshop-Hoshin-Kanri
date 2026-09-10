@@ -1,24 +1,30 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v38
-Fecha: 2026-09-09
+Version: v40
+Nombre: ERIC por arrastre
+Fecha: 2026-09-10
 
 Base verificada en GitHub:
 - Repositorio: sebastianllach-design/Workshop-Hoshin-Kanri
 - Rama: main
-- Commit: eb28dec0760219f78d12fd1820eac28acd9b7b2f
-- Mensaje: analisis de contexto
-
-Cambios acumulados desde v36:
-- Asignacion de equipo y roles al comienzo de la Hoja 2.
-- Eliminacion de roles de la Hoja 1 y del bloque redundante de la Hoja 3.
-- Recorrido directo desde consultas a conversacion, Matriz y sintesis.
+- Commit: 021a97d6fa5dd8632cea7c9b27f6e9b9b5cce5fa
+- Mensaje: sacar socalo final roles hoja 2
+- Version encontrada: v38 - Roles simplificados
 
 Marca visible esperada al abrir el tablero:
-Version v38 - Roles simplificados
+Version v40 - ERIC por arrastre
 
-Cambio incorporado en v37:
-- La Hoja 2 muestra una guia resumida para actuar cada uno de los cinco roles.
-- Se eliminaron el titulo "Paso previo a las consultas" y el aviso sobre tarjetas privadas.
+Cambios principales:
+- Matriz ERIC operada exclusivamente mediante arrastre de tarjetas.
+- Texto "Ubicar en" y selectores eliminados de todos los indicios.
+- Arrastre compatible con mouse, tablet y movil.
+- Reordenamiento y movimiento entre los cuatro cuadrantes y el banco sin clasificar.
+- ERIC se mantiene neutral, sin evaluacion, resultado ni efecto sobre el Score.
 
-Cambio incorporado en v38:
-- Se elimino la transicion redundante hacia las tres consultas que aparecia al fondo del bloque de roles.
+Compatibilidad preservada:
+- Clave localStorage hoshin_v31_internal.
+- Migracion segura de sesiones anteriores.
+- Campos historicos de sintesis conservados en el estado.
+- Banco de 20 consultas y maximo de tres.
+- Banco, impactos y formulas de variables.
+- Maximo de siete variables y 18 Story Points.
+- Modo facilitador, demos, snapshots, reportes, evaluacion, ranking y A3.
