@@ -1,10 +1,10 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v42 · Identidad Comercial Andina**
+**Versión actual: v43 · Logo Comercial Andina optimizado**
 
 Base verificada: último `main` disponible al iniciar el cambio, commit `021a97d` del 9 de septiembre de 2026.
 
-Al abrir el tablero publicado, la marca **Versión v42 · Identidad Comercial Andina** debe verse en la portada principal y **Hoshin Workshop · v42** en el índice lateral.
+Al abrir el tablero publicado, la marca **Versión v43 · Logo Comercial Andina optimizado** debe verse en la portada principal y **Hoshin Workshop · v43** en el índice lateral.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.
@@ -220,6 +220,15 @@ Al abrir el tablero publicado, la marca **Versión v42 · Identidad Comercial An
 - Se optimiza el recorte del recurso para conservar legibilidad en tamaños reducidos sin deformar la imagen original.
 - Se mantiene la posición del Score automático en la esquina superior derecha del reporte.
 - No se modifican contenido, fórmulas, variables, Story Points, ejemplos, persistencia, evaluación ni ranking.
+
+## v43 · Logo Comercial Andina optimizado
+
+- Se elimina completamente el fondo negro del logo incorporado en v42.
+- La marca se reconstruye como SVG transparente para conservar nitidez y legibilidad en cualquier resolución.
+- La Hoja 1 utiliza una variante con iniciales claras y montaña turquesa, diseñada para la portada azul petróleo.
+- La Hoja 4 utiliza una variante con iniciales azul petróleo y montaña turquesa, diseñada para el reporte blanco.
+- Se eliminan bordes, sombras y cajas visuales alrededor de la marca.
+- Se conservan sin cambios el contenido y toda la lógica funcional del tablero.
 
 ### Base verificada
 

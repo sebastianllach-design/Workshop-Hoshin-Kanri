@@ -1,6 +1,6 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v42
-Nombre: Identidad Comercial Andina
+Version: v43
+Nombre: Logo Comercial Andina optimizado
 Fecha: 2026-09-11
 
 Base verificada en GitHub:
@@ -11,12 +11,13 @@ Base verificada en GitHub:
 - Version encontrada: v38 - Roles simplificados
 
 Marca visible esperada al abrir el tablero:
-Version v42 - Identidad Comercial Andina
+Version v43 - Logo Comercial Andina optimizado
 
 Cambios principales:
-- Logo CA con silueta de montana incorporado en la Hoja 1 antes del nombre de la empresa.
-- Logo incorporado en la esquina superior izquierda del reporte al Directorio de la Hoja 4.
-- Recurso grafico optimizado para lectura en encabezados pequenos.
+- Fondo negro eliminado por completo.
+- Logo reconstruido como SVG transparente y nitido.
+- Variante clara para la portada oscura de la Hoja 1.
+- Variante azul petroleo para el reporte blanco de la Hoja 4.
 - Score automatico preservado en la esquina superior derecha del reporte.
 - Formula, variables, impactos, Story Points, ejemplos y ranking preservados.
 
