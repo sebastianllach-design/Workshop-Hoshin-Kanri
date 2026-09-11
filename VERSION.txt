@@ -1,6 +1,6 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v44
-Nombre: Score Final jerarquizado
+Version: v45
+Nombre: Cumplimiento de objetivos destacado
 Fecha: 2026-09-11
 
 Base verificada en GitHub:
@@ -11,13 +11,14 @@ Base verificada en GitHub:
 - Version encontrada: v38 - Roles simplificados
 
 Marca visible esperada al abrir el tablero:
-Version v44 - Score Final jerarquizado
+Version v45 - Cumplimiento de objetivos destacado
 
 Cambios principales:
-- Indicador de Hoja 4 renombrado Score Final.
-- Titulo, valor sobre 100 y explicacion separados en tres niveles visuales.
-- Ubicacion superior derecha, formula y momento de revelacion preservados.
-- Logo, variables, impactos, Story Points, ejemplos y ranking preservados.
+- Nuevo bloque destacado de cumplimiento en la Hoja 4.
+- Ventas, Costos y Desempeno muestran porcentaje de cumplimiento, meta y resultado proyectado.
+- Barras de avance permiten comparar los tres objetivos.
+- Story Points, Interdependencia y Equilibrio quedan como indicadores complementarios.
+- Score Final, formula, ejemplos y ranking preservados.
 
 Compatibilidad preservada:
 - Clave localStorage hoshin_v31_internal.

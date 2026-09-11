@@ -1,10 +1,10 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v44 · Score Final jerarquizado**
+**Versión actual: v45 · Cumplimiento de objetivos destacado**
 
 Base verificada: último `main` disponible al iniciar el cambio, commit `021a97d` del 9 de septiembre de 2026.
 
-Al abrir el tablero publicado, la marca **Versión v44 · Score Final jerarquizado** debe verse en la portada principal y **Hoshin Workshop · v44** en el índice lateral.
+Al abrir el tablero publicado, la marca **Versión v45 · Cumplimiento de objetivos destacado** debe verse en la portada principal y **Hoshin Workshop · v45** en el índice lateral.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.
@@ -236,6 +236,15 @@ Al abrir el tablero publicado, la marca **Versión v44 · Score Final jerarquiza
 - El valor, por ejemplo `92/100`, se presenta en una línea independiente debajo del título.
 - La explicación del cálculo permanece debajo del valor con menor jerarquía tipográfica.
 - Se conservan sin cambios la fórmula, el momento de revelación y la ubicación del indicador.
+
+## v45 · Cumplimiento de objetivos destacado
+
+- La Hoja 4 incorpora un bloque destacado de **Cumplimiento de los objetivos propuestos**.
+- Ventas, Costos y Desempeño muestran en primer plano su porcentaje de cumplimiento.
+- Cada tarjeta conserva la meta definida por Dirección y el resultado proyectado por el portafolio.
+- Una barra de avance permite comparar rápidamente los tres objetivos.
+- Story Points, Interdependencia e Índice de equilibrio permanecen como indicadores complementarios debajo del bloque.
+- El Score Final conserva su ubicación superior derecha y su fórmula original.
 
 ### Base verificada
 
