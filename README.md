@@ -1,10 +1,10 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v41 · Ejemplos integrados y Score al Directorio**
+**Versión actual: v42 · Identidad Comercial Andina**
 
 Base verificada: último `main` disponible al iniciar el cambio, commit `021a97d` del 9 de septiembre de 2026.
 
-Al abrir el tablero publicado, la marca **Versión v41 · Ejemplos integrados y Score al Directorio** debe verse en la portada principal y **Hoshin Workshop · v41** en el índice lateral.
+Al abrir el tablero publicado, la marca **Versión v42 · Identidad Comercial Andina** debe verse en la portada principal y **Hoshin Workshop · v42** en el índice lateral.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.
@@ -211,6 +211,15 @@ Al abrir el tablero publicado, la marca **Versión v41 · Ejemplos integrados y 
 - El Score se revela en la esquina superior derecha del resumen de la Hoja 4 después de usar **Preparar presentación al Directorio**.
 - El Índice de equilibrio se conserva dentro del detalle de indicadores de la Hoja 4.
 - Se mantienen sin cambios la fórmula del Score, los impactos, Story Points, capacidad, variables, persistencia, evaluación humana y cálculo del ranking.
+
+## v42 · Identidad Comercial Andina
+
+- Se incorpora el logo aprobado de Comercial Andina, basado en el monograma **CA** y una silueta de montaña.
+- En la Hoja 1, el logo reemplaza al marcador tipográfico temporal y aparece antes del nombre de la empresa.
+- En la Hoja 4, el logo aparece en la esquina superior izquierda del reporte al Directorio.
+- Se optimiza el recorte del recurso para conservar legibilidad en tamaños reducidos sin deformar la imagen original.
+- Se mantiene la posición del Score automático en la esquina superior derecha del reporte.
+- No se modifican contenido, fórmulas, variables, Story Points, ejemplos, persistencia, evaluación ni ranking.
 
 ### Base verificada
 

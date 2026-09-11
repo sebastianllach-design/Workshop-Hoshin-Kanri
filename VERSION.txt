@@ -1,6 +1,6 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v41
-Nombre: Ejemplos integrados y Score al Directorio
+Version: v42
+Nombre: Identidad Comercial Andina
 Fecha: 2026-09-11
 
 Base verificada en GitHub:
@@ -11,15 +11,14 @@ Base verificada en GitHub:
 - Version encontrada: v38 - Roles simplificados
 
 Marca visible esperada al abrir el tablero:
-Version v41 - Ejemplos integrados y Score al Directorio
+Version v42 - Identidad Comercial Andina
 
 Cambios principales:
-- Tres ejemplos actualizados desde consultas y ERIC hasta propuesta final, A3, evaluacion y ranking.
-- Ronda 1 y propuesta final diferenciadas en cada ejemplo.
-- Score automatico retirado de la Hoja 3.
-- Score automatico revelado en el encabezado de la Hoja 4 al preparar la presentacion.
-- Equilibrio preservado en el detalle del reporte.
-- Formula, variables, impactos, Story Points y ranking preservados.
+- Logo CA con silueta de montana incorporado en la Hoja 1 antes del nombre de la empresa.
+- Logo incorporado en la esquina superior izquierda del reporte al Directorio de la Hoja 4.
+- Recurso grafico optimizado para lectura en encabezados pequenos.
+- Score automatico preservado en la esquina superior derecha del reporte.
+- Formula, variables, impactos, Story Points, ejemplos y ranking preservados.
 
 Compatibilidad preservada:
 - Clave localStorage hoshin_v31_internal.
