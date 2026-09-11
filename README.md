@@ -1,10 +1,10 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v43 · Logo Comercial Andina optimizado**
+**Versión actual: v44 · Score Final jerarquizado**
 
 Base verificada: último `main` disponible al iniciar el cambio, commit `021a97d` del 9 de septiembre de 2026.
 
-Al abrir el tablero publicado, la marca **Versión v43 · Logo Comercial Andina optimizado** debe verse en la portada principal y **Hoshin Workshop · v43** en el índice lateral.
+Al abrir el tablero publicado, la marca **Versión v44 · Score Final jerarquizado** debe verse en la portada principal y **Hoshin Workshop · v44** en el índice lateral.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.
@@ -229,6 +229,13 @@ Al abrir el tablero publicado, la marca **Versión v43 · Logo Comercial Andina 
 - La Hoja 4 utiliza una variante con iniciales azul petróleo y montaña turquesa, diseñada para el reporte blanco.
 - Se eliminan bordes, sombras y cajas visuales alrededor de la marca.
 - Se conservan sin cambios el contenido y toda la lógica funcional del tablero.
+
+## v44 · Score Final jerarquizado
+
+- El indicador superior derecho de la Hoja 4 pasa a titularse **Score Final**.
+- El valor, por ejemplo `92/100`, se presenta en una línea independiente debajo del título.
+- La explicación del cálculo permanece debajo del valor con menor jerarquía tipográfica.
+- Se conservan sin cambios la fórmula, el momento de revelación y la ubicación del indicador.
 
 ### Base verificada
 

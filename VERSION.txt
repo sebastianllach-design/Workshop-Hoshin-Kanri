@@ -1,6 +1,6 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v43
-Nombre: Logo Comercial Andina optimizado
+Version: v44
+Nombre: Score Final jerarquizado
 Fecha: 2026-09-11
 
 Base verificada en GitHub:
@@ -11,15 +11,13 @@ Base verificada en GitHub:
 - Version encontrada: v38 - Roles simplificados
 
 Marca visible esperada al abrir el tablero:
-Version v43 - Logo Comercial Andina optimizado
+Version v44 - Score Final jerarquizado
 
 Cambios principales:
-- Fondo negro eliminado por completo.
-- Logo reconstruido como SVG transparente y nitido.
-- Variante clara para la portada oscura de la Hoja 1.
-- Variante azul petroleo para el reporte blanco de la Hoja 4.
-- Score automatico preservado en la esquina superior derecha del reporte.
-- Formula, variables, impactos, Story Points, ejemplos y ranking preservados.
+- Indicador de Hoja 4 renombrado Score Final.
+- Titulo, valor sobre 100 y explicacion separados en tres niveles visuales.
+- Ubicacion superior derecha, formula y momento de revelacion preservados.
+- Logo, variables, impactos, Story Points, ejemplos y ranking preservados.
 
 Compatibilidad preservada:
 - Clave localStorage hoshin_v31_internal.
