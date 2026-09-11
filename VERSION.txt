@@ -1,6 +1,6 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v45
-Nombre: Cumplimiento de objetivos destacado
+Version: v46
+Nombre: Indicadores complementarios legibles
 Fecha: 2026-09-11
 
 Base verificada en GitHub:
@@ -11,14 +11,14 @@ Base verificada en GitHub:
 - Version encontrada: v38 - Roles simplificados
 
 Marca visible esperada al abrir el tablero:
-Version v45 - Cumplimiento de objetivos destacado
+Version v46 - Indicadores complementarios legibles
 
 Cambios principales:
-- Nuevo bloque destacado de cumplimiento en la Hoja 4.
-- Ventas, Costos y Desempeno muestran porcentaje de cumplimiento, meta y resultado proyectado.
-- Barras de avance permiten comparar los tres objetivos.
-- Story Points, Interdependencia y Equilibrio quedan como indicadores complementarios.
-- Score Final, formula, ejemplos y ranking preservados.
+- Resultados de Story Points, Interdependencia y Equilibrio resaltados moderadamente.
+- Solo cambia la linea numerica de cada indicador.
+- Titulos y textos explicativos permanecen sin cambios.
+- Cumplimiento de objetivos y Score Final conservan mayor jerarquia visual.
+- Formulas, ejemplos y ranking preservados.
 
 Compatibilidad preservada:
 - Clave localStorage hoshin_v31_internal.

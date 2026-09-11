@@ -1,10 +1,10 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v45 · Cumplimiento de objetivos destacado**
+**Versión actual: v46 · Indicadores complementarios legibles**
 
 Base verificada: último `main` disponible al iniciar el cambio, commit `021a97d` del 9 de septiembre de 2026.
 
-Al abrir el tablero publicado, la marca **Versión v45 · Cumplimiento de objetivos destacado** debe verse en la portada principal y **Hoshin Workshop · v45** en el índice lateral.
+Al abrir el tablero publicado, la marca **Versión v46 · Indicadores complementarios legibles** debe verse en la portada principal y **Hoshin Workshop · v46** en el índice lateral.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.
@@ -245,6 +245,13 @@ Al abrir el tablero publicado, la marca **Versión v45 · Cumplimiento de objeti
 - Una barra de avance permite comparar rápidamente los tres objetivos.
 - Story Points, Interdependencia e Índice de equilibrio permanecen como indicadores complementarios debajo del bloque.
 - El Score Final conserva su ubicación superior derecha y su fórmula original.
+
+## v46 · Indicadores complementarios legibles
+
+- Se resaltan moderadamente los resultados numéricos de Story Points, Interdependencia e Índice de equilibrio en la Hoja 4.
+- El cambio se limita al tamaño, peso y color de la línea de resultado.
+- Los títulos y textos explicativos mantienen su jerarquía anterior.
+- El tratamiento sigue siendo deliberadamente menor que el utilizado para el cumplimiento de objetivos y el Score Final.
 
 ### Base verificada
 
