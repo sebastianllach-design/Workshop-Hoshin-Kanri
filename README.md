@@ -1,10 +1,10 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v40 · ERIC por arrastre**
+**Versión actual: v41 · Ejemplos integrados y Score al Directorio**
 
 Base verificada: último `main` disponible al iniciar el cambio, commit `021a97d` del 9 de septiembre de 2026.
 
-Al abrir el tablero publicado, la marca **Versión v40 · ERIC por arrastre** debe verse en la portada principal y **Hoshin Workshop · v40** en el índice lateral.
+Al abrir el tablero publicado, la marca **Versión v41 · Ejemplos integrados y Score al Directorio** debe verse en la portada principal y **Hoshin Workshop · v41** en el índice lateral.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.
@@ -200,9 +200,21 @@ Al abrir el tablero publicado, la marca **Versión v40 · ERIC por arrastre** de
 - Se agrega un indicador visual de agarre en cada tarjeta y se actualizan las instrucciones y estados vacíos para describir una única interacción.
 - Se mantienen la persistencia por equipo, la ausencia de evaluación o resultado ERIC, y toda la lógica de variables, impactos, Story Points, Score, demos y Directorio.
 
+## v41 · Ejemplos integrados y Score al Directorio
+
+- Los tres ejemplos recorren la estructura actual completa: roles, tres consultas, ERIC, lectura del problema, variables, Ronda 1, feedback, replanteo, propuesta final, A3, evaluación y ranking.
+- Cada ejemplo muestra un nivel diferente de madurez: mirada funcional, sistema en tensión y sistema alineado.
+- Los ejemplos utilizan exclusivamente consultas existentes del banco y los cuatro campos actuales de síntesis.
+- La Ronda 1 y la propuesta final quedan congeladas por separado para visualizar el efecto del Catchball.
+- Se incorporan proyectos A3 consistentes con la calidad de razonamiento de cada mesa.
+- El Score automático deja de mostrarse durante la construcción de la Hoja 3.
+- El Score se revela en la esquina superior derecha del resumen de la Hoja 4 después de usar **Preparar presentación al Directorio**.
+- El Índice de equilibrio se conserva dentro del detalle de indicadores de la Hoja 4.
+- Se mantienen sin cambios la fórmula del Score, los impactos, Story Points, capacidad, variables, persistencia, evaluación humana y cálculo del ranking.
+
 ### Base verificada
 
 - Repositorio: `sebastianllach-design/Workshop-Hoshin-Kanri`
 - Rama: `main`
 - Commit verificado en `main`: `021a97d6fa5dd8632cea7c9b27f6e9b9b5cce5fa`
-- Fecha de la entrega: 10 de septiembre de 2026.
+- Fecha de la entrega: 11 de septiembre de 2026.
