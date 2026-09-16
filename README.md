@@ -1,10 +1,44 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v46 · Indicadores complementarios legibles**
+**Versión actual: v49 · Lecturas y síntesis ejecutiva**
 
-Base verificada: último `main` disponible al iniciar el cambio, commit `021a97d` del 9 de septiembre de 2026.
+Base de trabajo: paquete productivo completo de la **v46 · Indicadores complementarios legibles**.
 
-Al abrir el tablero publicado, la marca **Versión v46 · Indicadores complementarios legibles** debe verse en la portada principal y **Hoshin Workshop · v46** en el índice lateral.
+Al abrir el tablero, la marca **Versión v49 · Lecturas y síntesis ejecutiva** debe verse en la portada principal y **Hoshin Workshop · v49** en el índice lateral.
+
+## v49 · Lecturas y síntesis ejecutiva
+
+- La etiqueta verde que identifica la procedencia de la información aparece siempre debajo del texto de conexión con evidencia.
+- **Alertas y efectos cruzados** y **Preguntas que abre el portafolio** se integran en un bloque visible llamado **Lecturas para preparar la síntesis**.
+- El bloque distingue **Efectos y condiciones para considerar** y **Preguntas para preparar la defensa**.
+- Las ayudas utilizan una presentación neutral: no califican la propuesta, no funcionan como acierto o error y no modifican el Score.
+- Únicamente el exceso de los 18 Story Points recibe un énfasis ámbar moderado, por tratarse de una condición objetiva de capacidad.
+- En la Hoja 4, la **Síntesis del Equipo de Liderazgo** aparece inmediatamente después de integrantes y roles.
+- La síntesis se amplía y organiza en cuatro bloques antes del cumplimiento de objetivos, los indicadores complementarios y la Matriz.
+- Se mantienen el banco por temas de v48, las 24 variables, sus impactos, las fórmulas, el máximo de siete variables, los 18 Story Points y la persistencia.
+
+## v48 · Variables organizadas por tema
+
+- Se elimina el botón individual **Ver detalle**.
+- Evidencia, riesgo y condiciones necesarias para el éxito se muestran directamente en la misma fila de cada variable.
+- Las 24 variables quedan agrupadas en seis temas: Crecimiento y clientes; Inventario y supply; Operación y productividad; Personas y liderazgo; Tecnología y coordinación; Compras y costos.
+- Dentro de cada tema, las variables se ordenan alfabéticamente para facilitar su comparación.
+- El buscador y el filtro por tema se mantienen.
+- El bloque completo continúa siendo plegable.
+- Los impactos, la dificultad, la interdependencia y los Story Points siguen ocultos hasta llevar la variable a la Matriz.
+- La Matriz, el dashboard, las fórmulas y las funcionalidades posteriores permanecen idénticos a v46 y v47.
+
+## v47 · Banco cualitativo de variables
+
+- La Hoja 3 comienza directamente con la exploración y selección de variables.
+- Se eliminan de la interfaz visible la Matriz ERIC y el bloque adicional de entendimiento.
+- El banco conserva las 24 variables de la v46 y las presenta en filas compactas.
+- Antes de seleccionar, cada variable permite revisar: conexión con evidencia, riesgo principal y condiciones necesarias para tener éxito.
+- La información de cada variable está cerrada por defecto y puede abrirse u ocultarse individualmente.
+- El banco completo forma parte de un bloque plegable y ofrece controles para mostrar u ocultar todos los detalles.
+- Impactos sobre objetivos, dificultad, interdependencia y Story Points solo aparecen cuando la variable se lleva a la Matriz.
+- La Matriz de variables, el dashboard final de la Matriz, las alertas y la asignación de Story Points conservan la apariencia y el comportamiento de la v46.
+- Se mantienen el máximo de 7 variables, los 18 Story Points, las fórmulas, las consultas, la persistencia, los ejemplos, los snapshots, el Directorio, el Catchball, A3, evaluación y ranking.
 
 ## v20 · Catchball interno simplificado
 - Se eliminó el bloque **“¿Qué ve cada uno?”**.

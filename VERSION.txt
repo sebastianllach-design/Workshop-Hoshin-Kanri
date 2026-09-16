@@ -1,30 +1,31 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v46
-Nombre: Indicadores complementarios legibles
-Fecha: 2026-09-11
+Version: v49
+Nombre: Lecturas y sintesis ejecutiva
+Fecha: 2026-09-16
 
-Base verificada en GitHub:
-- Repositorio: sebastianllach-design/Workshop-Hoshin-Kanri
-- Rama: main
-- Commit: 021a97d6fa5dd8632cea7c9b27f6e9b9b5cce5fa
-- Mensaje: sacar socalo final roles hoja 2
-- Version encontrada: v38 - Roles simplificados
+Base de trabajo verificada:
+- Paquete productivo: Workshop-Hoshin-Kanri-v46-GitHub-Render.zip
+- Version de origen: v46 - Indicadores complementarios legibles
+- La Matriz, el dashboard, las formulas y la persistencia parten de esa version.
 
 Marca visible esperada al abrir el tablero:
-Version v46 - Indicadores complementarios legibles
+Version v49 - Lecturas y sintesis ejecutiva
 
 Cambios principales:
-- Resultados de Story Points, Interdependencia y Equilibrio resaltados moderadamente.
-- Solo cambia la linea numerica de cada indicador.
-- Titulos y textos explicativos permanecen sin cambios.
-- Cumplimiento de objetivos y Score Final conservan mayor jerarquia visual.
-- Formulas, ejemplos y ranking preservados.
+- La procedencia de la informacion queda siempre debajo del texto de conexion con evidencia.
+- Alertas y preguntas se integran en Lecturas para preparar la sintesis.
+- Los efectos y preguntas utilizan una presentacion neutral y no se interpretan como aciertos o errores.
+- Solo exceder los 18 Story Points recibe un enfasis ambar moderado por tratarse de una condicion objetiva de capacidad.
+- En la Hoja 4, la Sintesis del Equipo de Liderazgo aparece inmediatamente despues de roles e integrantes.
+- La sintesis se amplia y organiza en cuatro bloques antes de resultados, indicadores y Matriz.
+- Se preservan el banco cualitativo agrupado por tema y todos los cambios de v48.
+- La Matriz, su dashboard numerico, las formulas y la persistencia conservan su comportamiento.
 
 Compatibilidad preservada:
 - Clave localStorage hoshin_v31_internal.
 - Migracion segura de sesiones anteriores.
 - Campos historicos de sintesis conservados en el estado.
 - Banco de 20 consultas y maximo de tres.
-- Banco, impactos y formulas de variables.
+- Banco de 24 variables, impactos y formulas.
 - Maximo de siete variables y 18 Story Points.
 - Modo facilitador, demos, snapshots, reportes, evaluacion, ranking y A3.
