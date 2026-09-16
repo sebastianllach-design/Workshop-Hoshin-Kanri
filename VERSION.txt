@@ -1,6 +1,6 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v51
-Nombre: Cierre oral en plenario
+Version: v52
+Nombre: Evaluacion y podio
 Fecha: 2026-09-16
 
 Base de trabajo verificada:
@@ -9,9 +9,14 @@ Base de trabajo verificada:
 - La Matriz, el dashboard, las formulas y la persistencia parten de esa version.
 
 Marca visible esperada al abrir el tablero:
-Version v51 - Cierre oral en plenario
+Version v52 - Evaluacion y podio
 
 Cambios principales:
+- La Hoja 6 integra evaluacion y ranking en una tabla final ordenada por resultado total.
+- El primero, segundo y tercer puesto se presentan como podio con jerarquia visual gradual.
+- La cabecera identifica al equipo ganador y resume sus indicadores principales.
+- La Hoja 6 permite cargar los tres ejemplos y compararlos inmediatamente, sin eliminar mesas reales.
+- Se conserva la formula vigente: 60% Score automatico y 40% evaluacion humana.
 - Se eliminan de la interfaz las antiguas Hojas 5 y 6: Catchball con direccion y Replanteo final.
 - La devolucion del Directorio y el Catchball se realizan oralmente y entre todas las mesas.
 - La Hoja 4 incluye una guia breve para conducir la presentacion, las preguntas, el plenario y la sintesis.

@@ -1,10 +1,21 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v51 · Cierre oral en plenario**
+**Versión actual: v52 · Evaluación y podio**
 
 Base de trabajo: paquete productivo completo de la **v46 · Indicadores complementarios legibles**.
 
-Al abrir el tablero, la marca **Versión v51 · Cierre oral en plenario** debe verse en la portada principal y **Hoshin Workshop · v51** en el índice lateral.
+Al abrir el tablero, la marca **Versión v52 · Evaluación y podio** debe verse en la portada principal y **Hoshin Workshop · v52** en el índice lateral.
+
+## v52 · Evaluación y podio
+
+- La Hoja 6 pasa a ser la pantalla final de **Evaluación y podio**.
+- El ranking y la evaluación se integran en una única tabla ordenada automáticamente por resultado total.
+- El primer, segundo y tercer puesto reciben una jerarquía visual gradual de oro, plata y bronce, manteniendo todos los valores editables de la evaluación.
+- Una cabecera identifica explícitamente al equipo ganador y resume su resultado, avance conjunto, equilibrio y Story Points.
+- Se agrega en la misma hoja el botón **Cargar los 3 ejemplos**, que conserva las mesas reales existentes, descarta únicamente la mesa inicial intacta y muestra inmediatamente cómo queda el podio.
+- Se mantiene sin cambios la fórmula del resultado total: 60% Score automático y 40% evaluación humana.
+- Los desempates visuales se ordenan por Score automático, avance conjunto y nombre del equipo, sin modificar el resultado numérico.
+- Se preservan el cierre oral en plenario, las fórmulas, la persistencia, el máximo de siete variables, los 18 Story Points y el resto del recorrido de la v51.
 
 ## v51 · Cierre oral en plenario
 
