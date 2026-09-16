@@ -1,10 +1,17 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v49 · Lecturas y síntesis ejecutiva**
+**Versión actual: v50 · Contador de consultas centrado**
 
 Base de trabajo: paquete productivo completo de la **v46 · Indicadores complementarios legibles**.
 
-Al abrir el tablero, la marca **Versión v49 · Lecturas y síntesis ejecutiva** debe verse en la portada principal y **Hoshin Workshop · v49** en el índice lateral.
+Al abrir el tablero, la marca **Versión v50 · Contador de consultas centrado** debe verse en la portada principal y **Hoshin Workshop · v50** en el índice lateral.
+
+## v50 · Contador de consultas centrado
+
+- En la Hoja 2, el texto **Consultas realizadas: 0/3** queda centrado horizontal y verticalmente dentro de su indicador.
+- El ajuste se mantiene cuando el contador cambia de 0/3 a 3/3.
+- No se modifica el banco de consultas, el máximo de tres selecciones ni ninguna lógica del tablero.
+- Se preservan íntegramente los cambios de la v49.
 
 ## v49 · Lecturas y síntesis ejecutiva
 

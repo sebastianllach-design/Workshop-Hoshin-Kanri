@@ -1,6 +1,6 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v49
-Nombre: Lecturas y sintesis ejecutiva
+Version: v50
+Nombre: Contador de consultas centrado
 Fecha: 2026-09-16
 
 Base de trabajo verificada:
@@ -9,16 +9,12 @@ Base de trabajo verificada:
 - La Matriz, el dashboard, las formulas y la persistencia parten de esa version.
 
 Marca visible esperada al abrir el tablero:
-Version v49 - Lecturas y sintesis ejecutiva
+Version v50 - Contador de consultas centrado
 
 Cambios principales:
-- La procedencia de la informacion queda siempre debajo del texto de conexion con evidencia.
-- Alertas y preguntas se integran en Lecturas para preparar la sintesis.
-- Los efectos y preguntas utilizan una presentacion neutral y no se interpretan como aciertos o errores.
-- Solo exceder los 18 Story Points recibe un enfasis ambar moderado por tratarse de una condicion objetiva de capacidad.
-- En la Hoja 4, la Sintesis del Equipo de Liderazgo aparece inmediatamente despues de roles e integrantes.
-- La sintesis se amplia y organiza en cuatro bloques antes de resultados, indicadores y Matriz.
-- Se preservan el banco cualitativo agrupado por tema y todos los cambios de v48.
+- En la Hoja 2, el texto del contador Consultas realizadas queda centrado horizontal y verticalmente.
+- Se mantiene sin cambios el conteo dinamico de 0/3 a 3/3.
+- Se preservan todos los cambios funcionales y visuales de v49.
 - La Matriz, su dashboard numerico, las formulas y la persistencia conservan su comportamiento.
 
 Compatibilidad preservada:
