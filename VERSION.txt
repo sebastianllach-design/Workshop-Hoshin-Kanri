@@ -1,6 +1,6 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v50
-Nombre: Contador de consultas centrado
+Version: v51
+Nombre: Cierre oral en plenario
 Fecha: 2026-09-16
 
 Base de trabajo verificada:
@@ -9,12 +9,15 @@ Base de trabajo verificada:
 - La Matriz, el dashboard, las formulas y la persistencia parten de esa version.
 
 Marca visible esperada al abrir el tablero:
-Version v50 - Contador de consultas centrado
+Version v51 - Cierre oral en plenario
 
 Cambios principales:
-- En la Hoja 2, el texto del contador Consultas realizadas queda centrado horizontal y verticalmente.
-- Se mantiene sin cambios el conteo dinamico de 0/3 a 3/3.
-- Se preservan todos los cambios funcionales y visuales de v49.
+- Se eliminan de la interfaz las antiguas Hojas 5 y 6: Catchball con direccion y Replanteo final.
+- La devolucion del Directorio y el Catchball se realizan oralmente y entre todas las mesas.
+- La Hoja 4 incluye una guia breve para conducir la presentacion, las preguntas, el plenario y la sintesis.
+- A3 y Evaluacion toman como referencia directa la presentacion congelada en la Hoja 4.
+- A3 y Evaluacion se renumeran como Hojas 5 y 6.
+- Se preservan todos los cambios funcionales y visuales de v50.
 - La Matriz, su dashboard numerico, las formulas y la persistencia conservan su comportamiento.
 
 Compatibilidad preservada:
@@ -25,3 +28,4 @@ Compatibilidad preservada:
 - Banco de 24 variables, impactos y formulas.
 - Maximo de siete variables y 18 Story Points.
 - Modo facilitador, demos, snapshots, reportes, evaluacion, ranking y A3.
+- Los campos historicos de feedback y replanteo se toleran en sesiones anteriores, pero ya no se muestran ni intervienen en el flujo activo.

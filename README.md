@@ -1,10 +1,21 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v50 · Contador de consultas centrado**
+**Versión actual: v51 · Cierre oral en plenario**
 
 Base de trabajo: paquete productivo completo de la **v46 · Indicadores complementarios legibles**.
 
-Al abrir el tablero, la marca **Versión v50 · Contador de consultas centrado** debe verse en la portada principal y **Hoshin Workshop · v50** en el índice lateral.
+Al abrir el tablero, la marca **Versión v51 · Cierre oral en plenario** debe verse en la portada principal y **Hoshin Workshop · v51** en el índice lateral.
+
+## v51 · Cierre oral en plenario
+
+- Se eliminan de la interfaz las antiguas Hojas 5 y 6: **Catchball con dirección** y **Replanteo final**.
+- La navegación queda renumerada sin saltos: A3 pasa a la Hoja 5 y Evaluación y ranking a la Hoja 6.
+- La Hoja 4 incorpora un cierre liviano para la **devolución del Directorio y el Catchball oral**, sin campos ni carga adicional para los equipos.
+- El cierre propone una secuencia común: presentación, preguntas del Directorio, intercambio entre mesas y síntesis del facilitador.
+- La propuesta congelada en la Hoja 4 pasa a ser la referencia para A3 y para la evaluación; ya no existe dependencia funcional de un replanteo posterior.
+- La evaluación conserva el criterio de Catchball, ahora identificado como **Catchball oral**.
+- Los ejemplos y los mensajes de navegación se ajustan al recorrido reducido.
+- Se mantienen íntegros el Informe Directivo, las consultas, el banco de variables, la Matriz, el dashboard, las fórmulas, los 18 Story Points y el Score Final.
 
 ## v50 · Contador de consultas centrado
 
