@@ -1,16 +1,17 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v56
-Nombre: Deportes Andina - eliminacion segura de experiencias
+Version: v57
+Nombre: Deportes Andina - eliminacion simple de experiencias
 Fecha: 2026-09-20
 
 Marca visible:
-- Portada: Version v56 - Deportes Andina
-- Indice lateral: Hoshin Workshop - v56
-- Titulo del navegador y metadato: v56
+- Portada: Version v57 - Deportes Andina
+- Indice lateral: Hoshin Workshop - v57
+- Titulo del navegador y metadato: v57
 
-Cambios v56:
-- El panel permite eliminar una experiencia creada por la cuenta facilitadora conectada.
-- La accion exige confirmacion inicial y escritura del codigo de la experiencia.
+Cambios v57:
+- El panel permite eliminar una experiencia con una sola confirmacion.
+- Ya no es necesario escribir el codigo de la experiencia.
+- El aviso identifica el nombre, el codigo y la cantidad de equipos afectados.
 - Se eliminan equipos, secretos de acceso, membresias anonimas, ranking publico y documento principal.
 - El borrado se ejecuta en lotes compatibles con el limite de Firebase.
 - Ante una interrupcion, el documento principal se conserva hasta el ultimo lote para permitir reintentar.

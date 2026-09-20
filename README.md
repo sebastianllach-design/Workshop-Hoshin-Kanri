@@ -1,10 +1,26 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v56 · Eliminación segura de experiencias**
+**Versión actual: v57 · Eliminación simple de experiencias**
 
 Base de trabajo: paquete productivo completo de la **v46 · Indicadores complementarios legibles**.
 
-Al abrir el tablero, la marca **Versión v56 · Deportes Andina** debe verse en la portada principal y **Hoshin Workshop · v56** en el índice lateral.
+Al abrir el tablero, la marca **Versión v57 · Deportes Andina** debe verse en la portada principal y **Hoshin Workshop · v57** en el índice lateral.
+
+## v57 · Eliminación simple de experiencias
+
+- El facilitador puede eliminar una experiencia con una sola confirmación.
+- Ya no necesita escribir el código de la experiencia.
+- El aviso muestra el nombre, el código y la cantidad de equipos antes de borrar.
+- La eliminación continúa siendo completa: borra equipos, secretos de acceso, membresías anónimas, ranking público y documento principal.
+- Se conservan la validación de propiedad, el bloqueo contra doble clic, el cierre preventivo y los lotes seguros para Firebase.
+- No cambian las reglas, colecciones, fórmulas, evaluación, ranking ni experiencia de los participantes.
+
+### Archivos principales de v57
+
+- `facilitator.js`: confirmación única y borrado completo.
+- `CHANGELOG-v57.md`: detalle funcional.
+- `INSTRUCCIONES-PUBLICACION-v57.md`: publicación y prueba mínima.
+- `qa_v57.js`: validaciones automáticas.
 
 ## v56 · Eliminación segura de experiencias
 
