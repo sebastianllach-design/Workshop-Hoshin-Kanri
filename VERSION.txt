@@ -1,36 +1,29 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v52
-Nombre: Evaluacion y podio
-Fecha: 2026-09-16
+Version: v55
+Nombre: Deportes Andina - nota unica del Panel y dialogo guiado
+Fecha: 2026-09-20
 
-Base de trabajo verificada:
-- Paquete productivo: Workshop-Hoshin-Kanri-v46-GitHub-Render.zip
-- Version de origen: v46 - Indicadores complementarios legibles
-- La Matriz, el dashboard, las formulas y la persistencia parten de esa version.
+Marca visible:
+- Portada: Version v55 - Deportes Andina
+- Indice lateral: Hoshin Workshop - v55
+- Titulo del navegador y metadato: v55
 
-Marca visible esperada al abrir el tablero:
-Version v52 - Evaluacion y podio
+Cambios v55:
+- El facilitador registra una sola nota final numerica de 1 a 10.
+- Fines-medios, interdependencias, Catchball y defensa se contemplan mediante preguntas para el dialogo del Panel.
+- No se puede finalizar una evaluacion sin una nota valida.
+- La formula conserva 50% Score automatico y 50% nota del Panel.
+- Ranking y podio muestran la nota del Panel sobre 10.
+- El desempate utiliza total, nota del Panel y Score automatico.
+- Las evaluaciones v54 se convierten automaticamente sin alterar su resultado.
+- No cambian Firebase, las reglas, las colecciones ni el flujo multiequipo.
 
-Cambios principales:
-- La Hoja 6 integra evaluacion y ranking en una tabla final ordenada por resultado total.
-- El primero, segundo y tercer puesto se presentan como podio con jerarquia visual gradual.
-- La cabecera identifica al equipo ganador y resume sus indicadores principales.
-- La Hoja 6 permite cargar los tres ejemplos y compararlos inmediatamente, sin eliminar mesas reales.
-- Se conserva la formula vigente: 60% Score automatico y 40% evaluacion humana.
-- Se eliminan de la interfaz las antiguas Hojas 5 y 6: Catchball con direccion y Replanteo final.
-- La devolucion del Directorio y el Catchball se realizan oralmente y entre todas las mesas.
-- La Hoja 4 incluye una guia breve para conducir la presentacion, las preguntas, el plenario y la sintesis.
-- A3 y Evaluacion toman como referencia directa la presentacion congelada en la Hoja 4.
-- A3 y Evaluacion se renumeran como Hojas 5 y 6.
-- Se preservan todos los cambios funcionales y visuales de v50.
-- La Matriz, su dashboard numerico, las formulas y la persistencia conservan su comportamiento.
-
-Compatibilidad preservada:
-- Clave localStorage hoshin_v31_internal.
-- Migracion segura de sesiones anteriores.
-- Campos historicos de sintesis conservados en el estado.
-- Banco de 20 consultas y maximo de tres.
-- Banco de 24 variables, impactos y formulas.
+Elementos preservados:
+- Clave historica localStorage hoshin_v31_internal.
+- Acceso por sesion, equipo y PIN.
+- Memoria central Firestore y respaldo local.
+- Banco de consultas y maximo de tres.
+- Banco e impactos de variables.
 - Maximo de siete variables y 18 Story Points.
-- Modo facilitador, demos, snapshots, reportes, evaluacion, ranking y A3.
-- Los campos historicos de feedback y replanteo se toleran en sesiones anteriores, pero ya no se muestran ni intervienen en el flujo activo.
+- Formula del Score automatico.
+- Roles, Catchball, presentacion al Directorio, temporizador y migracion segura.

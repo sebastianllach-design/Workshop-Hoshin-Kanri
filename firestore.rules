@@ -1,0 +1,74 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isFacilitator() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'facilitator';
+    }
+
+    function hasMembership(workshopId) {
+      return signedIn()
+        && exists(/databases/$(database)/documents/workshops/$(workshopId)/members/$(request.auth.uid));
+    }
+
+    function memberTeam(workshopId) {
+      return get(/databases/$(database)/documents/workshops/$(workshopId)/members/$(request.auth.uid)).data.teamId;
+    }
+
+    match /users/{userId} {
+      allow read: if isFacilitator() || (signedIn() && request.auth.uid == userId);
+      allow write: if false;
+    }
+
+    match /workshops/{workshopId} {
+      allow create: if isFacilitator()
+        && request.resource.data.facilitatorUid == request.auth.uid;
+      allow get: if signedIn();
+      allow list: if isFacilitator();
+      allow update, delete: if isFacilitator();
+
+      match /teamSecrets/{teamId} {
+        allow read, create, update, delete: if isFacilitator();
+      }
+
+      match /members/{userId} {
+        allow read: if isFacilitator() || (signedIn() && request.auth.uid == userId);
+        allow create: if signedIn()
+          && request.auth.uid == userId
+          && get(/databases/$(database)/documents/workshops/$(workshopId)).data.status == 'open'
+          && request.resource.data.keys().hasOnly(['teamId', 'role', 'proof', 'claimedAt'])
+          && request.resource.data.role == 'team'
+          && request.resource.data.teamId is string
+          && exists(/databases/$(database)/documents/workshops/$(workshopId)/teamSecrets/$(request.resource.data.teamId))
+          && request.resource.data.proof == get(/databases/$(database)/documents/workshops/$(workshopId)/teamSecrets/$(request.resource.data.teamId)).data.proof;
+        allow update, delete: if isFacilitator();
+      }
+
+      match /teams/{teamId} {
+        allow read: if isFacilitator()
+          || (hasMembership(workshopId) && memberTeam(workshopId) == teamId);
+        allow create, delete: if isFacilitator();
+        allow update: if isFacilitator()
+          || (
+            hasMembership(workshopId)
+            && memberTeam(workshopId) == teamId
+            && resource.data.locked != true
+            && get(/databases/$(database)/documents/workshops/$(workshopId)).data.status == 'open'
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+              'name', 'state', 'progress', 'metrics', 'currentSection', 'updatedAt', 'lastSeen'
+            ])
+          );
+      }
+
+      match /public/{documentId} {
+        allow read: if isFacilitator() || hasMembership(workshopId);
+        allow create, update, delete: if isFacilitator();
+      }
+    }
+  }
+}

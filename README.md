@@ -1,10 +1,79 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v52 · Evaluación y podio**
+**Versión actual: v55 · Nota única del Panel y diálogo guiado**
 
 Base de trabajo: paquete productivo completo de la **v46 · Indicadores complementarios legibles**.
 
-Al abrir el tablero, la marca **Versión v52 · Evaluación y podio** debe verse en la portada principal y **Hoshin Workshop · v52** en el índice lateral.
+Al abrir el tablero, la marca **Versión v55 · Deportes Andina** debe verse en la portada principal y **Hoshin Workshop · v55** en el índice lateral.
+
+## v55 · Nota única del Panel
+
+- El facilitador asigna una sola nota final numérica de `1 a 10`; ya no califica cuatro componentes por separado.
+- Fines–medios, interdependencias, Catchball y defensa se muestran como preguntas guía para sostener el diálogo del Panel.
+- No es posible finalizar una evaluación sin una nota válida.
+- El total conserva la ponderación `50% Score automático + 50% nota final del Panel`.
+- El ranking, el podio y la vista publicada muestran la nota del Panel sobre 10.
+- Las evaluaciones v54 se migran automáticamente: los cuatro puntajes anteriores se convierten a su equivalente integrado sobre 10.
+- Los desempates se resuelven por total, nota del Panel y Score automático; los empates completos comparten posición.
+- No cambian el modelo Firebase, las reglas, las colecciones ni el flujo de acceso.
+
+### Archivos principales de v55
+
+- `index.html`: experiencia de participantes, modo demostración y ranking actualizado.
+- `facilitator.html` y `facilitator.js`: diálogo guiado, nota única y publicación del podio.
+- `cloud-sync.js`: vista publicada compatible con rankings nuevos y anteriores.
+- `CHANGELOG-v55.md`: detalle funcional y compatibilidad.
+- `INSTRUCCIONES-PUBLICACION-v55.md`: actualización en GitHub y Render.
+- `qa_v55.js`: verificación automatizada.
+
+## v54 · Deportes Andina y dinámica final
+
+- El caso adquiere identidad de retail deportivo: calzado, indumentaria, accesorios y equipamiento para distintas disciplinas.
+- Los objetivos 2027 se presentan como un escalón de una dirección estratégica de largo plazo, sin crear KPI adicionales.
+- Una introducción reabrible explica Hoshin Kanri, Catchball y el entregable esperado.
+- El facilitador controla un temporizador sincronizado por etapa; todas las mesas lo ven en tiempo real y el tiempo cumplido no bloquea la carga.
+- El Índice de equilibrio permanece oculto durante la selección y se revela debajo del Score automático en la presentación al Directorio.
+- La fórmula final es `50% Score automático + 50% Evaluación del Panel de Directores`.
+- Se elimina la hoja de proyectos A3 y toda referencia visible; los campos históricos se toleran únicamente para migración.
+- La evaluación final separa equipos reales, ejemplos y vista conjunta. Los ejemplos nunca definen el ganador real.
+- Los equipos sin presentación o evaluación finalizada aparecen como pendientes, sin puesto definitivo.
+- El podio ordena por total, defensa y Score automático; los empates completos comparten posición.
+- Se conservan consultas, variables, impactos, 18 Story Points, máximo de siete variables, Score automático, roles, Catchball, Firebase, respaldo local y migración.
+
+### Archivos principales de v54
+
+- `index.html`: experiencia de participantes y modo demostración.
+- `facilitator.html` y `facilitator.js`: seguimiento, temporizador, evaluación y podio.
+- `cloud-sync.js`: acceso, memoria, temporizador remoto y ranking publicado.
+- `firestore.rules`: aislamiento de datos y permisos.
+- `ARQUITECTURA-MULTIEQUIPO-v54.md`: modelo técnico.
+- `INSTRUCCIONES-PUBLICACION-v54.md`: publicación.
+- `qa_v54.js`: validaciones automáticas.
+
+## v53 · Prueba multiequipo con Firebase
+
+- Se agrega acceso por código de experiencia, código de equipo y PIN, sin cuentas personales para participantes.
+- Cada equipo trabaja sobre un documento privado y no puede ver el avance de las demás mesas.
+- Firestore pasa a ser la memoria compartida; `localStorage` se conserva como respaldo y compatibilidad.
+- El guardado remoto utiliza una demora controlada para reducir escrituras y mantener la cuota gratuita.
+- Se incorpora `facilitator.html`, una vista privada para crear sesiones y equipos, observar avances, pausar la edición, evaluar y publicar el podio.
+- La evaluación humana se guarda fuera del estado editable por los equipos.
+- El ranking permanece oculto hasta que el facilitador decide publicarlo.
+- Los tres ejemplos se mantienen en modo demostración separado mediante `index.html?demo=1`.
+- Se incluyen reglas de seguridad, configuración Firebase, documentación de arquitectura y guía completa de puesta en marcha.
+- No se modifican variables, impactos, máximo de siete variables, 18 Story Points ni fórmulas de Score.
+
+### Archivos principales de v53
+
+- `index.html`: experiencia de participantes y modo demostración.
+- `facilitator.html`: panel privado del facilitador.
+- `cloud-sync.js`: acceso de equipos, memoria remota, respaldo y ranking publicado.
+- `facilitator.js`: administración de sesiones, equipos, evaluación y podio.
+- `firebase-config.js`: datos del proyecto Firebase que deben completarse antes de publicar.
+- `firestore.rules`: aislamiento de datos y permisos.
+- `SETUP-FIREBASE.md`: configuración paso a paso.
+- `ARQUITECTURA-MULTIEQUIPO-v53.md`: decisiones técnicas y modelo de datos de esa versión.
+- `qa_v53.js`: validaciones automáticas de esa versión.
 
 ## v52 · Evaluación y podio
 
@@ -169,7 +238,7 @@ Al abrir el tablero, la marca **Versión v52 · Evaluación y podio** debe verse
 - En pantallas menores a 1100 px se conserva el comportamiento responsive previo.
 
 ## v32 · Hoja 1 convertida en Informe Directivo
-- La Hoja 1 se presenta como el **Informe Directivo para la Planificación 2027** de Comercial Andina.
+- La Hoja 1 se presenta como el **Informe Directivo para la Planificación 2027** de Deportes Andina.
 - Se incorpora identidad institucional propia, encabezado ejecutivo e índice de seis secciones.
 - El contenido se reorganiza en Perfil, Evolución, Lectura estratégica, Áreas, Desempeño y Prioridades 2027.
 - Se diferencia conceptualmente Retrospectiva, Introspectiva, Expectativa y Prospectiva.
@@ -275,16 +344,16 @@ Al abrir el tablero, la marca **Versión v52 · Evaluación y podio** debe verse
 - El Índice de equilibrio se conserva dentro del detalle de indicadores de la Hoja 4.
 - Se mantienen sin cambios la fórmula del Score, los impactos, Story Points, capacidad, variables, persistencia, evaluación humana y cálculo del ranking.
 
-## v42 · Identidad Comercial Andina
+## v42 · Identidad Deportes Andina
 
-- Se incorpora el logo aprobado de Comercial Andina, basado en el monograma **CA** y una silueta de montaña.
+- Se incorpora el logo aprobado de Deportes Andina, basado en el monograma **CA** y una silueta de montaña.
 - En la Hoja 1, el logo reemplaza al marcador tipográfico temporal y aparece antes del nombre de la empresa.
 - En la Hoja 4, el logo aparece en la esquina superior izquierda del reporte al Directorio.
 - Se optimiza el recorte del recurso para conservar legibilidad en tamaños reducidos sin deformar la imagen original.
 - Se mantiene la posición del Score automático en la esquina superior derecha del reporte.
 - No se modifican contenido, fórmulas, variables, Story Points, ejemplos, persistencia, evaluación ni ranking.
 
-## v43 · Logo Comercial Andina optimizado
+## v43 · Logo Deportes Andina optimizado
 
 - Se elimina completamente el fondo negro del logo incorporado en v42.
 - La marca se reconstruye como SVG transparente para conservar nitidez y legibilidad en cualquier resolución.
