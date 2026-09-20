@@ -1,22 +1,20 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v55
-Nombre: Deportes Andina - nota unica del Panel y dialogo guiado
+Version: v56
+Nombre: Deportes Andina - eliminacion segura de experiencias
 Fecha: 2026-09-20
 
 Marca visible:
-- Portada: Version v55 - Deportes Andina
-- Indice lateral: Hoshin Workshop - v55
-- Titulo del navegador y metadato: v55
+- Portada: Version v56 - Deportes Andina
+- Indice lateral: Hoshin Workshop - v56
+- Titulo del navegador y metadato: v56
 
-Cambios v55:
-- El facilitador registra una sola nota final numerica de 1 a 10.
-- Fines-medios, interdependencias, Catchball y defensa se contemplan mediante preguntas para el dialogo del Panel.
-- No se puede finalizar una evaluacion sin una nota valida.
-- La formula conserva 50% Score automatico y 50% nota del Panel.
-- Ranking y podio muestran la nota del Panel sobre 10.
-- El desempate utiliza total, nota del Panel y Score automatico.
-- Las evaluaciones v54 se convierten automaticamente sin alterar su resultado.
-- No cambian Firebase, las reglas, las colecciones ni el flujo multiequipo.
+Cambios v56:
+- El panel permite eliminar una experiencia creada por la cuenta facilitadora conectada.
+- La accion exige confirmacion inicial y escritura del codigo de la experiencia.
+- Se eliminan equipos, secretos de acceso, membresias anonimas, ranking publico y documento principal.
+- El borrado se ejecuta en lotes compatibles con el limite de Firebase.
+- Ante una interrupcion, el documento principal se conserva hasta el ultimo lote para permitir reintentar.
+- No cambian reglas, colecciones, formulas, evaluacion, ranking ni flujo de participantes.
 
 Elementos preservados:
 - Clave historica localStorage hoshin_v31_internal.
