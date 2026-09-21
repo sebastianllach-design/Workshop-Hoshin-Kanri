@@ -1,32 +1,41 @@
-Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v58
-Nombre: Deportes Andina - facilitacion por hojas y cierre automatico
-Fecha: 2026-09-20
+Conversaciones que Transforman · Comercial Andina
+Version: v59
+Nombre: Control seguro de etapas, reaperturas y publicacion
+Fecha: 2026-09-21
 
-Marca visible:
-- Portada: Version v58 - Deportes Andina
-- Indice lateral: Hoshin Workshop - v58
-- Titulo del navegador y metadato: v58
+Version verificada antes de trabajar:
+- Ultima entrega local completa: v58.
+- Version publicada en Render al 2026-09-21: v58.
+- Base elegida: carpeta completa v58, copiada a v59 sin reemplazarla por versiones anteriores.
 
-Cambios v58:
-- El facilitador habilita una hoja y su tiempo para todas las mesas.
-- Las hojas futuras quedan bloqueadas y las etapas finalizadas pasan a solo lectura.
-- Al vencer la Hoja 2 se cierran roles y consultas.
-- Al vencer la Hoja 3 se congelan variables, Story Points y sintesis, y se genera la presentacion de la Hoja 4.
-- Pausar, reanudar, sumar tiempo y reiniciar mantienen el control en manos del facilitador.
-- La vision incluye cinco nuevas sucursales para 2029 y se ubica al final del Perfil.
-- La Hoja 2 incorpora dos bloques desplegables.
-- Se corrige la guia Mostrar/Ocultar de la Matriz y se elimina el aviso de desplazamiento de la lectura estrategica.
-- El Indice de equilibrio queda como indicador independiente en el reporte.
-- Se conserva la eliminacion simple de experiencias incorporada en v57.
-- No cambian reglas, colecciones, formulas, evaluacion, ranking ni flujo de participantes.
+Marca visible v59:
+- Pantalla de acceso: Version 59, en forma discreta.
+- Indice lateral: Version 59.
+- Panel privado: Version 59.
+- Titulo del navegador y metadato: Version 59.
+
+Cambios principales:
+- Estados claros por hoja: no habilitada, habilitada sin iniciar, en curso, tiempo finalizado, cerrada y reabierta excepcionalmente.
+- Navegacion privada del facilitador separada de la hoja activa de participantes.
+- Reapertura por equipo o para todos, con tiempo adicional opcional e independiente.
+- Hoja 2 bloqueada al vencer; Hoja 3 guardada, bloqueada y convertida en presentacion antes de habilitar Hoja 4.
+- Hoja 4 sin cronometro de bloqueo; cronometro de exposicion independiente.
+- Nota unica del Directorio entre 1 y 10, ranking calculado y publicacion explicita.
+- Sorteo persistente del orden de presentacion.
+- Equipos con codigo y PIN aleatorios, renombrado, regeneracion y Copiar acceso.
+- Sincronizacion de cambios por campo, indicador de guardado y aviso de otra sesion activa.
+- Variables propias con analisis previo deterministico y parametros persistidos.
+- Eliminacion simple de experiencias, con una confirmacion y advertencia irreversible.
+- Reglas Firestore restringidas al facilitador propietario y al equipo autenticado.
 
 Elementos preservados:
-- Clave historica localStorage hoshin_v31_internal.
-- Acceso por sesion, equipo y PIN.
-- Memoria central Firestore y respaldo local.
+- Clave historica localStorage hoshin_v31_internal y migracion de sesiones anteriores.
+- Informe Directivo de Comercial Andina y modelo de negocio.
+- Lectura compartida, variables, sintesis, A3 y presentacion al Directorio.
 - Banco de consultas y maximo de tres.
-- Banco e impactos de variables.
-- Maximo de siete variables y 18 Story Points.
-- Formula del Score automatico.
-- Roles, Catchball, presentacion al Directorio, temporizador y migracion segura.
+- Impactos existentes, maximo de siete variables y capacidad base de 18 Story Points.
+- Formulas vigentes de Score automatico, interdependencia, equilibrio y resultado final 50/50.
+- Estado demo, ejemplos, diseño responsive y guia privada del facilitador.
+
+Publicacion:
+- No se publico en GitHub, Render ni Firebase durante esta entrega.

@@ -1,58 +1,51 @@
-# Configuración de Firebase · v58
+# Configuración de Firebase · v59
 
-Esta versión usa el plan gratuito **Firebase Spark** y no necesita Cloud Functions. Render continúa alojando los archivos estáticos; Firebase aporta autenticación, memoria compartida y actualización en tiempo real.
+La aplicación usa Firebase Authentication y Cloud Firestore. Render sirve los archivos estáticos. No requiere Cloud Functions ni Firebase Hosting.
 
-## 1. Crear el proyecto
+## 1. Región
 
-1. Ingresar en `https://console.firebase.google.com/`.
-2. Crear un proyecto nuevo, por ejemplo `conversaciones-transforman`.
-3. Google Analytics no es necesario para esta prueba.
-4. En **Compilación > Firestore Database**, crear una base en modo producción.
-5. Si los participantes estarán en Tokio, elegir **`asia-northeast1` (Tokyo)**. La región de Firestore no puede cambiarse después de crear la base.
+Si el uso principal será en Tokio, elegí **`asia-northeast1` (Tokyo)** al crear Firestore. Reduce latencia para los participantes y la ubicación no puede cambiarse después.
 
-## 2. Activar los accesos
+Si la base ya existe en otra región, no crees una segunda base solo por esta versión: probá la latencia y decidí la migración por separado.
 
-En **Compilación > Authentication > Sign-in method** activar:
+## 2. Authentication
 
-- **Correo electrónico/contraseña**, para el facilitador.
-- **Anónimo**, para los equipos.
+En **Authentication → Sign-in method** activá:
 
-Los participantes no crearán cuentas personales. Cada computadora recibe una identidad anónima y la vincula con el código y PIN del equipo.
+- Correo electrónico/contraseña para facilitadores.
+- Anónimo para participantes.
 
-## 3. Registrar la aplicación web
+Los usuarios anónimos aparecen en **Authentication → Users** solamente después de que un participante ingresa correctamente por primera vez. Activar el método no crea usuarios por sí solo.
 
-1. En **Configuración del proyecto > Tus apps**, elegir el icono Web `</>`.
-2. Registrar la app. No es necesario activar Firebase Hosting.
-3. Copiar los valores de `firebaseConfig`.
-4. Abrir `firebase-config.js` y reemplazar todos los valores `REEMPLAZAR_*`.
+## 3. Aplicación web
 
-La configuración web de Firebase es pública por diseño. La protección de los datos se realiza mediante Authentication y `firestore.rules`.
+En **Configuración del proyecto → Tus apps**, registrá una aplicación web y copiá sus valores en `firebase-config.js`. Esa configuración identifica el proyecto y es pública por diseño; la protección real está en Authentication y `firestore.rules`.
 
-## 4. Crear al facilitador
+## 4. Cuenta facilitadora
 
-1. En **Authentication > Users**, crear el usuario con el correo y contraseña que utilizará el facilitador.
-2. Copiar su `User UID`.
-3. En Firestore crear la colección `users`.
-4. Crear un documento cuyo ID sea exactamente el UID copiado.
-5. Agregar estos campos:
+1. Creá una cuenta individual en **Authentication → Users**.
+2. Copiá su UID.
+3. En Firestore creá `users/{UID}` con:
 
 | Campo | Tipo | Valor |
-|---|---|---|
+| --- | --- | --- |
 | `role` | string | `facilitator` |
-| `email` | string | correo del facilitador |
+| `email` | string | correo individual |
 | `name` | string | nombre visible |
 
-El tablero no permite que un usuario se asigne a sí mismo el rol de facilitador.
+El rol no puede asignarse desde el navegador.
 
-## 5. Publicar las reglas de seguridad
+## 5. Reglas e índices
 
-Opción simple:
+La v59 cambia las reglas; deben publicarse antes de usar sus nuevas funciones.
 
-1. Abrir **Firestore Database > Rules**.
-2. Copiar el contenido completo de `firestore.rules`.
-3. Presionar **Publish**.
+Desde Firebase Console:
 
-Opción con Firebase CLI:
+1. Abrí **Firestore Database → Rules**.
+2. Copiá todo `firestore.rules`.
+3. Publicá.
+
+O con Firebase CLI:
 
 ```bash
 npm install -g firebase-tools
@@ -61,71 +54,58 @@ firebase use --add
 firebase deploy --only firestore:rules,firestore:indexes
 ```
 
-## 6. Autorizar el dominio publicado
+## 6. Dominios autorizados
 
-En **Authentication > Settings > Authorized domains**, agregar el dominio utilizado en Render, por ejemplo:
+En **Authentication → Settings → Authorized domains** agregá:
 
 ```text
 workshop-hoshin-kanri.onrender.com
 ```
 
-Para probar localmente, `localhost` suele estar autorizado por defecto.
+Para pruebas locales, verificá que `localhost` esté autorizado.
 
-## 7. Publicar en Render
+## 7. Prueba local corta
 
-Subir todos los archivos de esta carpeta al repositorio publicado. No excluir:
+```bash
+python3 -m http.server 8000
+```
 
-- `index.html`
-- `facilitator.html`
-- `cloud-sync.js`
-- `facilitator.js`
-- `firebase-config.js`
-- logos y favicon
+1. Abrí `http://localhost:8000/facilitator.html`.
+2. Ingresá con la cuenta facilitadora.
+3. Creá una experiencia cerrada y un equipo.
+4. Copiá el acceso.
+5. Abrí la experiencia.
+6. En otra ventana, abrí el enlace y escribí el PIN.
+7. Confirmá que el equipo aparece en el panel y que el guardado llega a `Guardado`.
 
-Los archivos `firestore.rules`, `firebase.json` y la documentación pueden permanecer en el repositorio aunque Render no los ejecute.
+No es necesario ejecutar todo el taller localmente; el archivo `PRUEBAS-v59.md` incluye una prueba de aceptación concentrada.
 
-## 8. Preparar una prueba
+## 8. Antes del evento
 
-1. Abrir `facilitator.html` en el dominio publicado.
-2. Ingresar con el usuario facilitador.
-3. Crear una experiencia y elegir un código.
-4. Crear cada equipo con nombre, código y PIN.
-5. Compartir el enlace generado y el PIN correspondiente.
-6. Cambiar el estado de la experiencia a **Abierta**.
-7. Observar el avance de las mesas en tiempo real.
-8. Si es necesario, usar **Pausar edición** por equipo o pausar toda la experiencia.
-9. Después de cada presentación, conversar sobre fines–medios, interdependencias, Catchball y defensa; luego ingresar una única nota final del Panel de 1 a 10 y finalizar la evaluación.
-10. Presionar **Publicar / actualizar podio**.
-
-## 9. Prueba técnica mínima antes del encuentro
-
-- Abrir dos navegadores distintos o una ventana normal y otra de incógnito.
-- Ingresar como dos equipos diferentes.
-- Completar roles y una consulta en ambos.
-- Confirmar que el panel muestra avances independientes.
-- Recargar un equipo y comprobar que recupera su información.
-- Desconectar internet, editar un campo, reconectar y comprobar la sincronización.
-- Pausar un equipo desde el panel y confirmar que no puede guardar nuevos cambios.
-- Publicar el podio y confirmar que aparece en ambos equipos.
-- Ocultar el podio y comprobar que deja de estar disponible.
-
-## 10. Recuperación y respaldo
-
-- Firestore es la memoria central de la experiencia.
-- Cada equipo mantiene además un respaldo local en su navegador.
-- El panel permite exportar la experiencia completa como JSON.
-- Se recomienda exportar una copia al terminar cada ensayo.
+- Cambiá desde Firebase Authentication la contraseña mencionada durante la reunión. No la guardes en archivos ni mensajes del proyecto.
+- Usá una cuenta individual por facilitador.
+- Publicá las reglas v59.
+- Confirmá Email/Password y Anonymous.
+- Confirmá el dominio de Render.
+- Probá dos dispositivos con el mismo equipo y dos equipos distintos.
+- Exportá un JSON de respaldo después del ensayo.
 
 ## Problemas frecuentes
 
-**“Firebase todavía no está configurado”**  
-Revisar que `firebase-config.js` ya no contenga valores `REEMPLAZAR_*`.
+**No aparecen usuarios anónimos**  
+Todavía nadie ingresó correctamente. Abrí la experiencia, usá un enlace de equipo y completá el PIN.
 
-**“La cuenta no tiene rol de facilitador”**  
-Revisar que exista `users/{UID}` y que el campo `role` sea exactamente `facilitator`.
+**La cuenta no tiene rol de facilitador**  
+Revisá `users/{UID}` y el valor exacto `facilitator`.
 
-**“Missing or insufficient permissions”**  
-Publicar nuevamente `firestore.rules` y verificar que Anonymous y Email/Password estén habilitados.
+**Missing or insufficient permissions**  
+Publicá `firestore.rules` v59 y verificá el UID propietario de la experiencia.
 
-**El equipo no aparece activo**  
-La actividad se calcula con la última señal recibida. Esperar hasta 90 segundos y verificar conexión.
+**El enlace pide experiencia y equipo**  
+Compartí el mensaje generado por **Copiar acceso**; el enlace debe incluir `session` y `team`.
+
+**Equipo antiguo sin PIN para copiar**  
+Usá **Nuevo PIN** y después **Copiar acceso**. Los datos del equipo no cambian.
+
+**La Hoja 4 no se habilita**  
+Algún equipo todavía no confirmó la presentación. Revisá su estado y usá **Reintentar generación** desde Hoja 3 si corresponde.
