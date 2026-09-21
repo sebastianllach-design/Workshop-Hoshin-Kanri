@@ -1,10 +1,31 @@
 # Conversaciones que Transforman · Hoshin Workshop
 
-**Versión actual: v57 · Eliminación simple de experiencias**
+**Versión actual: v58 · Facilitación por hojas y cierre automático**
 
 Base de trabajo: paquete productivo completo de la **v46 · Indicadores complementarios legibles**.
 
-Al abrir el tablero, la marca **Versión v57 · Deportes Andina** debe verse en la portada principal y **Hoshin Workshop · v57** en el índice lateral.
+Al abrir el tablero, la marca **Versión v58 · Deportes Andina** debe verse en la portada principal y **Hoshin Workshop · v58** en el índice lateral.
+
+## v58 · Facilitación por hojas y cierre automático
+
+- El cronómetro queda vinculado a una hoja concreta y hace avanzar simultáneamente a todos los equipos.
+- Las hojas futuras permanecen bloqueadas; las etapas anteriores pueden consultarse, pero no editarse.
+- Al vencer la Hoja 2 se cierran los roles y las consultas, aunque la mesa no haya utilizado las tres oportunidades.
+- Al vencer la Hoja 3 se bloquean variables, Story Points y síntesis; la presentación se congela, guarda y abre automáticamente en la Hoja 4.
+- El facilitador puede pausar, reanudar, sumar tiempo, reiniciar o finalizar inmediatamente cada etapa.
+- La visión de la empresa se ubica al final del Perfil e incorpora el objetivo de posicionar cinco nuevas sucursales para 2029.
+- Equipo y roles, y Consultas a Dirección, pasan a ser bloques desplegables independientes.
+- Se corrige el texto Mostrar/Ocultar de la guía de la Matriz y se elimina el aviso de desplazamiento de la lectura estratégica.
+- El Índice de equilibrio se presenta como indicador independiente junto a Interdependencia en el reporte.
+
+### Archivos principales de v58
+
+- `index.html`: control de vistas, bloqueo de interacción, cierre automático y ajustes visuales.
+- `cloud-sync.js`: sincronización del estado de hoja y vencimiento.
+- `facilitator.html` y `facilitator.js`: control del recorrido desde el panel.
+- `CHANGELOG-v58.md`: detalle funcional.
+- `INSTRUCCIONES-PUBLICACION-v58.md`: publicación y prueba mínima.
+- `qa_v58.js`: validaciones automáticas.
 
 ## v57 · Eliminación simple de experiencias
 

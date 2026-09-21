@@ -6,7 +6,9 @@
   let app=null,auth=null,db=null,api=null;
   let live=false,applyingRemote=false,locked=false,teamLocked=false,sessionStatus='draft',dirty=false,saveTimer=null;
   let sessionId='',teamId='',teamName='',sessionName='',currentSection='caso';
-  let queued=null,unsubscribeTeam=null,unsubscribeWorkshop=null,unsubscribeRanking=null,rankingData=null,initialApplied=false,timerState=null,timerTick=null;
+  let queued=null,unsubscribeTeam=null,unsubscribeWorkshop=null,unsubscribeRanking=null,rankingData=null,initialApplied=false,timerState=null,timerTick=null,lastActivationToken='',lastExpirationToken='';
+  const SECTION_ORDER=['caso','preguntas','despliegue','reporte','evaluacion'];
+  const LEGACY_STAGE_SECTIONS={'Lectura del caso':'caso','Consultas a Dirección':'preguntas','Selección de variables':'despliegue','Preparación de la defensa':'despliegue','Presentaciones al Directorio':'reporte','Plenario y cierre':'evaluacion'};
 
   const $=id=>document.getElementById(id);
   const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
@@ -105,6 +107,22 @@
     setInterval(()=>heartbeat(),90000);
   }
   function timerMillis(value){if(!value)return 0;if(typeof value.toMillis==='function')return value.toMillis();if(value.seconds)return value.seconds*1000;return Number(value)||0}
+  function timerSection(timer={}){const id=timer.sheetId||LEGACY_STAGE_SECTIONS[timer.stageLabel]||'caso';return SECTION_ORDER.includes(id)?id:'caso'}
+  function timerToken(timer={}){return String(timer.cycleId||`${timerSection(timer)}-${timerMillis(timer.startedAt)||0}`)}
+  function timerControl(seconds){
+    const timer=timerState||{},status=timer.status||'idle',sectionId=timerSection(timer),activeIndex=Math.max(0,SECTION_ORDER.indexOf(sectionId)),expired=status==='ended'||status==='running'&&seconds===0,maxVisibleIndex=sectionId==='despliegue'&&expired?Math.max(activeIndex,SECTION_ORDER.indexOf('reporte')):activeIndex,token=timerToken(timer);
+    const control={sectionId,activeIndex,maxVisibleIndex,expired,status,token,globalLocked:locked,globalLockReason:sessionStatus==='paused'?'La experiencia fue pausada por el facilitador.':sessionStatus==='closed'?'La experiencia fue cerrada por el facilitador.':teamLocked?'La edición de este equipo fue pausada por el facilitador.':''};
+    api?.applyStageControl?.(control);
+    if(!initialApplied||status==='idle')return;
+    if(token&&token!==lastActivationToken&&status!=='ended'){
+      lastActivationToken=token;
+      api?.onStageActivated?.(control);
+    }
+    if(expired&&!locked&&token&&token!==lastExpirationToken){
+      lastExpirationToken=token;
+      api?.onStageExpired?.(control);
+    }
+  }
   function renderTimer(){
     const box=$('liveTimer'),stage=$('liveTimerStage'),clock=$('liveTimerClock');if(!box||!stage||!clock)return;
     const timer=timerState||{},status=timer.status||'idle';let seconds=Number(timer.remainingSec||timer.durationSec||0);
@@ -114,6 +132,7 @@
     box.classList.toggle('warning',status==='running'&&seconds>0&&seconds<=120);box.classList.toggle('ended',status==='ended'||status==='running'&&seconds===0);
     if(status==='paused')stage.textContent=`${timer.stageLabel||'Etapa'} · Pausado`;
     if(status==='ended'||status==='running'&&seconds===0)stage.textContent=`${timer.stageLabel||'Etapa'} · Tiempo cumplido`;
+    timerControl(seconds);
   }
   function refreshLockState(){
     locked=teamLocked||sessionStatus!=='open';
@@ -123,6 +142,7 @@
     else if(teamLocked)setSync('error','Edición pausada por el facilitador');
     else if(!dirty)setSync('saved','Todo guardado');
     if(!locked&&queued){clearTimeout(saveTimer);saveTimer=setTimeout(flush,350)}
+    if(timerState)renderTimer();
   }
   function subscribeWorkshop(){
     unsubscribeWorkshop?.();

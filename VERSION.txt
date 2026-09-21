@@ -1,20 +1,24 @@
 Conversaciones que Transforman - Workshop Hoshin Kanri
-Version: v57
-Nombre: Deportes Andina - eliminacion simple de experiencias
+Version: v58
+Nombre: Deportes Andina - facilitacion por hojas y cierre automatico
 Fecha: 2026-09-20
 
 Marca visible:
-- Portada: Version v57 - Deportes Andina
-- Indice lateral: Hoshin Workshop - v57
-- Titulo del navegador y metadato: v57
+- Portada: Version v58 - Deportes Andina
+- Indice lateral: Hoshin Workshop - v58
+- Titulo del navegador y metadato: v58
 
-Cambios v57:
-- El panel permite eliminar una experiencia con una sola confirmacion.
-- Ya no es necesario escribir el codigo de la experiencia.
-- El aviso identifica el nombre, el codigo y la cantidad de equipos afectados.
-- Se eliminan equipos, secretos de acceso, membresias anonimas, ranking publico y documento principal.
-- El borrado se ejecuta en lotes compatibles con el limite de Firebase.
-- Ante una interrupcion, el documento principal se conserva hasta el ultimo lote para permitir reintentar.
+Cambios v58:
+- El facilitador habilita una hoja y su tiempo para todas las mesas.
+- Las hojas futuras quedan bloqueadas y las etapas finalizadas pasan a solo lectura.
+- Al vencer la Hoja 2 se cierran roles y consultas.
+- Al vencer la Hoja 3 se congelan variables, Story Points y sintesis, y se genera la presentacion de la Hoja 4.
+- Pausar, reanudar, sumar tiempo y reiniciar mantienen el control en manos del facilitador.
+- La vision incluye cinco nuevas sucursales para 2029 y se ubica al final del Perfil.
+- La Hoja 2 incorpora dos bloques desplegables.
+- Se corrige la guia Mostrar/Ocultar de la Matriz y se elimina el aviso de desplazamiento de la lectura estrategica.
+- El Indice de equilibrio queda como indicador independiente en el reporte.
+- Se conserva la eliminacion simple de experiencias incorporada en v57.
 - No cambian reglas, colecciones, formulas, evaluacion, ranking ni flujo de participantes.
 
 Elementos preservados:

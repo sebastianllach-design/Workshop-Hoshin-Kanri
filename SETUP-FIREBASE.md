@@ -1,4 +1,4 @@
-# Configuración de Firebase · v57
+# Configuración de Firebase · v58
 
 Esta versión usa el plan gratuito **Firebase Spark** y no necesita Cloud Functions. Render continúa alojando los archivos estáticos; Firebase aporta autenticación, memoria compartida y actualización en tiempo real.
 
